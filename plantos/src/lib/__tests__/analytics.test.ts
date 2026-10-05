@@ -38,7 +38,10 @@ test("Predictive: AF-24 (Süd) P1 mit RUL und Bereich; Schwingungs-Trend belastb
   assert.equal(p.failureMode, "Lagerschaden");
   assert.ok(p.rul && p.rul.days > 0 && p.rul.range[0] <= p.rul.days && p.rul.days <= p.rul.range[1]);
   assert.ok(p.window && Date.parse(p.window.to) > now);
-  assert.ok(p.explanation.confidence.score > 0 && p.explanation.missingData.includes("Drehmoment"));
+  assert.ok(p.explanation.confidence.score > 0 && p.explanation.confidence.score <= 0.95, "Confidence nie 100 %");
+  assert.ok(p.explanation.missingData.includes("Drehmoment"));
+  const cov = Number(/Abdeckung (\d+) %/.exec(p.explanation.confidence.why)?.[1]);
+  assert.ok(cov > 0 && cov <= 100, p.explanation.confidence.why);
   assert.ok(p.explanation.reasoning.length >= 3 && p.explanation.alternatives.length >= 2);
   assert.deepEqual(p.materials, ["4711"]);
 });
@@ -106,20 +109,40 @@ test("Energie: kWh, Leerlauf, Peak, Soll aus Historie, Potenzial mit Annahme", a
 });
 
 // ── Planer ──
-test("Wartungsplaner: AF-24 – Lager fehlt (Bestand 0, 12 T. Lieferzeit) → ungeplanter Stopp + Begründung", async () => {
+test("Wartungsplaner: AF-24 – Lager fehlt im Werk → Umlagerung aus Werk Nord (Annahme) → Wartungsfenster vor Prognosegrenze", async () => {
   const { g, memory } = await brain();
   const { predictAsset } = await import("../predictive/engine");
   const { planMaintenance } = await import("../maintenance/planner");
   const { DEMO_ROI_CONFIG } = await import("../roi/engine");
   const now = Date.UTC(2026, 9, 5, 8);
-  const plan = planMaintenance(g, [predictAsset(g.node("m-sued-af24")!, g, memory, now)], DEMO_ROI_CONFIG, now);
-  const i = plan[0];
+  const p = predictAsset(g.node("m-sued-af24")!, g, memory, now);
+  const i = planMaintenance(g, [p], DEMO_ROI_CONFIG, now)[0];
   assert.equal(i.partsMissing, true);
   assert.equal(i.parts[0].material, "4711");
+  assert.equal(i.parts[0].transfer?.fromPlant, "Werk Nord", "gleiches Land → kürzeste Transferzeit");
+  assert.equal(i.parts[0].transfer?.days, 2);
+  assert.match(i.parts[0].transfer!.assumption, /Annahme/);
+  assert.equal(i.slotType, "geplantes Wartungsfenster");
+  assert.ok(Date.parse(i.recommendedStart!) <= Date.parse(i.deadline));
+  assert.ok(i.cost.netBenefit > 0, `Netto-Nutzen ${i.cost.netBenefit}`);
+  assert.ok(i.reasons.some((r) => r.includes("Umlagerung")));
+  assert.equal(i.requiresApproval, true);
+});
+
+test("Wartungsplaner: kein Spenderwerk → Lieferzeit überschreitet Prognose → ungeplanter Stopp + Begründung", async () => {
+  const { g, memory } = await brain();
+  const { GraphIndex } = await import("../graph/queries");
+  const { predictAsset } = await import("../predictive/engine");
+  const { planMaintenance } = await import("../maintenance/planner");
+  const { DEMO_ROI_CONFIG } = await import("../roi/engine");
+  const now = Date.UTC(2026, 9, 5, 8);
+  const doc = structuredClone(g.doc);
+  for (const n of doc.nodes) if (n.type === "sparePart" && n.code === "4711" && n.props.plant !== "pl-sued") n.props.stock = n.props.minStock;
+  const g2 = new GraphIndex(doc);
+  const i = planMaintenance(g2, [predictAsset(g2.node("m-sued-af24")!, g2, memory, now)], DEMO_ROI_CONFIG, now)[0];
+  assert.equal(i.parts[0].transfer, undefined, "Mindestbestand anderer Werke wird nicht angetastet");
   assert.equal(i.slotType, "ungeplanter Stopp");
   assert.ok(i.reasons.some((r) => r.includes("Lieferzeit")));
-  assert.ok(i.failureRiskIfPostponed7dPct >= i.failureRiskAtSlotPct);
-  assert.equal(i.requiresApproval, true);
 });
 
 test("Wartungsplaner: Teile vorrätig → nächstes Wartungsfenster des Werks", async () => {
@@ -131,11 +154,13 @@ test("Wartungsplaner: Teile vorrätig → nächstes Wartungsfenster des Werks", 
   const p = predictAsset(g.node("m-atl-af41")!, g, memory, now);
   const plan = planMaintenance(g, [p], DEMO_ROI_CONFIG, now);
   assert.ok(plannedWindows(g, "pl-atl", now, 14).length >= 2);
-  if (plan[0]) {
-    assert.equal(plan[0].partsMissing, false);
-    assert.equal(plan[0].slotType, "geplantes Wartungsfenster");
-    assert.equal(plan[0].expectedDowntimeHours, 0);
-  }
+  assert.ok(plan[0], "AF-41 hat einen Trend und wird geplant");
+  assert.equal(plan[0].partsMissing, false);
+  assert.equal(plan[0].slotType, "geplantes Wartungsfenster");
+  assert.equal(plan[0].expectedDowntimeHours, 0);
+  assert.ok(p.window && Date.parse(plan[0].recommendedStart!) >= Date.parse(p.window.from), "nicht unnötig früh");
+  assert.ok(plan[0].cost.costIfNoAction > 0, "Nicht-Handeln bis zum prognostizierten Ausfall kostet");
+  assert.ok(plan[0].cost.netBenefit > 0);
 });
 
 // ── Simulation ──

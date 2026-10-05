@@ -45,7 +45,7 @@ export function PlannerView({ user, canApprove, canExecute }: { user: string; ca
             <li key={i.assetId} className="card p-4">
               <div className="flex flex-wrap items-center gap-2">
                 <Badge tone={TONE[i.priority]}>{i.priority}</Badge>
-                <Link href={`/brain/${encodeURIComponent(i.assetId)}`} className="font-medium hover:underline">{i.code}</Link>
+                <Link href={`/brain/${encodeURIComponent(i.assetId)}`} className="tap font-medium hover:underline">{i.code}</Link>
                 <span className="text-[12px] text-muted">{i.plant} · {i.line}</span>
                 <span className="ml-auto"><Badge tone={i.slotType === "geplantes Wartungsfenster" ? "ok" : "warn"}>{i.slotType}</Badge></span>
               </div>
@@ -55,7 +55,7 @@ export function PlannerView({ user, canApprove, canExecute }: { user: string; ca
                 <div><div className="label-section">Stillstand / Techniker</div>{i.expectedDowntimeHours} h zusätzlich · {i.technicians} Techn.</div>
                 <div><div className="label-section">Risiko</div>{i.failureRiskAtSlotPct} % bis Termin · {i.failureRiskIfPostponed7dPct} % bei +7 T.</div>
               </div>
-              <div className="mt-2 text-[12px]"><span className="text-muted">{i.failureMode} · Teile:</span> {i.parts.length ? i.parts.map((p) => <span key={p.material} className={p.available ? "" : "font-medium text-status-fault"}>{p.qty}× {p.name} (SAP {p.material}, Bestand {p.stock}{p.available ? "" : `, Lieferzeit ${p.leadTimeDays} T.`}) </span>) : "keine"}</div>
+              <div className="mt-2 text-[12px]"><span className="text-muted">{i.failureMode} · Teile:</span> {i.parts.length ? i.parts.map((p) => <span key={p.material} className={p.available ? "" : p.transfer ? "font-medium text-status-warn" : "font-medium text-status-fault"}>{p.qty}× {p.name} (SAP {p.material}, Bestand {p.stock}{p.available ? "" : p.transfer ? ` · Umlagerung aus ${p.transfer.fromPlant}, ${p.transfer.days} T. (Annahme)` : `, Lieferzeit ${p.leadTimeDays} T.`}) </span>) : "keine"}</div>
               <div className="mt-1 text-[12px]"><span className="text-muted">Kosten:</span> Maßnahme {eur(i.cost.costOfAction)} · Nicht-Handeln {eur(i.cost.costIfNoAction)} · Netto {eur(i.cost.netBenefit)} {i.cost.demo && <Badge tone="warn">DEMO-Annahmen</Badge>}</div>
               <ul className="mt-1 list-inside list-disc text-[11px] text-muted">{i.reasons.map((r) => <li key={r}>{r}</li>)}</ul>
               <div className="mt-3 flex flex-wrap gap-2">

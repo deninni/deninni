@@ -46,7 +46,7 @@ export function CopilotChat() {
       </div>
       <div className="border-t border-hairline p-3">
         <div className="mb-2 flex flex-wrap gap-1.5">
-          {CHIPS.map((c) => <button key={c} onClick={() => send(c)} className="focus-ring rounded-full border border-border px-2.5 py-1 text-[11px] text-muted hover:border-accent-border hover:text-foreground">{c}</button>)}
+          {CHIPS.map((c) => <button key={c} onClick={() => send(c)} className="focus-ring min-h-11 rounded-full border border-border px-3 text-[12px] text-muted hover:border-accent-border hover:text-foreground sm:min-h-7 sm:px-2.5 sm:text-[11px]">{c}</button>)}
         </div>
         <form onSubmit={(e) => { e.preventDefault(); send(input); }} className="flex gap-2">
           <input value={input} onChange={(e) => setInput(e.target.value)} maxLength={1000} placeholder="Frage zur Anlage …" className="input-industrial min-h-11 flex-1 text-[13px] sm:min-h-9" aria-label="Frage" />

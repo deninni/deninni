@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { readDoc, mutateDoc } from "../tenant/store";
 import { getTenant } from "../tenant/tenants";
-import { buildDemoGraph } from "./seed";
+import { buildDemoGraph, SEED_VERSION } from "./seed";
 import { GraphIndex } from "./queries";
 import { isEdgeType, isNodeType, type EdgeType, type GraphDoc, type GraphEdge, type GraphNode, type NodeType, type Provenance } from "./model";
 
@@ -11,7 +11,32 @@ function init(tenant: string) {
 
 const indexCache = new WeakMap<GraphDoc, { size: number; idx: GraphIndex }>();
 
+/**
+ * Demo-Struktur aktualisieren, ohne Nutzerdaten zu verlieren: Knoten/Kanten mit Quelle „demo“ werden
+ * neu aufgebaut, alle anderen (user, import, system, sap, edge) bleiben erhalten.
+ */
+export async function migrateDemoSeed(tenant: string): Promise<boolean> {
+  if (!getTenant(tenant)?.demo) return false;
+  return mutateDoc<GraphDoc, boolean>(tenant, "graph", init(tenant), (doc) => {
+    if (doc.seedVersion === SEED_VERSION) return false;
+    const fresh = buildDemoGraph(tenant);
+    const keepNodes = doc.nodes.filter((n) => n.source !== "demo");
+    const ids = new Set([...fresh.nodes.map((n) => n.id), ...keepNodes.map((n) => n.id)]);
+    const keepEdges = doc.edges.filter((e) => e.source !== "demo" && ids.has(e.from) && ids.has(e.to));
+    doc.nodes = [...fresh.nodes, ...keepNodes.filter((n) => !fresh.nodes.some((f) => f.id === n.id))];
+    doc.edges = [...fresh.edges, ...keepEdges.filter((e) => !fresh.edges.some((f) => f.id === e.id))];
+    doc.seedVersion = SEED_VERSION;
+    return true;
+  });
+}
+
+const migrated = new Set<string>();
+
 export async function loadGraph(tenant: string): Promise<GraphIndex> {
+  if (!migrated.has(tenant)) {
+    await migrateDemoSeed(tenant);
+    migrated.add(tenant);
+  }
   const doc = await readDoc<GraphDoc>(tenant, "graph", init(tenant));
   const size = doc.nodes.length * 100003 + doc.edges.length;
   const hit = indexCache.get(doc);

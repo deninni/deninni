@@ -47,11 +47,11 @@ export function ExecutiveView() {
         <Tile label="Ersatzteile < Mindestbestand" value={s.sparePartsBelowMin} tone={s.sparePartsBelowMin ? "fault" : undefined} />
         <Tile label="Qualität (8 h)" value={s.qualityPct.toLocaleString("de-DE")} unit="%" />
         <Tile label="Energie (24 h)" value={Math.round(s.energyKwh24h).toLocaleString("de-DE")} unit="kWh" />
-        <Tile label="Offene Maßnahmen" value={openActions} hint="Tickets" />
+        <Tile label="Offene Maßnahmen" value={openActions} hint="Tickets (alle Werke des Mandanten)" />
       </div>
       <div className="grid gap-4 lg:grid-cols-3">
         <Card title="OEE-Trend" className="lg:col-span-2" action={<select value={days} onChange={(e) => setDays(Number(e.target.value))} className="input-industrial min-h-8 py-1 text-[12px]" aria-label="Zeitraum"><option value={7}>Woche</option><option value={14}>14 Tage</option><option value={28}>Monat</option></select>}>
-          {trend.data ? <TrendChart height={200} data={trend.data.oee.map((x) => ({ ts: Date.parse(x.day), oee: x.oeePct }))} series={[{ key: "oee", label: "OEE", color: "#5a8fa3", unit: "%" }]} /> : <div className="h-[200px] animate-pulse" />}
+          {trend.data ? <TrendChart height={200} data={trend.data.oee.map((x) => ({ ts: Date.parse(x.day), oee: x.oeePct }))} series={[{ key: "oee", label: "OEE", color: "#5a8fa3", unit: "%" }]} yDomain={[50, 100]} /> : <div className="h-[200px] animate-pulse" />}
           <p className="text-[11px] text-stainless-dim">Tageswerte aus Demo-Engine (15-min-Raster).</p>
         </Card>
         <Card title="plantOS ROI">
@@ -60,7 +60,7 @@ export function ExecutiveView() {
               <div><div className="label-section">Vermiedene Kosten (Jahr, verifiziert)</div><div className="text-xl font-semibold tabular-nums">{eur(val.data.periods.year.realized)}</div></div>
               {val.data.periods.year.realizedDemo > 0 && <div className="text-[12px] text-status-warn">DEMO-Werte: {eur(val.data.periods.year.realizedDemo)} (nicht real)</div>}
               <div className="text-[12px] text-muted">Erwartet aus freigegebenen Maßnahmen: {eur(val.data.periods.year.approved + val.data.periods.year.approvedDemo)}</div>
-              <Link href="/value" className="text-[12px] text-accent hover:underline">Details & Annahmen →</Link>
+              <Link href="/value" className="tap text-[12px] text-accent hover:underline">Details & Annahmen →</Link>
             </div>
           )}
         </Card>
@@ -68,9 +68,9 @@ export function ExecutiveView() {
       <div className="grid gap-4 lg:grid-cols-2">
         <Card title="Top-Risiken">
           {s.critical.length === 0 ? <p className="text-[13px] text-muted">Keine Maschine mit erhöhtem Risiko.</p> : (
-            <ul className="space-y-2">{s.critical.map((c) => <li key={c.assetId} className="flex items-center gap-2 text-[13px]"><Badge tone={c.priority === "P1" ? "fault" : "warn"}>{c.priority}</Badge><Link href={`/brain/${encodeURIComponent(c.assetId)}`} className="font-medium hover:underline">{c.code}</Link><span className="ml-auto tabular-nums">Risiko {c.riskScore}</span></li>)}</ul>
+            <ul className="space-y-2">{s.critical.map((c) => <li key={c.assetId} className="flex items-center gap-2 text-[13px]"><Badge tone={c.priority === "P1" ? "fault" : "warn"}>{c.priority}</Badge><Link href={`/brain/${encodeURIComponent(c.assetId)}`} className="tap font-medium hover:underline">{c.code}</Link><span className="ml-auto tabular-nums">Risiko {c.riskScore}</span></li>)}</ul>
           )}
-          <Link href="/predictive" className="mt-2 inline-block text-[12px] text-accent hover:underline">Alle Prognosen →</Link>
+          <Link href="/predictive" className="tap mt-2 inline-block text-[12px] text-accent hover:underline">Alle Prognosen →</Link>
         </Card>
         <Card title="Ebenen" padded={false}>
           <div className="overflow-x-auto">

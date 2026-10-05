@@ -97,7 +97,7 @@ export function answerEnterprise(q: string, ctx: EnterpriseCtx): EnterpriseAnswe
   // 3) Welche Ersatzteile fehlen?
   if (/ersatzteil|teile fehlen|lagerbestand|bestand|material/.test(t)) {
     const plan = ctx.plan().filter((i) => inScope.has(i.assetId));
-    const needed = plan.flatMap((i) => i.parts.filter((p) => !p.available).map((p) => `• Für ${i.code} (${i.plant}): ${p.qty}× SAP ${p.material} ${p.name} – Bestand ${p.stock}, Lieferzeit ${p.leadTimeDays} Tage (benötigt für ${i.failureMode})`));
+    const needed = plan.flatMap((i) => i.parts.filter((p) => !p.available).map((p) => `• Für ${i.code} (${i.plant}): ${p.qty}× SAP ${p.material} ${p.name} – Bestand ${p.stock}, Lieferzeit ${p.leadTimeDays} Tage (benötigt für ${i.failureMode})${p.transfer ? `\n  Vorschlag: Umlagerung aus ${p.transfer.fromPlant} (${p.transfer.days} Tage, Annahme)` : ""}`));
     const scopeNode = b.g.node(ctx.scopeId);
     const plantsInScope = new Set(scopeNode?.type === "plant" ? [scopeNode.id] : [...b.g.descendants(ctx.scopeId, "plant").map((p) => p.id), b.g.ancestorOfType(ctx.scopeId, "plant")?.id].filter(Boolean) as string[]);
     const below = b.g.doc.nodes.filter((n) => n.type === "sparePart" && plantsInScope.has(String(n.props.plant))).filter((n) => { const p = n.props as unknown as SparePartProps; return p.stock < p.minStock; });

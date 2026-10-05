@@ -95,7 +95,7 @@ export function analyzeEnergy(n: GraphNode, pricePerKwh: number, now = Date.now(
       assumption: "50 % der Abweichung zum besten Dezil erreichbar (DEMO-Annahme)",
     });
   }
-  const conf = clamp((pts.length / (days * 288)) * (hourly.length >= 48 ? 1 : 0.6), 0, 1);
+  const conf = clamp((pts.length / (days * 288)) * (hourly.length >= 48 ? 0.9 : 0.6), 0, 0.95);
   return {
     assetId: n.id, code: n.code ?? n.name, days, source: "DEMO",
     totalKwh: round(total, 0), kwhPerDay: round(kwhPerDay, 1), goodUnits: Math.round(good), kwhPerUnit: ist ? round(ist, 5) : null,

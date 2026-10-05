@@ -5,8 +5,8 @@ export function Card({ title, action, children, className = "", padded = true }:
     <section className={`card ${className}`}>
       {(title || action) && (
         <header className="flex items-center justify-between gap-3 border-b border-hairline px-4 py-2.5">
-          {title && <h2 className="label-section">{title}</h2>}
-          {action}
+          {title && <h2 className="label-section min-w-0">{title}</h2>}
+          {action && <div className="shrink-0">{action}</div>}
         </header>
       )}
       <div className={padded ? "p-4" : ""}>{children}</div>

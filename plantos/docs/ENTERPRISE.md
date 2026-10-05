@@ -15,13 +15,20 @@ Dieses Dokument trennt strikt zwischen dem, was **im Code vorhanden** ist, und d
 | Web-Security | CSP ohne externe Quellen, Frame-Deny, nosniff, Permissions-Policy, kein `X-Powered-By` | `next.config.ts` |
 | Datenhoheit | local-first, kein Cloud-LLM, keine Drittanbieter-Requests | CSP `connect-src 'self'` |
 | Nachvollziehbare KI | Regelbaum mit Evidenz und Prüfschritten, Scope-Guard, Steuerungs-Verweigerung | `src/lib/rca/rules.ts`, `src/lib/copilot/` |
-| Qualitätssicherung | 25 Unit-Tests, 47 Smoke-Checks, CI bei jedem Push | `npm test`, `npm run smoke` |
+| Wissensmodell | Plant Brain: persistenter Graph Konzern → Sensor/Tag, SAP, Ersatzteile, Dokumente, Alarme, Tickets | `src/lib/graph/` |
+| Anlagengedächtnis | Industrial Memory, append-only, mit Fotos, Freigaben und Ergebnissen | `src/lib/memory/` |
+| Multi-Site + Mandanten | 5 Rollen, Mandantentrennung, Werkwechsel, KPIs je Ebene | `docs/SECURITY.md`, `/enterprise` |
+| Analytik mit Erklärung | Predictive (ohne Fake-RUL), Quality AI, Energie, Cross-Plant, Explainable-AI-Panel | `src/lib/predictive|quality|energy|crossplant` |
+| Wirtschaftlichkeit | ROI-Engine mit Annahmen, Value-Ledger nur aus verifizierten Ergebnissen | `src/lib/roi/` |
+| Instandhaltung | Wartungsplaner mit Teile-Umlagerung, SAP-Adapter (Demo + OData, nicht validiert), Vier-Augen | `src/lib/maintenance|sap` |
+| SSO | OIDC/Entra ID mit PKCE + JWKS-Prüfung (nicht validiert gegen Kunden-Tenant) | `src/lib/auth/oidc.ts` |
+| Qualitätssicherung | 57 Unit-Tests, 127 Smoke-Checks, Mobile-Prüfung, CI bei jedem Push | `npm test`, `npm run smoke` |
 
 ## 2. Roadmap bis zum Konzern-Pilot (priorisiert)
 
 1. **Edge-Agent-Paket** (Node, systemd) mit S7-Treiber (nur Lesen) und **OPC UA**-Client. OPC UA ist bei Krones-, KHS- und Sidel-Linien Standard. Weitere Punkte: Store-and-forward bei Netzausfall, ausschließlich ausgehendes HTTPS.
-2. **SSO über Entra ID (OIDC/PKCE)** mit Gruppen-zu-Rollen-Mapping. Konzerne lassen lokale Passwörter nicht zu.
-3. **Persistenz:** PostgreSQL/TimescaleDB statt Datei-Store, mit Mandanten- und Werks-Trennung (Multi-Site).
+2. **SSO-Validierung** gegen den Entra-Tenant des Kunden, danach Benutzerverwaltung per SCIM (Implementierung vorhanden).
+3. **Persistenz:** PostgreSQL/TimescaleDB statt Datei-Store, hinter den bestehenden Store-Schnittstellen (Mandantentrennung ist bereits umgesetzt).
 4. **Linien-Standards:** Mapping auf **PackML / OMAC** und Weihenstephaner Standards (WS Pack/Food), damit OEE und Stillstandsgründe herstellerübergreifend vergleichbar werden.
 5. **Integration:** Tickets nach SAP PM / Maximo (nur Anlage, keine Auftragsfreigabe), Export nach Historian (PI / AVEVA).
 6. **Betrieb:** Container-Image, Helm-Chart, Backup/Restore, Observability (OpenTelemetry), definierte RPO/RTO.

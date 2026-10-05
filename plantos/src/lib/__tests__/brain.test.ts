@@ -40,6 +40,20 @@ test("Plant Brain: Hierarchie Konzern → Region → Land → Standort → Werk 
   assert.equal(g.node("m-af12-motor")?.props.twinNode, "m-001");
 });
 
+test("Plant Brain: Demo-Migration erhält Nutzerdaten", async () => {
+  const store = await import("../graph/store");
+  const { mutateDoc, __resetTenantCache } = await import("../tenant/store");
+  const n = await store.addNode("demo", { type: "document", name: "Nutzerdokument", source: "user", parentId: undefined });
+  await store.addEdge("demo", { from: n.id, to: "m-af12", type: "documents", source: "user" });
+  await mutateDoc<{ seedVersion?: number }, void>("demo", "graph", () => ({}), (d) => { d.seedVersion = 1; });
+  assert.equal(await store.migrateDemoSeed("demo"), true);
+  __resetTenantCache();
+  const g = await store.loadGraph("demo");
+  assert.ok(g.node(n.id), "Nutzerknoten bleibt");
+  assert.equal(g.related(n.id, "documents", "out")[0]?.node.id, "m-af12", "Nutzerkante bleibt");
+  assert.equal(g.node("site-muc")?.code, "MUC");
+});
+
 test("Plant Brain: Suche + Filter nach Typ und Scope", async () => {
   const { loadGraph } = await import("../graph/store");
   const g = await loadGraph("demo");

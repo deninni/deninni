@@ -65,7 +65,7 @@ export function ValueView({ canConfig }: { canConfig: boolean }) {
             <li key={i.memoryId} className="px-4 py-2 text-[12px]">
               <div className="flex flex-wrap items-center gap-2"><Badge tone={i.kind === "realized" ? "ok" : "accent"}>{i.kind === "realized" ? "realisiert" : "erwartet"}</Badge>{i.demo && <Badge tone="warn">DEMO</Badge>}<span className="tabular-nums font-medium">{eur(i.amount)}</span><span className="text-muted">{new Date(i.at).toLocaleDateString("de-DE")}</span></div>
               <div className="mt-0.5">{i.description}</div>
-              <Link href={`/brain/${encodeURIComponent(i.assetId)}`} className="text-[11px] text-accent hover:underline">{i.assetPath}</Link>
+              <Link href={`/brain/${encodeURIComponent(i.assetId)}`} className="tap text-[11px] text-accent hover:underline">{i.assetPath}</Link>
             </li>
           ))}
         </ul>

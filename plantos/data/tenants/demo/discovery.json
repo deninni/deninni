@@ -49,6 +49,56 @@
       ],
       "id": "imp-42928f00",
       "createdAt": "2026-10-05T19:32:21.353Z"
+    },
+    {
+      "format": "tia",
+      "scopeId": "m-sued-fb03",
+      "fileName": "Eingabe",
+      "createdBy": "instandhaltung@plantos.local",
+      "suggestions": [
+        {
+          "candidate": {
+            "name": "M12",
+            "address": "DB12.DBD60",
+            "dataType": "REAL",
+            "description": "Strom",
+            "key": "1:M12",
+            "valid": true
+          },
+          "assetId": "m-sued-fb03-motor",
+          "assetPath": "SUED › ABF › L2 › FB03 › Antriebsstation › M12",
+          "confidence": 0.95,
+          "status": "sicher",
+          "reason": "Kennzeichen „M12“ = M12"
+        }
+      ],
+      "id": "imp-2f566b5d",
+      "createdAt": "2026-10-05T19:41:45.761Z"
+    },
+    {
+      "format": "tia",
+      "scopeId": "m-sued-fb03",
+      "fileName": "Eingabe",
+      "createdBy": "instandhaltung@plantos.local",
+      "suggestions": [
+        {
+          "candidate": {
+            "name": "M12",
+            "address": "DB12.DBD60",
+            "dataType": "REAL",
+            "description": "Strom",
+            "key": "1:M12",
+            "valid": true
+          },
+          "assetId": "m-sued-fb03-motor",
+          "assetPath": "SUED › ABF › L2 › FB03 › Antriebsstation › M12",
+          "confidence": 0.95,
+          "status": "sicher",
+          "reason": "Kennzeichen „M12“ = M12"
+        }
+      ],
+      "id": "imp-d2638817",
+      "createdAt": "2026-10-05T19:41:49.220Z"
     }
   ]
 }

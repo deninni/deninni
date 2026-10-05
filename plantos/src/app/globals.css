@@ -61,6 +61,8 @@ body {
 
 @layer components {
   .card {
+    /* verhindert, dass Grid-/Flex-Kinder auf schmalen Viewports über die Bildschirmbreite wachsen */
+    min-width: 0;
     background: var(--color-card);
     border: 1px solid var(--color-card-border);
     border-radius: var(--radius-lg);
@@ -171,6 +173,14 @@ body {
 }
 
 .tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* Touch-Ziele ≥ 44 px auf Touch-Geräten (iPhone), Desktop bleibt kompakt */
+@media (pointer: coarse) {
+  .tap { display: inline-flex; align-items: center; min-height: 44px; }
+}
+
+/* Grid-Kinder dürfen schrumpfen (iPhone: kein horizontales Aufweiten des Layout-Viewports) */
+.grid > * { min-width: 0; }
 
 details > summary { list-style: none; cursor: pointer; }
 details > summary::-webkit-details-marker { display: none; }

@@ -99,7 +99,7 @@ export function predictAsset(n: GraphNode, g: GraphIndex, memory: MemoryEntry[],
   // Tagesmediane
   const byDay = new Map<number, Snapshot[]>();
   for (const p of running) {
-    const d = Math.floor((p.ts - from) / D);
+    const d = Math.min(days - 1, Math.floor((p.ts - from) / D));
     (byDay.get(d) ?? byDay.set(d, []).get(d)!).push(p);
   }
   const dayIdx = [...byDay.keys()].filter((d) => byDay.get(d)!.length >= 6).sort((a, b) => a - b);
@@ -194,7 +194,8 @@ export function predictAsset(n: GraphNode, g: GraphIndex, memory: MemoryEntry[],
 
   const concern = !!sig[0] || riskScore >= 25 || !!window;
   const fm = dom && concern ? FAILURE_MODE[dom] : null;
-  const confScore = sig[0] ? clamp(sig[0].r2 * coverage * Math.min(1, sig[0].days / 14), 0, 1) : clamp(coverage * 0.6, 0, 1);
+  // Confidence nie 100 %: Modell bleibt Heuristik auf begrenzter Historie
+  const confScore = sig[0] ? clamp(sig[0].r2 * coverage * Math.min(1, sig[0].days / 14), 0, 0.95) : clamp(coverage * 0.6, 0, 0.95);
   const missing = ["Drehmoment", "Durchfluss"];
   if (prof !== "m-af12") missing.push("Druck");
   if (!maint) missing.push("Wartungshistorie im Industrial Memory");

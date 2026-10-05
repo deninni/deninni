@@ -62,7 +62,7 @@ export function AssetDetail({ id, perms }: { id: string; perms: { comment: boole
               {data.relations.map((r) => (
                 <li key={r.edgeId} className="flex min-h-10 flex-wrap items-center gap-2 px-4 py-1.5">
                   <span className="text-muted">{r.dir === "out" ? r.label : `← ${r.label}`}</span>
-                  <Link href={`/brain/${encodeURIComponent(r.node.id)}`} className="font-medium text-accent hover:underline">{r.node.name}</Link>
+                  <Link href={`/brain/${encodeURIComponent(r.node.id)}`} className="tap font-medium text-accent hover:underline">{r.node.name}</Link>
                   {r.node.code && <span className="font-mono text-[11px] text-stainless">{r.node.code}</span>}
                   <span className="ml-auto text-[10px] text-muted">{r.node.typeLabel} · {r.source}</span>
                 </li>

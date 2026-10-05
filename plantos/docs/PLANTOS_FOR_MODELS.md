@@ -24,6 +24,15 @@ Next.js 15.5 (App Router), React 19.1, TypeScript strict, Tailwind 4, three 0.18
 - `src/app/(app)/…`: geschützte Seiten. `src/app/api/…`: Route-Handler. `src/middleware.ts` prüft die Session-Signatur.
 - `src/components/twin/scene3d/`: `TwinCanvas` sowie die Szenen `Af12Scene`, `Vl3Scene`, `Ft7Scene` und `shared.tsx` (PBR-Materialien, Förderband, Motor, Sensor-Stele, Instanced-Flaschen).
 
+## Erweiterungen (Plant Brain & Co.)
+
+- `src/lib/graph/`: Wissensgraph je Tenant (`seed.ts` Demo-Konzern, `queries.ts` GraphIndex, `store.ts` Persistenz und Migration)
+- `src/lib/memory/`: Industrial Memory (append-only)
+- `src/lib/predictive/`, `crossplant/`, `quality/`, `energy/`, `roi/`, `maintenance/`, `simulation/`, `sap/`, `discovery/`, `reports/`, `enterprise/`
+- `src/lib/server/brain.ts`: Service-Schicht mit Caching. `src/lib/auth/roles.ts`: Rollen und Rechte. `src/lib/audit.ts`: Hash-Kette
+- Status je Block: `PLANTOS_STATE.md`. Sicherheit: `docs/SECURITY.md`
+- Regeln: RUL nur bei belastbarem Trend; Confidence nie 100 %; DEMO-Werte nie als real summieren; SAP nur vorbereiten und nach Vier-Augen-Freigabe ausführen; Discovery nur Vorschläge
+
 ## Design-Tokens
 
 | Token | Wert |

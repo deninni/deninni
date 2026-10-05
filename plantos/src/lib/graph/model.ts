@@ -66,6 +66,7 @@ export interface GraphDoc {
   version: 1;
   tenant: string;
   seededAt: string | null;
+  seedVersion?: number;
   nodes: GraphNode[];
   edges: GraphEdge[];
 }

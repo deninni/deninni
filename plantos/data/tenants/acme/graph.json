@@ -13,7 +13,7 @@
         "unitCost": 38
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "mat-4712",
@@ -25,7 +25,7 @@
         "unitCost": 145
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "mat-4713",
@@ -37,7 +37,7 @@
         "unitCost": 1890
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "mat-4714",
@@ -49,7 +49,7 @@
         "unitCost": 1240
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "mat-4720",
@@ -61,7 +61,7 @@
         "unitCost": 980
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "mat-4730",
@@ -73,7 +73,7 @@
         "unitCost": 2150
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "mat-4731",
@@ -85,7 +85,7 @@
         "unitCost": 640
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-co",
@@ -94,7 +94,7 @@
       "code": "ACME",
       "props": {},
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-reg",
@@ -103,7 +103,7 @@
       "code": "EMEA",
       "props": {},
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-de",
@@ -112,7 +112,7 @@
       "code": "DE",
       "props": {},
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-site",
@@ -121,7 +121,7 @@
       "code": "KOE",
       "props": {},
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-pl1",
@@ -140,7 +140,7 @@
         ]
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-area",
@@ -149,7 +149,7 @@
       "code": "LOG",
       "props": {},
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-l1",
@@ -158,7 +158,7 @@
       "code": "L1",
       "props": {},
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-fl-l1",
@@ -167,7 +167,7 @@
       "code": "ACME-W1-L1",
       "props": {},
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1",
@@ -184,7 +184,7 @@
         "maintenanceIntervalH": 3000
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-plc",
@@ -197,7 +197,7 @@
         "access": "read-only"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-eq",
@@ -208,7 +208,7 @@
         "sapSystem": "DEMO"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-asm-drive",
@@ -216,7 +216,7 @@
       "name": "Antriebsstation",
       "props": {},
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-motor",
@@ -228,7 +228,7 @@
         "ratedCurrentA": 12
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-motor-eq",
@@ -239,7 +239,7 @@
         "sapSystem": "DEMO"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-motor-tag",
@@ -253,7 +253,7 @@
         "access": "read"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-bearing",
@@ -263,7 +263,7 @@
         "kind": "bearing"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "sp-acme1-4711",
@@ -283,7 +283,7 @@
         "plant": "acme-pl1"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-vs",
@@ -296,7 +296,7 @@
         "signal": "vibrationMmS"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-vs-tag",
@@ -310,7 +310,7 @@
         "access": "read"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-ts",
@@ -323,7 +323,7 @@
         "signal": "temperatureC"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-ts-tag",
@@ -337,7 +337,7 @@
         "access": "read"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "sp-acme1-4714",
@@ -358,7 +358,7 @@
         "plant": "acme-pl1"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-asm-belt",
@@ -366,7 +366,7 @@
       "name": "Fördergurt",
       "props": {},
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-gurt",
@@ -376,7 +376,7 @@
         "kind": "belt"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "sp-acme1-4720",
@@ -396,7 +396,7 @@
         "plant": "acme-pl1"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-ls",
@@ -408,7 +408,7 @@
         "signal": null
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-ls-tag",
@@ -422,7 +422,7 @@
         "access": "read"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-doc-ba",
@@ -433,7 +433,7 @@
         "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-doc-sp",
@@ -444,7 +444,7 @@
         "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "acme-ft1-doc-wp",
@@ -455,7 +455,7 @@
         "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
       },
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     }
   ],
   "edges": [
@@ -465,7 +465,7 @@
       "to": "acme-co",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-de:partOf:acme-reg",
@@ -473,7 +473,7 @@
       "to": "acme-reg",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-site:partOf:acme-de",
@@ -481,7 +481,7 @@
       "to": "acme-de",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-pl1:partOf:acme-site",
@@ -489,7 +489,7 @@
       "to": "acme-site",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-area:partOf:acme-pl1",
@@ -497,7 +497,7 @@
       "to": "acme-pl1",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-l1:partOf:acme-area",
@@ -505,7 +505,7 @@
       "to": "acme-area",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-l1:sapLocation:acme-fl-l1",
@@ -513,7 +513,7 @@
       "to": "acme-fl-l1",
       "type": "sapLocation",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1:partOf:acme-l1",
@@ -521,7 +521,7 @@
       "to": "acme-l1",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1:controlledBy:acme-ft1-plc",
@@ -529,7 +529,7 @@
       "to": "acme-ft1-plc",
       "type": "controlledBy",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1:sapEquipment:acme-ft1-eq",
@@ -537,7 +537,7 @@
       "to": "acme-ft1-eq",
       "type": "sapEquipment",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1:sapLocation:acme-fl-l1",
@@ -545,7 +545,7 @@
       "to": "acme-fl-l1",
       "type": "sapLocation",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-asm-drive:partOf:acme-ft1",
@@ -553,7 +553,7 @@
       "to": "acme-ft1",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-motor:partOf:acme-ft1-asm-drive",
@@ -561,7 +561,7 @@
       "to": "acme-ft1-asm-drive",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-motor:controlledBy:acme-ft1-plc",
@@ -569,7 +569,7 @@
       "to": "acme-ft1-plc",
       "type": "controlledBy",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-motor:sapEquipment:acme-ft1-motor-eq",
@@ -577,7 +577,7 @@
       "to": "acme-ft1-motor-eq",
       "type": "sapEquipment",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-motor-tag:tagOf:acme-ft1-plc",
@@ -585,7 +585,7 @@
       "to": "acme-ft1-plc",
       "type": "tagOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-motor:measuredBy:acme-ft1-motor-tag",
@@ -593,7 +593,7 @@
       "to": "acme-ft1-motor-tag",
       "type": "measuredBy",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-bearing:partOf:acme-ft1-asm-drive",
@@ -601,7 +601,7 @@
       "to": "acme-ft1-asm-drive",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:sp-acme1-4711:material:mat-4711",
@@ -609,7 +609,7 @@
       "to": "mat-4711",
       "type": "material",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-bearing:usesSparePart:sp-acme1-4711",
@@ -617,7 +617,7 @@
       "to": "sp-acme1-4711",
       "type": "usesSparePart",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-vs:partOf:acme-ft1-motor",
@@ -625,7 +625,7 @@
       "to": "acme-ft1-motor",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-vs-tag:tagOf:acme-ft1-plc",
@@ -633,7 +633,7 @@
       "to": "acme-ft1-plc",
       "type": "tagOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-vs:measuredBy:acme-ft1-vs-tag",
@@ -641,7 +641,7 @@
       "to": "acme-ft1-vs-tag",
       "type": "measuredBy",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-ts:partOf:acme-ft1-motor",
@@ -649,7 +649,7 @@
       "to": "acme-ft1-motor",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-ts-tag:tagOf:acme-ft1-plc",
@@ -657,7 +657,7 @@
       "to": "acme-ft1-plc",
       "type": "tagOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-ts:measuredBy:acme-ft1-ts-tag",
@@ -665,7 +665,7 @@
       "to": "acme-ft1-ts-tag",
       "type": "measuredBy",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:sp-acme1-4714:material:mat-4714",
@@ -673,7 +673,7 @@
       "to": "mat-4714",
       "type": "material",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-motor:usesSparePart:sp-acme1-4714",
@@ -681,7 +681,7 @@
       "to": "sp-acme1-4714",
       "type": "usesSparePart",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-asm-belt:partOf:acme-ft1",
@@ -689,7 +689,7 @@
       "to": "acme-ft1",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-gurt:partOf:acme-ft1-asm-belt",
@@ -697,7 +697,7 @@
       "to": "acme-ft1-asm-belt",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:sp-acme1-4720:material:mat-4720",
@@ -705,7 +705,7 @@
       "to": "mat-4720",
       "type": "material",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-gurt:usesSparePart:sp-acme1-4720",
@@ -713,7 +713,7 @@
       "to": "sp-acme1-4720",
       "type": "usesSparePart",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-ls:partOf:acme-ft1-asm-belt",
@@ -721,7 +721,7 @@
       "to": "acme-ft1-asm-belt",
       "type": "partOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-ls-tag:tagOf:acme-ft1-plc",
@@ -729,7 +729,7 @@
       "to": "acme-ft1-plc",
       "type": "tagOf",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-ls:measuredBy:acme-ft1-ls-tag",
@@ -737,7 +737,7 @@
       "to": "acme-ft1-ls-tag",
       "type": "measuredBy",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-doc-ba:documents:acme-ft1",
@@ -745,7 +745,7 @@
       "to": "acme-ft1",
       "type": "documents",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-doc-sp:documents:acme-ft1",
@@ -753,7 +753,7 @@
       "to": "acme-ft1",
       "type": "documents",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     },
     {
       "id": "e:acme-ft1-doc-wp:documents:acme-ft1",
@@ -761,7 +761,8 @@
       "to": "acme-ft1",
       "type": "documents",
       "source": "demo",
-      "createdAt": "2026-10-05T19:32:14.737Z"
+      "createdAt": "2026-10-05T19:41:45.209Z"
     }
-  ]
+  ],
+  "seedVersion": 2
 }

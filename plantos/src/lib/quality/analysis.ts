@@ -74,7 +74,7 @@ export function analyzeQuality(n: GraphNode, scrapCostPerUnit: number, now = Dat
   }));
   const base = mean(rows.map((r) => r.reject));
   const unitsPerDay = rows.reduce((a, r) => a + r.units, 0) / (hours / 24);
-  const conf = (p: number, nIn: number) => clamp(Math.min(1, -Math.log10(Math.max(p, 1e-300)) / 12) * Math.min(1, nIn / 60), 0, 1);
+  const conf = (p: number, nIn: number) => clamp(Math.min(1, -Math.log10(Math.max(p, 1e-300)) / 12) * Math.min(1, nIn / 60), 0, 0.95);
 
   const make = (kind: Finding["kind"], rules: Rule[], sel: (r: Row) => boolean, cat?: Finding["category"]): Finding | null => {
     const a = rows.filter(sel).map((r) => r.reject), b = rows.filter((r) => !sel(r)).map((r) => r.reject);

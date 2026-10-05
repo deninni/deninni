@@ -8,6 +8,9 @@ import { LAYOUTS } from "../twin/layouts";
 
 interface Ctx { nodes: GraphNode[]; edges: GraphEdge[]; at: string }
 
+/** Version der Demo-Struktur. Erhöhen, wenn sich die Demo-Daten ändern – Nutzerdaten bleiben erhalten. */
+export const SEED_VERSION = 2;
+
 function N(c: Ctx, id: string, type: NodeType, name: string, code?: string, props: Record<string, unknown> = {}): string {
   c.nodes.push({ id, type, name, code, props, source: "demo", createdAt: c.at });
   return id;
@@ -155,7 +158,7 @@ export function buildDemoGraph(tenant: string, now = Date.now()): GraphDoc {
     const fl = N(c, "acme-fl-l1", "sapFunctionalLocation", "TP ACME-W1-L1", "ACME-W1-L1");
     E(c, line, "sapLocation", fl);
     machine(c, line, plant, "acme1", fl, { id: "acme-ft1", code: "FT-1", name: "Fördertechnik FT-1", props: { profile: "m-ft7", offsetMin: 777, driftPhaseDays: 10, ratedCurrentA: 12, nominalRate: 120, unit: "Gebinde/min", maintenanceIntervalH: 3000 }, motorCode: "M1", plcCode: "PLC-A1", db: 40 }, {});
-    return { version: 1, tenant, seededAt: c.at, nodes: c.nodes, edges: c.edges };
+    return { version: 1, tenant, seededAt: c.at, seedVersion: SEED_VERSION, nodes: c.nodes, edges: c.edges };
   }
 
   const co = N(c, "co", "company", "Demo Beverages Group (DEMO)", "DBG", { demo: true });
@@ -165,16 +168,16 @@ export function buildDemoGraph(tenant: string, now = Date.now()): GraphDoc {
   const pl = child(c, emea, "cty-pl", "country", "Polen", "PL");
   const us = child(c, na, "cty-us", "country", "USA", "US");
 
-  type PlantSeed = { id: string; code: string; name: string; site: string; siteName: string; country: string; tz: string; technicians: number; windows: { weekday: number; startH: number; durH: number }[]; energyPrice?: number };
+  type PlantSeed = { id: string; code: string; name: string; site: string; siteName: string; siteCode: string; country: string; tz: string; technicians: number; windows: { weekday: number; startH: number; durH: number }[]; energyPrice?: number };
   const plantsSeed: PlantSeed[] = [
-    { id: "pl-nord", code: "NORD", name: "Werk Nord", site: "site-ham", siteName: "Standort Hamburg", country: de, tz: "Europe/Berlin", technicians: 3, windows: [{ weekday: 6, startH: 6, durH: 8 }] },
-    { id: "pl-sued", code: "SUED", name: "Werk Süd", site: "site-muc", siteName: "Standort München", country: de, tz: "Europe/Berlin", technicians: 2, windows: [{ weekday: 3, startH: 22, durH: 6 }, { weekday: 6, startH: 6, durH: 6 }] },
-    { id: "pl-posen", code: "POZ", name: "Werk Posen", site: "site-poz", siteName: "Standort Poznań", country: pl, tz: "Europe/Warsaw", technicians: 2, windows: [{ weekday: 0, startH: 6, durH: 10 }] },
-    { id: "pl-atl", code: "ATL", name: "Werk Atlanta", site: "site-atl", siteName: "Standort Atlanta", country: us, tz: "America/New_York", technicians: 4, windows: [{ weekday: 6, startH: 4, durH: 8 }] },
+    { id: "pl-nord", code: "NORD", name: "Werk Nord", site: "site-ham", siteName: "Standort Hamburg", siteCode: "HAM", country: de, tz: "Europe/Berlin", technicians: 3, windows: [{ weekday: 6, startH: 6, durH: 8 }] },
+    { id: "pl-sued", code: "SUED", name: "Werk Süd", site: "site-muc", siteName: "Standort München", siteCode: "MUC", country: de, tz: "Europe/Berlin", technicians: 2, windows: [{ weekday: 3, startH: 22, durH: 6 }, { weekday: 6, startH: 6, durH: 6 }] },
+    { id: "pl-posen", code: "POZ", name: "Werk Posen", site: "site-poz", siteName: "Standort Poznań", siteCode: "POZN", country: pl, tz: "Europe/Warsaw", technicians: 2, windows: [{ weekday: 0, startH: 6, durH: 10 }] },
+    { id: "pl-atl", code: "ATL", name: "Werk Atlanta", site: "site-atl", siteName: "Standort Atlanta", siteCode: "ATLG", country: us, tz: "America/New_York", technicians: 4, windows: [{ weekday: 6, startH: 4, durH: 8 }] },
   ];
   const plantIds: Record<string, string> = {};
   for (const p of plantsSeed) {
-    const site = child(c, p.country, p.site, "site", p.siteName, p.code);
+    const site = child(c, p.country, p.site, "site", p.siteName, p.siteCode);
     plantIds[p.code] = child(c, site, p.id, "plant", p.name, p.code, { timezone: p.tz, technicians: p.technicians, maintenanceWindows: p.windows, demo: true });
   }
 
@@ -222,5 +225,5 @@ export function buildDemoGraph(tenant: string, now = Date.now()): GraphDoc {
   machine(c, al1.id, plantIds.ATL, "atl", al1.fl, { id: "m-atl-af41", code: "AF-41", name: "Filler AF-41", props: { profile: "m-af12", offsetMin: 3301, driftPhaseDays: 30, ratedCurrentA: 21, nominalRate: 600, unit: "btl/min", maintenanceIntervalH: 2500 }, motorCode: "M-411", plcCode: "PLC21", db: 41 }, atlStock);
   machine(c, al1.id, plantIds.ATL, "atl", al1.fl, { id: "m-atl-ft42", code: "FT-42", name: "Conveyor FT-42", props: { profile: "m-ft7", offsetMin: 2711, driftPhaseDays: 60, ratedCurrentA: 11, nominalRate: 120, unit: "cases/min", maintenanceIntervalH: 3000 }, motorCode: "M42", plcCode: "PLC22", db: 42 }, atlStock);
 
-  return { version: 1, tenant, seededAt: c.at, nodes: c.nodes, edges: c.edges };
+  return { version: 1, tenant, seededAt: c.at, seedVersion: SEED_VERSION, nodes: c.nodes, edges: c.edges };
 }
