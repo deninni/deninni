@@ -1,4 +1,4 @@
-import type { Role } from "./users";
+import type { Role } from "./roles";
 
 /**
  * Signierte Sessions (HMAC-SHA256 über Web Crypto – läuft in Middleware und Route-Handlern).

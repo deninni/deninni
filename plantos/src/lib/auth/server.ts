@@ -2,7 +2,7 @@ import "server-only";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { SESSION_COOKIE, verifySession, type Session } from "./session";
-import { hasRole, type Role } from "./users";
+import { hasRole, type Role } from "./roles";
 
 export async function getSession(): Promise<Session | null> {
   const jar = await cookies();

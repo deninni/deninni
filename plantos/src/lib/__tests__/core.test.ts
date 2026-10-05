@@ -6,7 +6,7 @@ import path from "node:path";
 
 import { sampleMachine, kpis, series, activeIncidentAt, INCIDENTS } from "../demo/engine";
 import { signSession, verifySession } from "../auth/session";
-import { hasRole } from "../auth/users";
+import { hasRole } from "../auth/roles";
 import { rateLimit } from "../auth/rate-limit";
 import { guardTelemetry, checkTagName } from "../plc/tag-write-guard";
 import { enforceS7EdgeHonesty, freshness, isS7Address } from "../plc/edge-protocol";
