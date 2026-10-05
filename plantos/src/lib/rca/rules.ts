@@ -87,6 +87,17 @@ export function runRca(snap: Snapshot): RcaResult {
     });
   }
 
+  // Aktive Meldung ohne passende Regel (z. B. Anfang eines Vorfalls, Werte noch unter Schwelle):
+  // ehrlich als niedrige Konfidenz ausweisen statt „keine Auffälligkeit“ zu behaupten.
+  const inc = snap.activeIncident;
+  if (inc && !h.some((x) => x.component === inc.component)) {
+    h.push({
+      code: inc.code, title: inc.title, component: inc.component, confidence: "niedrig",
+      evidence: [`Meldung ${inc.code} aktiv (${inc.severity})`, "Messwerte noch unter Regel-Schwellen – Trend beobachten"],
+      checks: ["Komponente vor Ort sichten, bevor Hardware angefasst wird", "Verlauf in Historie prüfen (letzte 30 min)"],
+    });
+  }
+
   return {
     machineId: snap.machineId,
     machineCode: m.code,

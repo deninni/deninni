@@ -74,7 +74,7 @@ export function Selectable({ id, health, selected, onSelect, position, children,
 export function NodeLabel({ text, y = 1.4, show }: { text: string; y?: number; show: boolean }) {
   if (!show) return null;
   return (
-    <Html position={[0, y + 0.42, 0]} center distanceFactor={18} style={{ pointerEvents: "none" }}>
+    <Html position={[0, y + 0.42, 0]} center distanceFactor={14} style={{ pointerEvents: "none" }}>
       <div style={{ fontSize: 8, fontWeight: 500, color: "rgba(232,238,246,.88)", background: "rgba(14,20,30,.22)", backdropFilter: "blur(4px)", border: "1px solid rgba(148,163,184,.2)", borderRadius: 3, padding: "1px 4px", maxWidth: 108, whiteSpace: "nowrap" }}>
         {shortComponentLabel(text)}
       </div>
@@ -113,7 +113,7 @@ export function FloorPlate({ size = 30 }: { size?: number }) {
     <group>
       <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
         <planeGeometry args={[size, size * 0.6]} />
-        <meshPhysicalMaterial map={tex} roughness={0.7} metalness={0.1} clearcoat={0.35} clearcoatRoughness={0.4} />
+        <meshPhysicalMaterial map={tex} color="#7d8794" roughness={0.82} metalness={0.05} clearcoat={0.2} clearcoatRoughness={0.5} />
       </mesh>
       <gridHelper args={[size, size, "#2a3344", "#1a2230"]} position={[0, 0.003, 0]} />
     </group>
@@ -335,7 +335,7 @@ export function PackageMesh({ wrapped, blocked }: { wrapped?: boolean; blocked?:
 
 export function MicroLabel({ text, position }: { text: string; position: [number, number, number] }) {
   return (
-    <Html position={position} center distanceFactor={18} style={{ pointerEvents: "none" }}>
+    <Html position={position} center distanceFactor={14} style={{ pointerEvents: "none" }}>
       <div style={{ fontSize: 7, fontFamily: "var(--font-geist-mono)", color: "#7eb6c9", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>{text}</div>
     </Html>
   );

@@ -37,7 +37,7 @@ export function LoginForm({ next }: { next: string }) {
         <input className="input-industrial mt-1 w-full" type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required autoFocus />
       </label>
       {error && <div role="alert" className="rounded-md border border-status-fault/40 bg-status-fault/10 px-3 py-2 text-[12px] text-status-fault">{error}</div>}
-      <button disabled={busy} className="focus-ring min-h-11 w-full rounded-md bg-accent text-[13px] font-medium text-white transition-colors hover:bg-accent/85 disabled:opacity-60">
+      <button type="submit" disabled={busy} className="focus-ring min-h-11 w-full rounded-md bg-accent text-[13px] font-medium text-white transition-colors hover:bg-accent/85 disabled:opacity-60">
         {busy ? "Anmelden …" : "Anmelden"}
       </button>
       <div className="grid grid-cols-2 gap-2">

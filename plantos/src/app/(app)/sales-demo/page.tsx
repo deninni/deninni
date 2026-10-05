@@ -8,8 +8,8 @@ export const metadata = { title: "Sales Demo" };
 const STEPS = [
   { href: "/dashboard", title: "Control Room", text: "Drei Linien, Aufmerksamkeit zuerst. Eine Störung, eine Warnung – keine KPI-Wand." },
   { href: "/digital-twin?machine=m-af12", title: "Digital Twin AF-12", text: "Füller, Sternräder, Verschließer in 3D. Klick auf Komponente → Zustand, SPS-Tag, Ursache." },
-  { href: "/anlagen/m-ft7?tab=rca", title: "Ursachenanalyse FT-7", text: "Regelbaum mit Evidenz und Prüfschritten. Ein Klick: Ticket aus RCA – Duplikate werden zusammengeführt." },
-  { href: "/ai", title: "Anlagen-Copilot", text: "„Warum ist FT-7 auffällig?“ – Antwort aus Messwerten. „Schalte FT-7 ab“ – klares Nein (Trust: Supervised)." },
+  { href: "/historie", title: "Historie & Ursachenanalyse", text: "Anomalie-Fenster der letzten Stunden, Regelbaum mit Evidenz und Prüfschritten. Ein Klick: Ticket aus RCA – Duplikate werden zusammengeführt." },
+  { href: "/ai", title: "Anlagen-Copilot", text: "„Warum ist die Linie auffällig?“ – Antwort aus Messwerten. „Schalte FT-7 ab“ – klares Nein (Trust: Supervised)." },
   { href: "/connect", title: "Connect & Schreibschutz", text: "Edge-Agent im OT-Netz, nur ausgehend, nur Lesen. Symbolliste per CSV statt Projektzugriff." },
   { href: "/handover", title: "Schichtübergabe", text: "Was die nächste Schicht prüfen muss – als Klartext oder PDF mit Unterschriftzeile." },
 ];

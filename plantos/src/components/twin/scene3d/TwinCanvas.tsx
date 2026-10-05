@@ -18,11 +18,18 @@ function LocalEnvironment() {
     const pmrem = new THREE.PMREMGenerator(gl);
     const env = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
     scene.environment = env;
-    scene.environmentIntensity = 0.75;
+    scene.environmentIntensity = 0.5;
     return () => { env.dispose(); pmrem.dispose(); scene.environment = null; };
   }, [gl, scene]);
   return null;
 }
+
+/** Kamera je Anlage so wählen, dass die ganze Linie sichtbar ist (mobil weiter weg). */
+const CAMERA: Record<string, { pos: [number, number, number]; target: [number, number, number] }> = {
+  "m-af12": { pos: [5.5, 11, 18.5], target: [0.6, 0.6, 0.6] },
+  "m-vl3": { pos: [4.5, 8.5, 13.5], target: [0.2, 0.6, 0.6] },
+  "m-ft7": { pos: [4.5, 8.5, 13.5], target: [0.2, 0.6, 0.6] },
+};
 
 function useBottleBudget() {
   const [b, setB] = useState(120);
@@ -37,6 +44,9 @@ function useBottleBudget() {
 
 export default function TwinCanvas(props: Omit<SceneProps, "bottleBudget">) {
   const budget = useBottleBudget();
+  const cam = CAMERA[props.twin.machineId] ?? CAMERA["m-ft7"];
+  const zoom = budget <= 48 ? 1.55 : budget <= 80 ? 1.2 : 1;
+  const pos = cam.pos.map((v, i) => cam.target[i] + (v - cam.target[i]) * zoom) as [number, number, number];
   const scene = useMemo(() => {
     const p = { ...props, bottleBudget: budget };
     if (props.twin.machineId === "m-af12") return <Af12Scene {...p} />;
@@ -47,14 +57,15 @@ export default function TwinCanvas(props: Omit<SceneProps, "bottleBudget">) {
   return (
     <div className="relative h-full w-full" style={{ background: "radial-gradient(ellipse at 50% 30%, #1a2434 0%, #0a0e14 60%, #06080c 100%)" }}>
       <Canvas
-        shadows
+        shadows="percentage"
         dpr={[1, 1.5]}
-        camera={{ position: [8.5, 7.2, 11.5], fov: 36, near: 0.1, far: 90 }}
-        gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.12 }}
+        key={`${props.twin.machineId}-${zoom}`}
+        camera={{ position: pos, fov: 36, near: 0.1, far: 120 }}
+        gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.0 }}
         onPointerMissed={() => props.onSelect("")}
       >
         <color attach="background" args={["#0a0e14"]} />
-        <fog attach="fog" args={["#0a0e14", 26, 55]} />
+        <fog attach="fog" args={["#0a0e14", 30, 70]} />
         <Suspense fallback={null}>
           <LocalEnvironment />
           <SceneLights />
@@ -62,7 +73,7 @@ export default function TwinCanvas(props: Omit<SceneProps, "bottleBudget">) {
           {scene}
           <ContactShadows position={[0, 0.01, 0]} opacity={0.45} scale={34} blur={2.2} far={6} />
         </Suspense>
-        <OrbitControls enableDamping dampingFactor={0.08} minPolarAngle={0.28} maxPolarAngle={Math.PI / 2.12} minDistance={4} maxDistance={28} target={[0.8, 0.55, 0]} />
+        <OrbitControls enableDamping dampingFactor={0.08} minPolarAngle={0.28} maxPolarAngle={Math.PI / 2.12} minDistance={4} maxDistance={40} target={cam.target} />
       </Canvas>
       <div className="pointer-events-none absolute bottom-2 left-3 text-[10px] text-stainless-dim">
         3D · Industrial PBR · Orbit · Klick = Detail

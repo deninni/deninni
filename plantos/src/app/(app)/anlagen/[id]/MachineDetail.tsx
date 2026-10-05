@@ -111,7 +111,7 @@ export function RcaPanel({ machineId, canWrite }: { machineId: string; canWrite:
 
   if (!rca.data) return <div className="card h-32 animate-pulse" />;
   return (
-    <Card title="Ursachenanalyse · Regelbaum (Heuristik)" action={<Badge tone="muted">kein ML · nicht zertifiziert</Badge>}>
+    <Card title="Ursachenanalyse" action={<Badge tone="muted" title="Regelbaum · kein ML · nicht zertifiziert">Heuristik</Badge>}>
       {rca.data.hypotheses.length === 0 && <p className="text-[13px] text-muted">{rca.data.note}</p>}
       <ul className="space-y-3">
         {rca.data.hypotheses.map((h) => (

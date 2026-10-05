@@ -270,3 +270,12 @@ test("store: mutateStore schreibt atomar in PLANTOS_DATA_DIR", async () => {
   const s = await readStore();
   assert.equal(s.tickets.length, 3);
 });
+
+test("RCA: aktive Meldung ohne Regeltreffer → ehrliche Hypothese mit niedriger Konfidenz", () => {
+  const pts = series("m-af12", T0 - 12 * 3600_000, T0, 60_000);
+  const early = pts.find((p) => p.activeIncident && p.signals.temperatureC < 50 && p.signals.rejectRatePct < 1.5)!;
+  assert.ok(early, "Fixture: frühe Vorfallphase gefunden");
+  const r = runRca(early);
+  const h = r.hypotheses.find((x) => x.code === early.activeIncident!.code);
+  assert.equal(h?.confidence, "niedrig");
+});

@@ -12,7 +12,7 @@ export const AF12_WORLD: Record<string, [number, number, number]> = {
   "b-101": [-9.2, 0, 0], "sr-01": [-6.6, 0, 0], "rn-01": [-4.5, 0, 0], "sr-02": [-2.5, 0, 0], "fc-01": [0.2, 0, 0],
   "sr-03": [3.0, 0, 0], "cp-01": [5.0, 0, 0], "lb-01": [6.9, 0, 0], "rj-01": [8.2, 0, 1.35], "b-102": [8.4, 0, 0], "pk-01": [10.6, 0, 0],
   "m-001": [0.2, 0, 3.4], "p-2": [-1.6, 0, 3.4], "fv-01": [0.2, 0, -2.5], "e-stop": [10.8, 0, 2.8],
-  "ls-17": [3.0, 0, -1.4], "s-speed": [1.4, 0, 3.4], "tt-214": [-1.0, 0, -2.4],
+  "ls-17": [3.0, 0, -1.4], "s-speed": [1.9, 0, 2.2], "tt-214": [-1.3, 0, -2.3],
 };
 
 function Spinner({ speed, playing, children, y = 0 }: { speed: number; playing: boolean; children: React.ReactNode; y?: number }) {

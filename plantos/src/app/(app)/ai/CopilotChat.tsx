@@ -6,7 +6,7 @@ import { postJson } from "@/lib/client/usePoll";
 
 type Msg = { role: "user" | "assistant"; text: string; kind?: string; sources?: string[] };
 
-const CHIPS = ["Wie ist der Zustand?", "Warum ist FT-7 auffällig?", "OEE der Linie", "Ticket aus RCA", "Stecker TT-214", "Offene Tickets"];
+const CHIPS = ["Wie ist der Zustand?", "Warum ist die Linie auffällig?", "OEE der Linie", "Ticket aus RCA", "Stecker TT-214", "Offene Tickets"];
 
 export function CopilotChat() {
   const [msgs, setMsgs] = useState<Msg[]>([{ role: "assistant", text: "Ich beantworte Fragen zu den Anlagen in Werk Nord – aus Messwerten, Meldungen und Ursachenanalyse. Steuern kann ich nichts." }]);
