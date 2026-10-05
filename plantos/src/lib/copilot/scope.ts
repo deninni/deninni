@@ -7,7 +7,7 @@ export const PLANT_SCOPE_REFUSAL =
 export const CONTROL_REFUSAL =
   "Nein. plantOS-Trust: Supervised. Ich kann melden und Tickets anlegen, aber nicht abschalten, keine Sollwerte schreiben und nichts bestellen. Freigabe und Eingriff macht der Mensch vor Ort.";
 
-const PLANT_WORDS = /(anlage|maschine|linie|af-?12|vl-?3|ft-?7|füller|fueller|sternrad|motor|antrieb|sensor|temperatur|strom|vibration|schwingung|oee|ausschuss|meldung|alarm|alert|störung|stoerung|ticket|rca|ursache|schicht|übergabe|uebergabe|sps|plc|edge|tunnel|band|förder|foerder|sorter|flasche|format|kipp|stecker|tt-?214|wartung|instandhaltung|status|leistung|ausbringung|verfügbarkeit|qualität|zustand|werk\b|produktion|m-?001|pumpe|ventil|etikett|verschließ|packer|spüler)/i;
+const PLANT_WORDS = /(anlage|maschine|linie|af-?12|vl-?3|ft-?7|füller|fueller|sternrad|motor|antrieb|sensor|temperatur|strom|vibration|schwingung|oee|ausschuss|meldung|alarm|alert|störung|stoerung|ticket|rca|ursache|schicht|übergabe|uebergabe|sps|plc|edge|tunnel|band|förder|foerder|sorter|flasche|format|kipp|stecker|tt-?214|wartung|instandhaltung|status|leistung|ausbringung|verfügbarkeit|qualität|zustand|werk\b|produktion|m-?001|pumpe|ventil|etikett|verschließ|packer|spüler|ersatzteil|energie|verbrauch|kosten|kritisch|ausfall|fehler|wartung|werk|af-?\d+|fb\d+|m\d+)/i;
 const OFF_TOPIC = /(wetter|politik|wahl|fußball|fussball|rezept|witz|aktie|bitcoin|promi|film|serie|urlaub|horoskop|hauptstadt|präsident|praesident|bundeskanzler)/i;
 const CONTROL = /(stopp|stoppe|stop\b|abschalt|ausschalt|anhalten|herunterfahr|shutdown|schreib|setze|sollwert|setpoint|erhöhe|erhoehe|senke|reduzier|starte|einschalt|override|forcier|force\b|bestell|auftrag erteil|tausch(e)? den sensor|sensor tauschen)/i;
 

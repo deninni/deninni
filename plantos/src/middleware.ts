@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { SESSION_COOKIE, verifySession } from "@/lib/auth/session";
 
 /** Öffentlich: Login, Auth-API, Health, Edge-Ingest (prüft Token selbst), statische Assets. */
-const PUBLIC = [/^\/login$/, /^\/api\/auth\/login$/, /^\/api\/health$/, /^\/api\/edge\/(telemetry|heartbeat)$/];
+const PUBLIC = [/^\/login$/, /^\/api\/auth\/login$/, /^\/api\/auth\/oidc\/(start|callback)$/, /^\/api\/health$/, /^\/api\/edge\/(telemetry|heartbeat)$/];
 
 export async function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl;

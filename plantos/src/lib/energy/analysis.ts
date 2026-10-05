@@ -43,7 +43,7 @@ export function analyzeEnergy(n: GraphNode, pricePerKwh: number, now = Date.now(
     total += kwh;
     if (p.state === "STOPPED") idle += kwh;
     good += p.signals.outputRate * 5;
-    const d = Math.floor((p.ts - (now - days * D)) / D);
+    const d = Math.min(days - 1, Math.floor((p.ts - (now - days * D)) / D));
     const e = dayMap.get(d) ?? { kwh: 0, units: 0 };
     e.kwh += kwh; e.units += p.signals.outputRate * 5;
     dayMap.set(d, e);
