@@ -10,7 +10,7 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
   const auth = await requireRole("operator");
   if ("response" in auth) return auth.response;
   const { id } = await params;
-  const alert = (await currentAlerts()).find((a) => a.id === id);
+  const alert = (await currentAlerts(Date.now(), auth.session.tenant)).find((a) => a.id === id);
   if (!alert) return NextResponse.json({ error: "Meldung unbekannt" }, { status: 404 });
   const body = (await req.json().catch(() => ({}))) as { action?: string; text?: string };
   const who = auth.session.sub;
@@ -21,9 +21,9 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
       title: `${alert.machineCode}: ${alert.title}`,
       description: `Aus Meldung ${alert.code} (${alert.severity}), seit ${alert.startedAt}.`,
       machineId: alert.machineId, alertId: alert.id, source: "alert",
-      priority: alert.severity === "FAULT" ? "high" : "medium", createdBy: who,
+      priority: alert.severity === "FAULT" ? "high" : "medium", createdBy: who, tenant: auth.session.tenant,
     });
-    await audit({ actor: who, action: r.deduped ? "ticket.reported" : "ticket.create", target: r.ticket.id, detail: alert.id });
+    await audit({ tenant: auth.session.tenant, actor: who, action: r.deduped ? "ticket.reported" : "ticket.create", target: r.ticket.id, detail: alert.id });
     return NextResponse.json(r);
   }
 
@@ -37,7 +37,7 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     if (body.action === "close") { st.closedAt = now; st.closedBy = who; st.acknowledgedAt ??= now; st.acknowledgedBy ??= who; }
     if (text) st.comments.push({ by: who, at: now, text });
     return st;
-  });
-  await audit({ actor: who, action: `alert.${body.action}`, target: id, detail: text || undefined });
+  }, auth.session.tenant);
+  await audit({ tenant: auth.session.tenant, actor: who, action: `alert.${body.action}`, target: id, detail: text || undefined });
   return NextResponse.json({ ok: true, state });
 }

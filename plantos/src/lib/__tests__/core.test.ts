@@ -59,7 +59,7 @@ test("engine: activeIncidentAt erkennt Fenster", () => {
 
 // ── Auth ────────────────────────────────────────────────────
 test("session: signiert, verifiziert, manipuliert → null, abgelaufen → null", async () => {
-  const tok = await signSession({ sub: "demo@plantos.local", name: "Demo", role: "admin" }, T0);
+  const tok = await signSession({ sub: "demo@plantos.local", name: "Demo", role: "admin", tenant: "demo" }, T0);
   const s = await verifySession(tok, T0 + 1000);
   assert.equal(s?.role, "admin");
   const [body, sig] = tok.split(".");

@@ -26,7 +26,7 @@ export function getFormat(id: string): BottleFormat {
 
 const G = 9.81;
 const STAR_RADIUS_M = 0.36;
-const MAX_LINE_SPEED_MS = 1.45; // bei 100 %
+export const MAX_LINE_SPEED_MS = 1.45; // bei 100 %
 /** Annahme: Führungsgeländer am Sternrad nimmt ~81 % des Kippmoments auf (DEMO-Kalibrierung). */
 const GUIDE_RESIDUAL = 0.185;
 

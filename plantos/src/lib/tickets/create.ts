@@ -10,6 +10,8 @@ export interface NewTicket {
   priority?: Ticket["priority"];
   source?: Ticket["source"];
   createdBy: string;
+  /** Mandant (Default „demo“) */
+  tenant?: string;
 }
 
 export interface CreateResult {
@@ -48,5 +50,5 @@ export function applyNewTicket(tickets: Ticket[], input: NewTicket, now = new Da
 }
 
 export function createTicket(input: NewTicket): Promise<CreateResult> {
-  return mutateStore((s) => applyNewTicket(s.tickets, input));
+  return mutateStore((s) => applyNewTicket(s.tickets, input), input.tenant ?? "demo");
 }

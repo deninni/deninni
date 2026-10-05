@@ -27,13 +27,13 @@ export async function POST(req: NextRequest) {
   }
   const user = demoUsers().find((u) => u.email === email);
   if (!user || !safeEq(user.password, password)) {
-    await audit({ actor: email || "?", action: "login.failed", detail: ip, ok: false });
+    await audit({ tenant: user?.tenant ?? "demo", actor: email || "?", action: "login.failed", detail: ip, ok: false });
     return NextResponse.json({ error: "E-Mail oder Passwort falsch" }, { status: 401 });
   }
   resetRateLimit(`login:${ip}:${email}`);
-  const token = await signSession({ sub: user.email, name: user.name, role: user.role });
-  await audit({ actor: user.email, action: "login.ok", detail: user.role, ok: true });
-  const res = NextResponse.json({ ok: true, name: user.name, role: user.role });
+  const token = await signSession({ sub: user.email, name: user.name, role: user.role, tenant: user.tenant });
+  await audit({ tenant: user.tenant, actor: user.email, action: "login.ok", detail: user.role, ok: true });
+  const res = NextResponse.json({ ok: true, name: user.name, role: user.role, tenant: user.tenant });
   res.cookies.set(SESSION_COOKIE, token, {
     httpOnly: true,
     sameSite: "lax",

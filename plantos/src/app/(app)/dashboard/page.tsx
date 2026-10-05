@@ -13,6 +13,7 @@ import { getMachine } from "@/lib/plants";
 import { runRca } from "@/lib/rca/rules";
 import { de, agoDe } from "@/lib/format";
 import { BRAND } from "@/lib/brand";
+import { getSession } from "@/lib/auth/server";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Dashboard" };
@@ -22,7 +23,7 @@ const RANK = { FAULT: 0, WARN: 1, STOPPED: 2, RUNNING: 3 } as const;
 export default async function DashboardPage() {
   const now = Date.now();
   const snaps = (await liveAll(now)).sort((a, b) => RANK[a.state] - RANK[b.state]);
-  const alerts = (await currentAlerts(now)).filter((a) => a.status !== "CLOSED");
+  const alerts = (await currentAlerts(now, (await getSession())?.tenant ?? "demo")).filter((a) => a.status !== "CLOSED");
   const active = alerts.filter((a) => a.active);
   const insights = snaps.flatMap((s) => runRca(s).hypotheses.slice(0, 1).map((h) => ({ m: getMachine(s.machineId)!, h })));
   const k = snaps.map((s) => ({ s, k: kpis(s.machineId, now) }));

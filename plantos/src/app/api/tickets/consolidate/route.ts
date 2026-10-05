@@ -7,7 +7,7 @@ import { audit } from "@/lib/audit";
 export async function POST() {
   const auth = await requireRole("operator");
   if ("response" in auth) return auth.response;
-  const r = await mutateStore((s) => consolidate(s.tickets));
-  await audit({ actor: auth.session.sub, action: "ticket.consolidate", detail: `${r.merged} zusammengeführt` });
+  const r = await mutateStore((s) => consolidate(s.tickets), auth.session.tenant);
+  await audit({ tenant: auth.session.tenant, actor: auth.session.sub, action: "ticket.consolidate", detail: `${r.merged} zusammengeführt` });
   return NextResponse.json(r);
 }

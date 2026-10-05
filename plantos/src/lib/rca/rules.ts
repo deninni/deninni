@@ -45,11 +45,11 @@ export function runRca(snap: Snapshot): RcaResult {
         checks: ["Umgebungstemperatur / Hallenlüftung prüfen", "Lüfterrad M-001 Sichtprüfung"],
       });
     }
-    if (s.rejectRatePct > 2.2) {
+    if (s.rejectRatePct > 2.8) {
       h.push({
         code: "TIP-SR03", title: "Flaschen kippen am Sternrad SR-03 (Übergabe Füller → Verschließer)", component: "sr-03",
         confidence: s.vibrationMmS > 2.8 ? "hoch" : "mittel",
-        evidence: [`Ausschuss ${fmt(s.rejectRatePct, 2)} % (> 2,2)`, `Vibration ${fmt(s.vibrationMmS, 2)} mm/s`],
+        evidence: [`Ausschuss ${fmt(s.rejectRatePct, 2)} % (> 2,8)`, `Vibration ${fmt(s.vibrationMmS, 2)} mm/s`],
         checks: ["Führungsgeländer SR-03 auf Formatteile 1,0 L prüfen", "Sternradtaschen auf Verschleiß prüfen", "Geschwindigkeit in Simulation gegen Format prüfen"],
       });
     }

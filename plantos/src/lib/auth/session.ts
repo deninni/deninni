@@ -1,4 +1,4 @@
-import type { Role } from "./roles";
+import { isRole, type Role } from "./roles";
 
 /**
  * Signierte Sessions (HMAC-SHA256 über Web Crypto – läuft in Middleware und Route-Handlern).
@@ -12,6 +12,12 @@ export interface Session {
   sub: string;
   name: string;
   role: Role;
+  /** Mandant – alle Daten-APIs filtern hierauf */
+  tenant: string;
+  /** Sitzungs-ID (für serverseitigen Widerruf beim Logout) */
+  sid: string;
+  /** Anmeldeverfahren */
+  amr: "password" | "oidc";
   iat: number;
   exp: number;
 }
@@ -58,8 +64,10 @@ function timingSafeEqual(a: Uint8Array, b: Uint8Array): boolean {
   return r === 0;
 }
 
-export async function signSession(data: Omit<Session, "iat" | "exp">, now = Date.now()): Promise<string> {
-  const payload: Session = { ...data, iat: now, exp: now + sessionHours() * 3600_000 };
+export async function signSession(data: Omit<Session, "iat" | "exp" | "sid" | "amr"> & { amr?: Session["amr"] }, now = Date.now()): Promise<string> {
+  const sidBytes = new Uint8Array(12);
+  crypto.getRandomValues(sidBytes);
+  const payload: Session = { amr: "password", ...data, sid: b64url(sidBytes), iat: now, exp: now + sessionHours() * 3600_000 };
   const body = b64url(enc.encode(JSON.stringify(payload)));
   const sig = b64url(await hmac(body));
   return `${body}.${sig}`;
@@ -74,7 +82,9 @@ export async function verifySession(token: string | undefined | null, now = Date
     if (!timingSafeEqual(expected, fromB64url(sig))) return null;
     const payload = JSON.parse(new TextDecoder().decode(fromB64url(body))) as Session;
     if (typeof payload.exp !== "number" || payload.exp < now) return null;
-    if (!["viewer", "operator", "admin"].includes(payload.role)) return null;
+    if (!isRole(payload.role)) return null;
+    if (typeof payload.tenant !== "string" || !/^[a-z0-9][a-z0-9-]{1,39}$/.test(payload.tenant)) return null;
+    if (typeof payload.sid !== "string") return null;
     return payload;
   } catch {
     return null;

@@ -18,6 +18,20 @@ export interface Signals {
   vibrationMmS: number;
   outputRate: number;
   rejectRatePct: number;
+  /** Prozessdruck (AF-12: Fülldruck, sonst Druckluft) in bar */
+  pressureBar: number;
+  /** elektrische Wirkleistung der Anlage in kW (Antrieb + Nebenaggregate) */
+  powerKw: number;
+}
+
+/**
+ * Variante eines Profils für weitere (Demo-)Anlagen in anderen Werken:
+ * gleiche Physik, eigener Zeitversatz (andere Vorfallzeitpunkte) und eigene Verschleißphase.
+ */
+export interface Variant {
+  key: string;
+  offsetMin: number;
+  driftPhaseDays: number;
 }
 
 export interface Snapshot {
@@ -54,15 +68,58 @@ export const INCIDENTS: Record<MachineId, IncidentDef[]> = {
   ],
 };
 
-const BASE: Record<MachineId, { speed: number; current: number; temp: number; vib: number }> = {
+export const BASE: Record<MachineId, { speed: number; current: number; temp: number; vib: number }> = {
   "m-af12": { speed: 86, current: 18.5, temp: 46, vib: 2.1 },
   "m-vl3": { speed: 78, current: 11.2, temp: 52, vib: 1.6 },
   "m-ft7": { speed: 72, current: 7.8, temp: 39, vib: 2.8 },
 };
 
 const MIN = 60_000;
+const DAY = 86_400_000;
 
-export function activeIncidentAt(machineId: MachineId, ts: number): IncidentDef | null {
+/**
+ * Langsamer, deterministischer Verschleiß (Sägezahn: Instandsetzung setzt ihn zurück).
+ * Grundlage für Trend-/Prognosetests – DEMO, kein realer Anlagenzustand.
+ */
+export const DRIFT: Record<MachineId, { signal: "vibrationMmS" | "temperatureC"; perDay: number; cycleDays: number; epoch: number }> = {
+  "m-af12": { signal: "vibrationMmS", perDay: 0.045, cycleDays: 120, epoch: Date.UTC(2026, 0, 1) },
+  "m-vl3": { signal: "temperatureC", perDay: 0.0, cycleDays: 365, epoch: Date.UTC(2026, 0, 1) },
+  "m-ft7": { signal: "temperatureC", perDay: 0.11, cycleDays: 150, epoch: Date.UTC(2026, 0, 1) },
+};
+
+/** Tage seit letzter (simulierter) Instandsetzung. */
+export function driftDays(machineId: MachineId, ts: number, phaseDays = 0): number {
+  const d = DRIFT[machineId];
+  const days = (ts - d.epoch) / DAY + phaseDays;
+  return ((days % d.cycleDays) + d.cycleDays) % d.cycleDays;
+}
+
+/** Zeitpunkt der letzten (simulierten) Instandsetzung. */
+export function lastDriftReset(machineId: MachineId, ts: number, phaseDays = 0): number {
+  return ts - driftDays(machineId, ts, phaseDays) * DAY;
+}
+
+const PRESSURE_BASE: Record<MachineId, number> = { "m-af12": 5.15, "m-vl3": 6.1, "m-ft7": 6.0 };
+const POWER: Record<MachineId, { aux: number; idle: number }> = {
+  "m-af12": { aux: 6.0, idle: 4.5 },
+  "m-vl3": { aux: 38.0, idle: 22.0 }, // Shrink-Tunnel heizt auch im Stillstand
+  "m-ft7": { aux: 1.5, idle: 0.8 },
+};
+
+/** Produktionsplan (DEMO): Formatwechsel alle 4 h auf AF-12. */
+export function productAt(machineId: MachineId, ts: number): string {
+  if (machineId !== "m-af12") return machineId === "m-vl3" ? "6er-Pack" : "Gebinde";
+  const block = Math.floor(ts / (4 * 3600_000));
+  return ["0.5", "1.0", "1.5", "1.0"][((block % 4) + 4) % 4];
+}
+
+export function shiftAt(ts: number): "Früh" | "Spät" | "Nacht" {
+  const h = Number(new Intl.DateTimeFormat("de-DE", { hour: "numeric", hourCycle: "h23", timeZone: "Europe/Berlin" }).format(new Date(ts)));
+  return h >= 6 && h < 14 ? "Früh" : h >= 14 && h < 22 ? "Spät" : "Nacht";
+}
+
+export function activeIncidentAt(machineId: MachineId, ts: number, offsetMin = 0): IncidentDef | null {
+  ts += offsetMin * MIN;
   const minute = ts / MIN;
   for (const inc of INCIDENTS[machineId]) {
     const phase = (((minute - inc.offsetMin) % inc.periodMin) + inc.periodMin) % inc.periodMin;
@@ -87,22 +144,44 @@ function plannedStop(machineId: MachineId, ts: number): boolean {
 }
 
 export function sampleMachine(machineId: MachineId, ts: number = Date.now()): Snapshot {
+  return sampleProfile(machineId, ts);
+}
+
+/** Profil-Sample, optional als Variante (andere Anlage gleichen Typs in einem anderen Werk). */
+export function sampleProfile(machineId: MachineId, realTs: number = Date.now(), variant?: Variant): Snapshot {
   const b = BASE[machineId];
   const def = getMachine(machineId)!;
+  const ts = realTs + (variant?.offsetMin ?? 0) * MIN;
+  const nk = variant ? `${machineId}:${variant.key}` : machineId;
   const inc = activeIncidentAt(machineId, ts);
   const stopped = plannedStop(machineId, ts);
 
-  const n1 = smoothNoise(machineId + ":speed", ts, 45_000);
-  const n2 = smoothNoise(machineId + ":cur", ts, 20_000);
-  const n3 = smoothNoise(machineId + ":temp", ts, 180_000);
-  const n4 = smoothNoise(machineId + ":vib", ts, 8_000);
-  const jitter = noise01(machineId + ":j", Math.floor(ts / 2000)) - 0.5;
+  const n1 = smoothNoise(nk + ":speed", ts, 45_000);
+  const n2 = smoothNoise(nk + ":cur", ts, 20_000);
+  const n3 = smoothNoise(nk + ":temp", ts, 180_000);
+  const n4 = smoothNoise(nk + ":vib", ts, 8_000);
+  const n5 = smoothNoise(nk + ":press", ts, 600_000);
+  const jitter = noise01(nk + ":j", Math.floor(ts / 2000)) - 0.5;
 
   let speed = b.speed + n1 * 4 + jitter * 0.6;
   let current = b.current * (speed / b.speed) + n2 * 0.6 + jitter * 0.2;
   let temp = b.temp + n3 * 2.2;
   let vib = b.vib + n4 * 0.35;
   let reject = 0.6 + Math.max(0, n2) * 0.4;
+  let pressure = PRESSURE_BASE[machineId] + n5 * 0.6;
+
+  // Verschleiß-Trend (Sägezahn), DEMO
+  const drift = DRIFT[machineId];
+  const dd = driftDays(machineId, realTs, variant?.driftPhaseDays ?? 0);
+  if (drift.signal === "vibrationMmS") vib += drift.perDay * dd;
+  else temp += drift.perDay * dd;
+
+  // Prozessabhängiger Ausschuss (DEMO-Prozessmodell): hohe Bandgeschwindigkeit + niedriger Fülldruck
+  if (machineId === "m-af12") {
+    reject += Math.max(0, speed - 86) * 0.05;
+    if (speed > 87 && pressure < 4.8) reject += 1.1;
+    if (productAt(machineId, ts) === "1.5") reject += 0.2;
+  }
 
   if (inc) {
     const ramp = Math.min(1, (((ts / MIN - inc.offsetMin) % inc.periodMin) + inc.periodMin) % inc.periodMin / 2);
@@ -121,8 +200,10 @@ export function sampleMachine(machineId: MachineId, ts: number = Date.now()): Sn
   }
 
   if (stopped) {
-    speed = 0; current = 0.4; vib = 0.1; reject = 0;
+    speed = 0; current = 0.4; vib = 0.1; reject = 0; pressure = PRESSURE_BASE[machineId] * 0.6;
   }
+  const pw = POWER[machineId];
+  const power = stopped ? pw.idle : (Math.sqrt(3) * 400 * current * 0.85) / 1000 + pw.aux;
 
   speed = clamp(speed, 0, 100);
   const output = stopped ? 0 : (def.nominalRate * speed) / 100 * (1 - reject / 100);
@@ -141,6 +222,8 @@ export function sampleMachine(machineId: MachineId, ts: number = Date.now()): Sn
       vibrationMmS: round(vib, 2),
       outputRate: round(output, 1),
       rejectRatePct: round(reject, 2),
+      pressureBar: round(pressure, 2),
+      powerKw: round(power, 2),
     },
   };
 }
@@ -150,10 +233,10 @@ export function sampleAll(ts: number = Date.now()): Snapshot[] {
 }
 
 /** Zeitreihe aus der Engine (Historie = Engine zu vergangenen Zeitpunkten). */
-export function series(machineId: MachineId, fromTs: number, toTs: number, stepMs: number): Snapshot[] {
+export function series(machineId: MachineId, fromTs: number, toTs: number, stepMs: number, variant?: Variant): Snapshot[] {
   const out: Snapshot[] = [];
   const start = Math.floor(fromTs / stepMs) * stepMs;
-  for (let t = start; t <= toTs; t += stepMs) out.push(sampleMachine(machineId, t));
+  for (let t = start; t <= toTs; t += stepMs) out.push(sampleProfile(machineId, t, variant));
   return out;
 }
 
@@ -167,13 +250,13 @@ export interface Kpis {
 }
 
 /** OEE nach Standarddefinition über ein Zeitfenster (Default: laufende Schicht 8 h, Raster 1 min). */
-export function kpis(machineId: MachineId, toTs: number = Date.now(), windowMin = 480): Kpis {
-  const pts = series(machineId, toTs - windowMin * MIN, toTs, MIN);
+export function kpis(machineId: MachineId, toTs: number = Date.now(), windowMin = 480, variant?: Variant, stepMin = 1): Kpis {
+  const pts = series(machineId, toTs - windowMin * MIN, toTs, stepMin * MIN, variant);
   const running = pts.filter((p) => p.state !== "STOPPED");
   const availability = running.length / pts.length;
   const perf = running.length ? running.reduce((s, p) => s + p.signals.speedPercent, 0) / running.length / 100 : 0;
   const quality = running.length ? 1 - running.reduce((s, p) => s + p.signals.rejectRatePct, 0) / running.length / 100 : 0;
-  const good = running.reduce((s, p) => s + p.signals.outputRate, 0);
+  const good = running.reduce((s, p) => s + p.signals.outputRate, 0) * stepMin;
   return {
     availabilityPct: round(availability * 100, 1),
     performancePct: round(perf * 100, 1),

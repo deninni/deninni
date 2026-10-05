@@ -10,7 +10,7 @@ export const metadata = { title: "Schichtübergabe" };
 
 export default async function HandoverPage() {
   const s = (await getSession())!;
-  const h = await collectHandover(s.name);
+  const h = await collectHandover(s.name, undefined, s.tenant);
   return (
     <div className="mx-auto max-w-4xl">
       <PageHeader eyebrow={h.shift} title="Schichtübergabe" subtitle="Was die nächste Schicht prüfen muss, bevor Hardware angefasst wird · Trust: Supervised" />

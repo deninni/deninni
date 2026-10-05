@@ -31,7 +31,8 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     priority: hyp.confidence === "hoch" ? "high" : "medium",
     source: "rca",
     createdBy: auth.session.sub,
+    tenant: auth.session.tenant,
   });
-  await audit({ actor: auth.session.sub, action: res.deduped ? "ticket.reported" : "ticket.create", target: res.ticket.id, detail: res.ticket.title });
+  await audit({ tenant: auth.session.tenant, actor: auth.session.sub, action: res.deduped ? "ticket.reported" : "ticket.create", target: res.ticket.id, detail: res.ticket.title });
   return NextResponse.json(res);
 }

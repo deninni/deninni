@@ -21,7 +21,7 @@ export async function liveAll(now = Date.now()) {
   return Promise.all(MACHINES.map((m) => liveSnapshot(m.id, now)));
 }
 
-export async function currentAlerts(now = Date.now()): Promise<Alert[]> {
-  const s = await readStore();
+export async function currentAlerts(now = Date.now(), tenant = "demo"): Promise<Alert[]> {
+  const s = await readStore(tenant);
   return deriveAlerts(s.alerts, now);
 }

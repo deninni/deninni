@@ -9,7 +9,7 @@ export const metadata = { title: "Tickets" };
 
 export default async function TicketsPage() {
   const s = await getSession();
-  const tickets = [...(await readStore()).tickets].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  const tickets = [...(await readStore(s?.tenant ?? "demo")).tickets].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   return (
     <div className="mx-auto max-w-5xl">
       <PageHeader eyebrow="Betrieb" title="Tickets" subtitle="Instandhaltungs-Tickets · automatische Meldungen werden zusammengeführt" />

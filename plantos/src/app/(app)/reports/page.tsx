@@ -6,15 +6,17 @@ import { currentAlerts } from "@/lib/server/data";
 import { readStore } from "@/lib/store/store";
 import { de } from "@/lib/format";
 import { PrintButton } from "./PrintButton";
+import { getSession } from "@/lib/auth/server";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Berichte" };
 
 export default async function ReportsPage() {
   const now = Date.now();
+  const tenant = (await getSession())?.tenant ?? "demo";
   const rows = MACHINES.map((m) => ({ m, s: kpis(m.id, now, 480), d: kpis(m.id, now, 1440) }));
-  const alerts = await currentAlerts(now);
-  const tickets = (await readStore()).tickets;
+  const alerts = await currentAlerts(now, tenant);
+  const tickets = (await readStore(tenant)).tickets;
   return (
     <div className="mx-auto max-w-5xl">
       <PageHeader eyebrow="Analyse" title="Berichte" subtitle="Generiert aus Demo-KPIs der Engine · OEE = Verfügbarkeit × Leistung × Qualität" actions={<PrintButton />} />

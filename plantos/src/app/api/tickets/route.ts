@@ -9,7 +9,9 @@ export const dynamic = "force-dynamic";
 const STATUSES: TicketStatus[] = ["OPEN", "IN_PROGRESS", "WAITING", "DONE"];
 
 export async function GET() {
-  const s = await readStore();
+  const auth = await requireRole("viewer");
+  if ("response" in auth) return auth.response;
+  const s = await readStore(auth.session.tenant);
   return NextResponse.json({ tickets: [...s.tickets].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)) });
 }
 
@@ -25,8 +27,9 @@ export async function POST(req: Request) {
     priority: (["low", "medium", "high"].includes(b.priority) ? b.priority : "medium") as "low" | "medium" | "high",
     source: (["manual", "handover", "copilot"].includes(b.source) ? b.source : "manual") as "manual",
     createdBy: auth.session.sub,
+    tenant: auth.session.tenant,
   });
-  await audit({ actor: auth.session.sub, action: r.deduped ? "ticket.reported" : "ticket.create", target: r.ticket.id, detail: r.ticket.title });
+  await audit({ tenant: auth.session.tenant, actor: auth.session.sub, action: r.deduped ? "ticket.reported" : "ticket.create", target: r.ticket.id, detail: r.ticket.title });
   return NextResponse.json(r, { status: r.deduped ? 200 : 201 });
 }
 
@@ -39,8 +42,8 @@ export async function PATCH(req: Request) {
     const t = s.tickets.find((x) => x.id === b.id);
     if (t) { t.status = b.status!; t.updatedAt = new Date().toISOString(); }
     return t;
-  });
+  }, auth.session.tenant);
   if (!t) return NextResponse.json({ error: "Ticket unbekannt" }, { status: 404 });
-  await audit({ actor: auth.session.sub, action: "ticket.status", target: t.id, detail: b.status });
+  await audit({ tenant: auth.session.tenant, actor: auth.session.sub, action: "ticket.status", target: t.id, detail: b.status });
   return NextResponse.json({ ticket: t });
 }

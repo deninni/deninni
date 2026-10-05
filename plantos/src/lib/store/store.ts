@@ -47,25 +47,30 @@ export function dataDir(): string {
   return process.env.PLANTOS_DATA_DIR || path.join(process.cwd(), "data");
 }
 
-function storeFile() {
-  return path.join(dataDir(), "plantos-store.json");
+const TENANT_RE = /^[a-z0-9][a-z0-9-]{1,39}$/;
+
+/** Tickets/Meldungsstatus je Tenant. „demo“ behält den bisherigen Pfad (Abwärtskompatibilität). */
+function storeFile(tenant: string) {
+  if (!TENANT_RE.test(tenant)) throw new Error(`Ungültige Tenant-ID: ${tenant}`);
+  return tenant === "demo" ? path.join(dataDir(), "plantos-store.json") : path.join(dataDir(), "tenants", tenant, "store.json");
 }
 
-let cache: StoreData | null = null;
-let cacheFile: string | null = null;
-let chain: Promise<unknown> = Promise.resolve();
+const caches = new Map<string, StoreData>();
+const chains = new Map<string, Promise<unknown>>();
 
-export async function readStore(): Promise<StoreData> {
-  const file = storeFile();
-  if (cache && cacheFile === file) return cache;
+export async function readStore(tenant = "demo"): Promise<StoreData> {
+  const file = storeFile(tenant);
+  const hit = caches.get(file);
+  if (hit) return hit;
+  let data: StoreData;
   try {
     const raw = JSON.parse(await fs.readFile(file, "utf8")) as Partial<StoreData>;
-    cache = { ...EMPTY, ...raw, tickets: raw.tickets ?? [], alerts: raw.alerts ?? {} } as StoreData;
+    data = { ...EMPTY, ...raw, tickets: raw.tickets ?? [], alerts: raw.alerts ?? {} } as StoreData;
   } catch {
-    cache = structuredClone(EMPTY);
+    data = structuredClone(EMPTY);
   }
-  cacheFile = file;
-  return cache;
+  caches.set(file, data);
+  return data;
 }
 
 export async function writeJsonAtomic(file: string, data: unknown) {
@@ -76,19 +81,21 @@ export async function writeJsonAtomic(file: string, data: unknown) {
 }
 
 /** Serialisierte Mutation: fn verändert den Store; Rückgabewert wird durchgereicht. */
-export function mutateStore<T>(fn: (s: StoreData) => T | Promise<T>): Promise<T> {
-  const run = chain.then(async () => {
-    const s = await readStore();
+export function mutateStore<T>(fn: (s: StoreData) => T | Promise<T>, tenant = "demo"): Promise<T> {
+  const file = storeFile(tenant);
+  const prev = chains.get(file) ?? Promise.resolve();
+  const run = prev.then(async () => {
+    const s = await readStore(tenant);
     const result = await fn(s);
-    await writeJsonAtomic(storeFile(), s);
+    await writeJsonAtomic(file, s);
     return result;
   });
-  chain = run.catch(() => undefined);
+  chains.set(file, run.catch(() => undefined));
   return run;
 }
 
 /** Nur für Tests. */
 export function __resetStoreCache() {
-  cache = null;
-  cacheFile = null;
+  caches.clear();
+  chains.clear();
 }

@@ -16,19 +16,19 @@ export async function POST(req: Request) {
   const q = String(body.message ?? "").trim().slice(0, 1000);
   if (!q) return NextResponse.json({ error: "Frage fehlt" }, { status: 400 });
 
-  const ans = answerLocal(q, { tickets: (await readStore()).tickets, alerts: await currentAlerts() });
+  const ans = answerLocal(q, { tickets: (await readStore(auth.session.tenant)).tickets, alerts: await currentAlerts(Date.now(), auth.session.tenant) });
   let ticket = null;
   let text = ans.text;
   if (ans.kind === "ticket-request" && ans.ticketRequest) {
     if (!hasRole(auth.session.role, "operator")) {
       text += "\nTicket nicht angelegt: Rolle „Schicht/Instandhaltung“ erforderlich.";
     } else {
-      const r = await createTicket({ ...ans.ticketRequest, source: "copilot", priority: "medium", createdBy: auth.session.sub });
+      const r = await createTicket({ ...ans.ticketRequest, source: "copilot", priority: "medium", createdBy: auth.session.sub, tenant: auth.session.tenant });
       ticket = r;
       text += r.deduped ? `\nBestehendes Ticket ${r.ticket.id} ergänzt (${r.ticket.reportCount}× gemeldet).` : `\nTicket ${r.ticket.id} angelegt.`;
-      await audit({ actor: auth.session.sub, action: r.deduped ? "ticket.reported" : "ticket.create", target: r.ticket.id, detail: "Copilot" });
+      await audit({ tenant: auth.session.tenant, actor: auth.session.sub, action: r.deduped ? "ticket.reported" : "ticket.create", target: r.ticket.id, detail: "Copilot" });
     }
   }
-  if (ans.kind === "control-refusal") await audit({ actor: auth.session.sub, action: "copilot.control-refused", detail: q.slice(0, 200) });
+  if (ans.kind === "control-refusal") await audit({ tenant: auth.session.tenant, actor: auth.session.sub, action: "copilot.control-refused", detail: q.slice(0, 200) });
   return NextResponse.json({ ...ans, text, ticket, model: "lokal-regelbasiert", note: LOCAL_MODEL_NOTE });
 }

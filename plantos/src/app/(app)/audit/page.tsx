@@ -13,7 +13,7 @@ export const metadata = { title: "Audit-Log" };
 export default async function AuditPage() {
   const s = await getSession();
   if (!s || !hasRole(s.role, "admin")) redirect("/dashboard");
-  const entries = await readAudit(300);
+  const entries = await readAudit(300, s.tenant);
   return (
     <div className="mx-auto max-w-5xl">
       <PageHeader eyebrow="System" title="Audit-Log" subtitle="Wer hat wann was gemeldet, bestätigt, angelegt oder exportiert · append-only" />
