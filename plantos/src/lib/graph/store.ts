@@ -67,9 +67,9 @@ export async function updateNodeProps(tenant: string, id: string, patch: Record<
 }
 
 /** Alarm/Ticket aus dem Betrieb im Graphen verknüpfen (Alarm betrifft Asset, Ticket erzeugt aus Alarm). */
-export async function linkAlarmTicket(tenant: string, input: { assetId: string; alarmId?: string | null; alarmTitle?: string; ticketId?: string; ticketTitle?: string }): Promise<void> {
+export async function linkAlarmTicket(tenant: string, input: { assetId: string; alarmId?: string | null; alarmTitle?: string; ticketId?: string; ticketTitle?: string }): Promise<boolean> {
   const g = await loadGraph(tenant);
-  if (!g.node(input.assetId)) return;
+  if (!g.node(input.assetId)) return false;
   if (input.alarmId && !g.node(`alarm:${input.alarmId}`)) {
     await addNode(tenant, { id: `alarm:${input.alarmId}`, type: "alarm", name: input.alarmTitle ?? input.alarmId, code: input.alarmId, source: "system" });
     await addEdge(tenant, { from: `alarm:${input.alarmId}`, to: input.assetId, type: "affects", source: "system" });
@@ -79,4 +79,12 @@ export async function linkAlarmTicket(tenant: string, input: { assetId: string; 
     await addEdge(tenant, { from: `ticket:${input.ticketId}`, to: input.assetId, type: "concerns", source: "system" });
     if (input.alarmId) await addEdge(tenant, { from: `ticket:${input.ticketId}`, to: `alarm:${input.alarmId}`, type: "createdFrom", source: "system" });
   }
+  return true;
+}
+
+/** Twin-/Layout-Komponente einer Bestandsanlage auf den Plant-Brain-Knoten abbilden. */
+export function resolveTwinComponent(g: GraphIndex, machineId: string, twinNode: string): string {
+  if (g.node(`${machineId}/${twinNode}`)) return `${machineId}/${twinNode}`;
+  const hit = g.descendants(machineId).find((n) => n.props.twinNode === twinNode);
+  return hit?.id ?? machineId;
 }

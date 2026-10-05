@@ -1,0 +1,52 @@
+{
+  "actions": [
+    {
+      "id": "sap-89455bf8",
+      "type": "notification",
+      "assetId": "m-sued-af24",
+      "draft": {
+        "equipment": "EQ-AF24",
+        "shortText": "Lagerschaden AF-24",
+        "longText": "Ersatzteil fehlt: Rillenkugellager 6205-2RS (SAP 4711, Lieferzeit 12 T.) Lieferzeit überschreitet Prognosefenster – Eilbeschaffung prüfen, Zwischeninspektion empfohlen\nTeile: 2× 4711 Rillenkugellager 6205-2RS\nRisiko bei Verschiebung um 7 Tage: 100 %",
+        "priority": "1",
+        "notificationType": "M2"
+      },
+      "status": "executed",
+      "preparedBy": "werkleiter@plantos.local",
+      "preparedAt": "2026-10-05T19:32:15.156Z",
+      "source": "Wartungsplan mem-036c24fc-c22",
+      "decidedBy": "demo@plantos.local",
+      "decidedAt": "2026-10-05T19:32:15.238Z",
+      "result": {
+        "ok": true,
+        "externalId": "DEMO-MUVNC9OL",
+        "message": "DEMO: Meldung „Lagerschaden AF-24“ nur im Demo-Adapter erfasst – kein SAP-System angebunden.",
+        "mode": "demo"
+      }
+    },
+    {
+      "id": "sap-08b4ced7",
+      "type": "notification",
+      "assetId": "m-sued-af24",
+      "draft": {
+        "equipment": "EQ-AF24",
+        "shortText": "Lagerschaden AF-24",
+        "longText": "Ersatzteil fehlt: Rillenkugellager 6205-2RS (SAP 4711, Lieferzeit 12 T.) Lieferzeit überschreitet Prognosefenster – Eilbeschaffung prüfen, Zwischeninspektion empfohlen\nTeile: 2× 4711 Rillenkugellager 6205-2RS\nRisiko bei Verschiebung um 7 Tage: 100 %",
+        "priority": "1",
+        "notificationType": "M2"
+      },
+      "status": "executed",
+      "preparedBy": "werkleiter@plantos.local",
+      "preparedAt": "2026-10-05T19:32:21.201Z",
+      "source": "Wartungsplan mem-f08390d0-02d",
+      "decidedBy": "demo@plantos.local",
+      "decidedAt": "2026-10-05T19:32:21.276Z",
+      "result": {
+        "ok": true,
+        "externalId": "DEMO-MUVNCECC",
+        "message": "DEMO: Meldung „Lagerschaden AF-24“ nur im Demo-Adapter erfasst – kein SAP-System angebunden.",
+        "mode": "demo"
+      }
+    }
+  ]
+}

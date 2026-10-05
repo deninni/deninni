@@ -1,0 +1,25 @@
+{
+  "currency": "EUR",
+  "productionValuePerHour": 18000,
+  "downtimeCostPerHour": 12500,
+  "unitValue": 0.32,
+  "scrapCostPerUnit": 0.21,
+  "energyPricePerKwh": 0.2,
+  "maintenanceCostPerHour": 85,
+  "laborCostPerHour": 62,
+  "sparePartsCostFactor": 1,
+  "source": "user",
+  "plantOverrides": {
+    "pl-atl": {
+      "energyPricePerKwh": 0.11,
+      "laborCostPerHour": 58
+    },
+    "pl-posen": {
+      "energyPricePerKwh": 0.16,
+      "laborCostPerHour": 34,
+      "downtimeCostPerHour": 9000
+    }
+  },
+  "updatedBy": "werkleiter@plantos.local",
+  "updatedAt": "2026-10-05T19:32:21.000Z"
+}

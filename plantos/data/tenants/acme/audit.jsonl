@@ -1,0 +1,2 @@
+{"seq":1,"at":"2026-10-05T19:32:13.357Z","tenant":"acme","actor":"admin@acme.test","action":"login.ok","detail":"admin","ok":true,"prevHash":"GENESIS","hash":"f2013aa9696a4b4e5185b16f3a3cf733d92188b2ad5454c207f84bf273c2496b"}
+{"seq":2,"at":"2026-10-05T19:32:19.583Z","tenant":"acme","actor":"admin@acme.test","action":"login.ok","detail":"admin","ok":true,"prevHash":"f2013aa9696a4b4e5185b16f3a3cf733d92188b2ad5454c207f84bf273c2496b","hash":"b8fe6bd2ac0b0eec618f7abe41c2865e26bedefff61ed550318a3ea43e1b6167"}

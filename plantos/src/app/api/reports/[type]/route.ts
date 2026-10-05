@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { requireCap } from "@/lib/auth/server";
-import { getBrain, predictionsFor, metricsFor, resolveScope } from "@/lib/server/brain";
+import { getBrain, predictionsFor, metricsFor } from "@/lib/server/brain";
 import { buildReport, reportPdf, REPORT_TYPES, type ReportType } from "@/lib/reports/build";
 import { loadRoiConfig } from "@/lib/roi/config-store";
 import { readStore } from "@/lib/store/store";
+import { scopeFrom } from "@/lib/server/scope";
 import { handle } from "@/lib/server/http";
 import { audit } from "@/lib/audit";
 
@@ -17,7 +18,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ type: st
     if (!(type in REPORT_TYPES)) return NextResponse.json({ error: "Unbekannter Berichtstyp" }, { status: 404 });
     const sp = new URL(req.url).searchParams;
     const b = await getBrain(auth.session.tenant);
-    const scopeId = resolveScope(b, sp.get("scope"));
+    const scopeId = await scopeFrom(b, req);
     const report = buildReport(type as ReportType, b, { scopeId, preds: predictionsFor(b), metrics: metricsFor(b), cfg: await loadRoiConfig(auth.session.tenant), tickets: (await readStore(auth.session.tenant)).tickets, user: auth.session.name });
     if (sp.get("format") === "pdf") {
       await audit({ tenant: auth.session.tenant, actor: auth.session.sub, action: "report.export", target: type, detail: scopeId });

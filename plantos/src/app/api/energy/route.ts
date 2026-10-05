@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { requireCap } from "@/lib/auth/server";
-import { getBrain, resolveScope } from "@/lib/server/brain";
+import { getBrain } from "@/lib/server/brain";
 import { analyzeEnergy } from "@/lib/energy/analysis";
 import { loadRoiConfig } from "@/lib/roi/config-store";
 import { effectiveConfig } from "@/lib/roi/engine";
+import { scopeFrom } from "@/lib/server/scope";
 import { handle } from "@/lib/server/http";
 
 export const dynamic = "force-dynamic";
@@ -13,7 +14,7 @@ export async function GET(req: Request) {
     const auth = await requireCap("read");
     if ("response" in auth) return auth.response;
     const b = await getBrain(auth.session.tenant);
-    const scope = resolveScope(b, new URL(req.url).searchParams.get("scope"));
+    const scope = await scopeFrom(b, req);
     const cfg = await loadRoiConfig(auth.session.tenant);
     const rows = b.g.machinesUnder(scope).map((m) => {
       const plantId = b.g.ancestorOfType(m.id, "plant")?.id;

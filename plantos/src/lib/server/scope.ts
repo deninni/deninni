@@ -10,3 +10,9 @@ export async function currentScope(b: Brain): Promise<string> {
   const jar = await cookies();
   return resolveScope(b, jar.get(SCOPE_COOKIE)?.value);
 }
+
+/** Scope aus ?scope= (falls angegeben) sonst aus dem Cookie. */
+export async function scopeFrom(b: Brain, req: Request): Promise<string> {
+  const q = new URL(req.url).searchParams.get("scope");
+  return q ? resolveScope(b, q) : currentScope(b);
+}

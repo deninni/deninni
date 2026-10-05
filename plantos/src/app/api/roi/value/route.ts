@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { requireCap } from "@/lib/auth/server";
-import { getBrain, resolveScope } from "@/lib/server/brain";
+import { getBrain } from "@/lib/server/brain";
 import { valueItems, summarizeValue, PERIOD_LABEL } from "@/lib/roi/ledger";
+import { scopeFrom } from "@/lib/server/scope";
 import { handle } from "@/lib/server/http";
 
 export const dynamic = "force-dynamic";
@@ -11,7 +12,7 @@ export async function GET(req: Request) {
     const auth = await requireCap("read");
     if ("response" in auth) return auth.response;
     const b = await getBrain(auth.session.tenant);
-    const scope = resolveScope(b, new URL(req.url).searchParams.get("scope"));
+    const scope = await scopeFrom(b, req);
     const ids = new Set([scope, ...b.g.descendants(scope).map((n) => n.id)]);
     const s = summarizeValue(valueItems(b.g, b.memory), ids);
     const name = (id: string) => b.g.node(id)?.name ?? id;

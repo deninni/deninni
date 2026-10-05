@@ -1,0 +1,767 @@
+{
+  "version": 1,
+  "tenant": "acme",
+  "seededAt": "2026-10-05T19:32:14.737Z",
+  "nodes": [
+    {
+      "id": "mat-4711",
+      "type": "sapMaterial",
+      "name": "Rillenkugellager 6205-2RS",
+      "code": "4711",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 38
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "mat-4712",
+      "type": "sapMaterial",
+      "name": "Dichtungssatz Füllventil",
+      "code": "4712",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 145
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "mat-4713",
+      "type": "sapMaterial",
+      "name": "Drehstrommotor 7,5 kW IE3",
+      "code": "4713",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 1890
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "mat-4714",
+      "type": "sapMaterial",
+      "name": "Getriebemotor 2,2 kW",
+      "code": "4714",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 1240
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "mat-4720",
+      "type": "sapMaterial",
+      "name": "Fördergurt Modulband 600 mm",
+      "code": "4720",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 980
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "mat-4730",
+      "type": "sapMaterial",
+      "name": "Heizregister Shrink-Tunnel",
+      "code": "4730",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 2150
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "mat-4731",
+      "type": "sapMaterial",
+      "name": "Umluftventilator Tunnel",
+      "code": "4731",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 640
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-co",
+      "type": "company",
+      "name": "ACME Test GmbH (DEMO)",
+      "code": "ACME",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-reg",
+      "type": "region",
+      "name": "EMEA",
+      "code": "EMEA",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-de",
+      "type": "country",
+      "name": "Deutschland",
+      "code": "DE",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-site",
+      "type": "site",
+      "name": "Standort Köln",
+      "code": "KOE",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-pl1",
+      "type": "plant",
+      "name": "ACME Werk 1",
+      "code": "W1",
+      "props": {
+        "timezone": "Europe/Berlin",
+        "technicians": 2,
+        "maintenanceWindows": [
+          {
+            "weekday": 6,
+            "startH": 6,
+            "durH": 6
+          }
+        ]
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-area",
+      "type": "area",
+      "name": "Logistik",
+      "code": "LOG",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-l1",
+      "type": "line",
+      "name": "Linie 1",
+      "code": "L1",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-fl-l1",
+      "type": "sapFunctionalLocation",
+      "name": "TP ACME-W1-L1",
+      "code": "ACME-W1-L1",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1",
+      "type": "machine",
+      "name": "Fördertechnik FT-1",
+      "code": "FT-1",
+      "props": {
+        "profile": "m-ft7",
+        "offsetMin": 777,
+        "driftPhaseDays": 10,
+        "ratedCurrentA": 12,
+        "nominalRate": 120,
+        "unit": "Gebinde/min",
+        "maintenanceIntervalH": 3000
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-plc",
+      "type": "plc",
+      "name": "SPS PLC-A1",
+      "code": "PLC-A1",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1200",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-eq",
+      "type": "sapEquipment",
+      "name": "Equipment FT-1",
+      "code": "EQ-FT1",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-asm-drive",
+      "type": "assembly",
+      "name": "Antriebsstation",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-motor",
+      "type": "component",
+      "name": "Motor M1",
+      "code": "M1",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 12
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M1",
+      "code": "EQ-FT1-M1",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-motor-tag",
+      "type": "plcTag",
+      "name": "M1 Motorstrom",
+      "code": "DB40.DBD0",
+      "props": {
+        "address": "DB40.DBD0",
+        "dataType": "REAL",
+        "plc": "PLC-A1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "sp-acme1-4711",
+      "type": "sparePart",
+      "name": "Rillenkugellager 6205-2RS",
+      "code": "4711",
+      "props": {
+        "sapMaterial": "4711",
+        "stock": 3,
+        "minStock": 1,
+        "leadTimeDays": 7,
+        "unitCost": 38,
+        "failureModes": [
+          "Lagerschaden",
+          "Vibration"
+        ],
+        "plant": "acme-pl1"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-vs",
+      "type": "sensor",
+      "name": "Schwingung M1",
+      "code": "VS-M1",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M1 Schwingung",
+      "code": "DB40.DBD4",
+      "props": {
+        "address": "DB40.DBD4",
+        "dataType": "REAL",
+        "plc": "PLC-A1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-ts",
+      "type": "sensor",
+      "name": "Temperatur M1",
+      "code": "TT-M1",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M1 Temperatur",
+      "code": "DB40.DBD8",
+      "props": {
+        "address": "DB40.DBD8",
+        "dataType": "REAL",
+        "plc": "PLC-A1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "sp-acme1-4714",
+      "type": "sparePart",
+      "name": "Getriebemotor 2,2 kW",
+      "code": "4714",
+      "props": {
+        "sapMaterial": "4714",
+        "stock": 3,
+        "minStock": 1,
+        "leadTimeDays": 7,
+        "unitCost": 1240,
+        "failureModes": [
+          "Getriebeschaden",
+          "Übertemperatur",
+          "Stromspitze"
+        ],
+        "plant": "acme-pl1"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-asm-belt",
+      "type": "assembly",
+      "name": "Fördergurt",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-gurt",
+      "type": "component",
+      "name": "Modulband",
+      "props": {
+        "kind": "belt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "sp-acme1-4720",
+      "type": "sparePart",
+      "name": "Fördergurt Modulband 600 mm",
+      "code": "4720",
+      "props": {
+        "sapMaterial": "4720",
+        "stock": 3,
+        "minStock": 1,
+        "leadTimeDays": 7,
+        "unitCost": 980,
+        "failureModes": [
+          "Gurtverschleiß",
+          "Stau"
+        ],
+        "plant": "acme-pl1"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-ls",
+      "type": "sensor",
+      "name": "Lichtschranke Stau",
+      "code": "LS-1",
+      "props": {
+        "kind": "presence",
+        "signal": null
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-ls-tag",
+      "type": "plcTag",
+      "name": "LS-1 Stau",
+      "code": "DB40.DBX3.0",
+      "props": {
+        "address": "DB40.DBX3.0",
+        "dataType": "BOOL",
+        "plc": "PLC-A1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung FT-1",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-doc-sp",
+      "type": "document",
+      "name": "Schaltplan FT-1",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "acme-ft1-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan FT-1",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e:acme-reg:partOf:acme-co",
+      "from": "acme-reg",
+      "to": "acme-co",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-de:partOf:acme-reg",
+      "from": "acme-de",
+      "to": "acme-reg",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-site:partOf:acme-de",
+      "from": "acme-site",
+      "to": "acme-de",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-pl1:partOf:acme-site",
+      "from": "acme-pl1",
+      "to": "acme-site",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-area:partOf:acme-pl1",
+      "from": "acme-area",
+      "to": "acme-pl1",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-l1:partOf:acme-area",
+      "from": "acme-l1",
+      "to": "acme-area",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-l1:sapLocation:acme-fl-l1",
+      "from": "acme-l1",
+      "to": "acme-fl-l1",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1:partOf:acme-l1",
+      "from": "acme-ft1",
+      "to": "acme-l1",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1:controlledBy:acme-ft1-plc",
+      "from": "acme-ft1",
+      "to": "acme-ft1-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1:sapEquipment:acme-ft1-eq",
+      "from": "acme-ft1",
+      "to": "acme-ft1-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1:sapLocation:acme-fl-l1",
+      "from": "acme-ft1",
+      "to": "acme-fl-l1",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-asm-drive:partOf:acme-ft1",
+      "from": "acme-ft1-asm-drive",
+      "to": "acme-ft1",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-motor:partOf:acme-ft1-asm-drive",
+      "from": "acme-ft1-motor",
+      "to": "acme-ft1-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-motor:controlledBy:acme-ft1-plc",
+      "from": "acme-ft1-motor",
+      "to": "acme-ft1-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-motor:sapEquipment:acme-ft1-motor-eq",
+      "from": "acme-ft1-motor",
+      "to": "acme-ft1-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-motor-tag:tagOf:acme-ft1-plc",
+      "from": "acme-ft1-motor-tag",
+      "to": "acme-ft1-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-motor:measuredBy:acme-ft1-motor-tag",
+      "from": "acme-ft1-motor",
+      "to": "acme-ft1-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-bearing:partOf:acme-ft1-asm-drive",
+      "from": "acme-ft1-bearing",
+      "to": "acme-ft1-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:sp-acme1-4711:material:mat-4711",
+      "from": "sp-acme1-4711",
+      "to": "mat-4711",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-bearing:usesSparePart:sp-acme1-4711",
+      "from": "acme-ft1-bearing",
+      "to": "sp-acme1-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-vs:partOf:acme-ft1-motor",
+      "from": "acme-ft1-vs",
+      "to": "acme-ft1-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-vs-tag:tagOf:acme-ft1-plc",
+      "from": "acme-ft1-vs-tag",
+      "to": "acme-ft1-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-vs:measuredBy:acme-ft1-vs-tag",
+      "from": "acme-ft1-vs",
+      "to": "acme-ft1-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-ts:partOf:acme-ft1-motor",
+      "from": "acme-ft1-ts",
+      "to": "acme-ft1-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-ts-tag:tagOf:acme-ft1-plc",
+      "from": "acme-ft1-ts-tag",
+      "to": "acme-ft1-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-ts:measuredBy:acme-ft1-ts-tag",
+      "from": "acme-ft1-ts",
+      "to": "acme-ft1-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:sp-acme1-4714:material:mat-4714",
+      "from": "sp-acme1-4714",
+      "to": "mat-4714",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-motor:usesSparePart:sp-acme1-4714",
+      "from": "acme-ft1-motor",
+      "to": "sp-acme1-4714",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-asm-belt:partOf:acme-ft1",
+      "from": "acme-ft1-asm-belt",
+      "to": "acme-ft1",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-gurt:partOf:acme-ft1-asm-belt",
+      "from": "acme-ft1-gurt",
+      "to": "acme-ft1-asm-belt",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:sp-acme1-4720:material:mat-4720",
+      "from": "sp-acme1-4720",
+      "to": "mat-4720",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-gurt:usesSparePart:sp-acme1-4720",
+      "from": "acme-ft1-gurt",
+      "to": "sp-acme1-4720",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-ls:partOf:acme-ft1-asm-belt",
+      "from": "acme-ft1-ls",
+      "to": "acme-ft1-asm-belt",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-ls-tag:tagOf:acme-ft1-plc",
+      "from": "acme-ft1-ls-tag",
+      "to": "acme-ft1-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-ls:measuredBy:acme-ft1-ls-tag",
+      "from": "acme-ft1-ls",
+      "to": "acme-ft1-ls-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-doc-ba:documents:acme-ft1",
+      "from": "acme-ft1-doc-ba",
+      "to": "acme-ft1",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-doc-sp:documents:acme-ft1",
+      "from": "acme-ft1-doc-sp",
+      "to": "acme-ft1",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    },
+    {
+      "id": "e:acme-ft1-doc-wp:documents:acme-ft1",
+      "from": "acme-ft1-doc-wp",
+      "to": "acme-ft1",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:32:14.737Z"
+    }
+  ]
+}

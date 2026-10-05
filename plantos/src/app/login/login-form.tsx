@@ -41,10 +41,10 @@ export function LoginForm({ next }: { next: string }) {
         {busy ? "Anmelden …" : "Anmelden"}
       </button>
       <div className="grid grid-cols-2 gap-2">
-        <button type="button" disabled title="SSO (Entra ID / Google) vorbereitet – nicht konfiguriert" className="min-h-9 rounded-md border border-border text-[12px] text-muted opacity-50">Microsoft SSO</button>
-        <button type="button" disabled title="SSO vorbereitet – nicht konfiguriert" className="min-h-9 rounded-md border border-border text-[12px] text-muted opacity-50">Google SSO</button>
+        <a href="/api/auth/oidc/start" className="grid min-h-11 place-items-center rounded-md border border-border text-[12px] text-muted sm:min-h-9">Microsoft Entra ID</a>
+        <a href="/api/auth/oidc/start" className="grid min-h-11 place-items-center rounded-md border border-border text-[12px] text-muted sm:min-h-9">OIDC / SSO</a>
       </div>
-      <p className="text-[10px] text-stainless-dim">SSO ist für Enterprise-Piloten vorgesehen, aber noch nicht konfiguriert.</p>
+      <p className="text-[10px] text-stainless-dim">SSO (OIDC/PKCE) ist implementiert; ohne Konfiguration antwortet es mit einem Hinweis.</p>
     </form>
   );
 }

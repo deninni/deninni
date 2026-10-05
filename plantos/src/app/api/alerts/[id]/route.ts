@@ -4,6 +4,7 @@ import { mutateStore } from "@/lib/store/store";
 import { currentAlerts } from "@/lib/server/data";
 import { createTicket } from "@/lib/tickets/create";
 import { audit } from "@/lib/audit";
+import { linkAlarmTicket, loadGraph, resolveTwinComponent } from "@/lib/graph/store";
 
 /** Aktionen: ack | comment | close | ticket */
 export async function POST(req: Request, { params }: { params: Promise<{ id: string }> }) {
@@ -24,6 +25,9 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
       priority: alert.severity === "FAULT" ? "high" : "medium", createdBy: who, tenant: auth.session.tenant,
     });
     await audit({ tenant: auth.session.tenant, actor: who, action: r.deduped ? "ticket.reported" : "ticket.create", target: r.ticket.id, detail: alert.id });
+    // Plant Brain: „Alarm betrifft Komponente“, „Ticket erzeugt aus Alarm“
+    const g = await loadGraph(auth.session.tenant);
+    await linkAlarmTicket(auth.session.tenant, { assetId: resolveTwinComponent(g, alert.machineId, alert.component), alarmId: alert.id, alarmTitle: alert.title, ticketId: r.ticket.id, ticketTitle: r.ticket.title });
     return NextResponse.json(r);
   }
 
