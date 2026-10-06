@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+/*
+ * plantOS Design-System · Control-Room-Look für Enterprise-Käufer (Getränke-/CPG-Industrie).
+ * Charcoal/Slate + entsättigtes Präzisions-Cyan. Statusfarben NUR für Zustand.
+ */
+
+@theme {
+  --color-background: #0a0e14;
+  --color-foreground: #e6eaef;
+  --color-muted: #8b93a0;
+  --color-card: #11161e;
+  --color-card-border: #1c2430;
+  --color-border: #1c2430;
+  --color-surface: #0e131a;
+  --color-surface-elevated: #161c26;
+  --color-hairline: rgba(180, 190, 204, 0.11);
+  --color-navy-deep: #080b10;
+  --color-accent: #5a8fa3;
+  --color-accent-muted: rgba(90, 143, 163, 0.14);
+  --color-accent-border: rgba(90, 143, 163, 0.42);
+  --color-stainless: #b4bcc8;
+  --color-stainless-dim: #8b93a0;
+  --color-stainless-bright: #dce2ea;
+  --color-status-ok: #3d9b72;
+  --color-status-warn: #c9a227;
+  --color-status-fault: #c45c5c;
+  --color-status-info: #4a9bb8;
+
+  --radius-sm: 0.1875rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.5rem;
+
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.375rem;
+
+  --shadow-card: 0 1px 0 0 rgba(255, 255, 255, 0.035) inset, 0 1px 2px rgba(0, 0, 0, 0.35);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html,
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+body {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .card {
+    /* verhindert, dass Grid-/Flex-Kinder auf schmalen Viewports über die Bildschirmbreite wachsen */
+    min-width: 0;
+    background: var(--color-card);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+  }
+  .label-section {
+    font-size: 0.625rem;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-stainless-dim);
+  }
+  .badge-industrial {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.08rem 0.4rem;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-hairline);
+    background: var(--color-surface-elevated);
+    white-space: nowrap;
+  }
+  .input-industrial {
+    background: var(--color-navy-deep);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0.45rem 0.6rem;
+    color: var(--color-foreground);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .input-industrial:focus {
+    border-color: var(--color-accent-border);
+    box-shadow: 0 0 0 3px var(--color-accent-muted);
+  }
+  .focus-ring:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+  .kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 1px;
+    background: var(--color-hairline);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .kpi-strip > * {
+    background: var(--color-card);
+    padding: 0.65rem 0.8rem;
+  }
+  .twin-hero-h {
+    height: min(52vh, 420px);
+    min-height: 50vh;
+  }
+  @media (min-width: 640px) {
+    .twin-hero-h {
+      height: min(70vh, 640px);
+      min-height: 560px;
+    }
+  }
+  .photo-fade-b {
+    background: linear-gradient(to bottom, transparent 0%, rgba(10, 14, 20, 0.55) 55%, var(--color-background) 100%);
+  }
+  .industrial-grid {
+    background-image:
+      linear-gradient(rgba(180, 190, 204, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180, 190, 204, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .login-backdrop {
+    background:
+      radial-gradient(1200px 600px at 20% 10%, rgba(90, 143, 163, 0.18), transparent 60%),
+      radial-gradient(900px 500px at 90% 90%, rgba(61, 155, 114, 0.08), transparent 60%),
+      linear-gradient(160deg, #101824 0%, #0a0e14 60%, #06080c 100%);
+  }
+  .login-frost {
+    background: rgba(17, 22, 30, 0.72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(180, 190, 204, 0.14);
+  }
+  .safe-bottom {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  }
+  @media (min-width: 1024px) {
+    .safe-bottom {
+      padding-bottom: 2rem;
+    }
+  }
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: var(--color-accent);
+    animation: livepulse 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes livepulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(90, 143, 163, 0.5); }
+  50% { opacity: 0.55; box-shadow: 0 0 0 4px rgba(90, 143, 163, 0); }
+}
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* Touch-Ziele ≥ 44 px auf Touch-Geräten (iPhone), Desktop bleibt kompakt */
+@media (pointer: coarse) {
+  .tap { display: inline-flex; align-items: center; min-height: 44px; }
+}
+
+/* Grid-Kinder dürfen schrumpfen (iPhone: kein horizontales Aufweiten des Layout-Viewports) */
+.grid > * { min-width: 0; }
+
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+
+::selection { background: rgba(90, 143, 163, 0.35); }
+
+@media print {
+  aside, nav, .no-print { display: none !important; }
+  body { background: #fff; color: #000; }
+}

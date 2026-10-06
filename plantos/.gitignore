@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+# Laufzeitdaten (lokaler Store, Edge-State, Audit) – werden beim Start erzeugt
+data/*.json
+data/edge/
+data/audit/
+!data/.gitkeep
+dist/

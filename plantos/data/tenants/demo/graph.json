@@ -1,0 +1,7161 @@
+{
+  "version": 1,
+  "tenant": "demo",
+  "seededAt": "2026-10-05T19:31:35.248Z",
+  "nodes": [
+    {
+      "id": "mat-4711",
+      "type": "sapMaterial",
+      "name": "Rillenkugellager 6205-2RS",
+      "code": "4711",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 38
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "mat-4712",
+      "type": "sapMaterial",
+      "name": "Dichtungssatz Füllventil",
+      "code": "4712",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 145
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "mat-4713",
+      "type": "sapMaterial",
+      "name": "Drehstrommotor 7,5 kW IE3",
+      "code": "4713",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 1890
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "mat-4714",
+      "type": "sapMaterial",
+      "name": "Getriebemotor 2,2 kW",
+      "code": "4714",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 1240
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "mat-4720",
+      "type": "sapMaterial",
+      "name": "Fördergurt Modulband 600 mm",
+      "code": "4720",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 980
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "mat-4730",
+      "type": "sapMaterial",
+      "name": "Heizregister Shrink-Tunnel",
+      "code": "4730",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 2150
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "mat-4731",
+      "type": "sapMaterial",
+      "name": "Umluftventilator Tunnel",
+      "code": "4731",
+      "props": {
+        "sapSystem": "DEMO",
+        "unitCost": 640
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "co",
+      "type": "company",
+      "name": "Demo Beverages Group (DEMO)",
+      "code": "DBG",
+      "props": {
+        "demo": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "reg-emea",
+      "type": "region",
+      "name": "EMEA",
+      "code": "EMEA",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "reg-na",
+      "type": "region",
+      "name": "Nordamerika",
+      "code": "NA",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "cty-de",
+      "type": "country",
+      "name": "Deutschland",
+      "code": "DE",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "cty-pl",
+      "type": "country",
+      "name": "Polen",
+      "code": "PL",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "cty-us",
+      "type": "country",
+      "name": "USA",
+      "code": "US",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "site-ham",
+      "type": "site",
+      "name": "Standort Hamburg",
+      "code": "HAM",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-nord",
+      "type": "plant",
+      "name": "Werk Nord",
+      "code": "NORD",
+      "props": {
+        "timezone": "Europe/Berlin",
+        "technicians": 3,
+        "maintenanceWindows": [
+          {
+            "weekday": 6,
+            "startH": 6,
+            "durH": 8
+          }
+        ],
+        "demo": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "site-muc",
+      "type": "site",
+      "name": "Standort München",
+      "code": "MUC",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-sued",
+      "type": "plant",
+      "name": "Werk Süd",
+      "code": "SUED",
+      "props": {
+        "timezone": "Europe/Berlin",
+        "technicians": 2,
+        "maintenanceWindows": [
+          {
+            "weekday": 3,
+            "startH": 22,
+            "durH": 6
+          },
+          {
+            "weekday": 6,
+            "startH": 6,
+            "durH": 6
+          }
+        ],
+        "demo": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "site-poz",
+      "type": "site",
+      "name": "Standort Poznań",
+      "code": "POZN",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-posen",
+      "type": "plant",
+      "name": "Werk Posen",
+      "code": "POZ",
+      "props": {
+        "timezone": "Europe/Warsaw",
+        "technicians": 2,
+        "maintenanceWindows": [
+          {
+            "weekday": 0,
+            "startH": 6,
+            "durH": 10
+          }
+        ],
+        "demo": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "site-atl",
+      "type": "site",
+      "name": "Standort Atlanta",
+      "code": "ATLG",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-atl",
+      "type": "plant",
+      "name": "Werk Atlanta",
+      "code": "ATL",
+      "props": {
+        "timezone": "America/New_York",
+        "technicians": 4,
+        "maintenanceWindows": [
+          {
+            "weekday": 6,
+            "startH": 4,
+            "durH": 8
+          }
+        ],
+        "demo": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-nord-abf",
+      "type": "area",
+      "name": "Abfüllung",
+      "code": "ABF",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-nord-log",
+      "type": "area",
+      "name": "Logistik",
+      "code": "LOG",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-nord-abf-la",
+      "type": "line",
+      "name": "Linie A",
+      "code": "LA",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-nord-abf-la-fl",
+      "type": "sapFunctionalLocation",
+      "name": "TP NORD-LA",
+      "code": "DE01-NORD-LA",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-nord-log-lb",
+      "type": "line",
+      "name": "Linie B",
+      "code": "LB",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-nord-log-lb-fl",
+      "type": "sapFunctionalLocation",
+      "name": "TP NORD-LB",
+      "code": "DE01-NORD-LB",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12",
+      "type": "machine",
+      "name": "Abfüllanlage AF-12",
+      "code": "AF-12",
+      "props": {
+        "profile": "m-af12",
+        "legacyId": "m-af12",
+        "ratedCurrentA": 21,
+        "nominalRate": 600,
+        "unit": "Fl/min",
+        "maintenanceIntervalH": 2500
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-plc",
+      "type": "plc",
+      "name": "SPS PLC-NA1",
+      "code": "PLC-NA1",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1500",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-eq",
+      "type": "sapEquipment",
+      "name": "Equipment AF-12",
+      "code": "EQ-AF12",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-asm-drive",
+      "type": "assembly",
+      "name": "Hauptantrieb",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-motor",
+      "type": "component",
+      "name": "Motor M-001",
+      "code": "M-001",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 21,
+        "twinNode": "m-001"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M-001",
+      "code": "EQ-AF12-M001",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-motor-tag",
+      "type": "plcTag",
+      "name": "M-001 Motorstrom",
+      "code": "DB10.DBD40",
+      "props": {
+        "address": "DB10.DBD40",
+        "dataType": "REAL",
+        "plc": "PLC-NA1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-nord-4711",
+      "type": "sparePart",
+      "name": "Rillenkugellager 6205-2RS",
+      "code": "4711",
+      "props": {
+        "sapMaterial": "4711",
+        "stock": 4,
+        "minStock": 2,
+        "leadTimeDays": 5,
+        "unitCost": 38,
+        "failureModes": [
+          "Lagerschaden",
+          "Vibration"
+        ],
+        "plant": "pl-nord"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-vs",
+      "type": "sensor",
+      "name": "Schwingung M-001",
+      "code": "VS-M-001",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M-001 Schwingung",
+      "code": "DB10.DBD44",
+      "props": {
+        "address": "DB10.DBD44",
+        "dataType": "REAL",
+        "plc": "PLC-NA1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-ts",
+      "type": "sensor",
+      "name": "Temperatur M-001",
+      "code": "TT-M-001",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M-001 Temperatur",
+      "code": "DB10.DBD48",
+      "props": {
+        "address": "DB10.DBD48",
+        "dataType": "REAL",
+        "plc": "PLC-NA1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-nord-4713",
+      "type": "sparePart",
+      "name": "Drehstrommotor 7,5 kW IE3",
+      "code": "4713",
+      "props": {
+        "sapMaterial": "4713",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 21,
+        "unitCost": 1890,
+        "failureModes": [
+          "Wicklungsschaden",
+          "Übertemperatur"
+        ],
+        "plant": "pl-nord"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-asm-filler",
+      "type": "assembly",
+      "name": "Füllerkarussell",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-valves",
+      "type": "component",
+      "name": "Füllventile (12×)",
+      "props": {
+        "kind": "valve"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-nord-4712",
+      "type": "sparePart",
+      "name": "Dichtungssatz Füllventil",
+      "code": "4712",
+      "props": {
+        "sapMaterial": "4712",
+        "stock": 6,
+        "minStock": 2,
+        "leadTimeDays": 10,
+        "unitCost": 145,
+        "failureModes": [
+          "Undichtigkeit",
+          "Füllmenge"
+        ],
+        "plant": "pl-nord"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-fv",
+      "type": "actuator",
+      "name": "Füllventil-Ansteuerung",
+      "code": "FV-01",
+      "props": {
+        "kind": "valve",
+        "access": "read-only (Status)"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-fv-tag",
+      "type": "plcTag",
+      "name": "FV-01 Status",
+      "code": "DB10.DBX13.0",
+      "props": {
+        "address": "DB10.DBX13.0",
+        "dataType": "BOOL",
+        "plc": "PLC-NA1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-pt",
+      "type": "sensor",
+      "name": "Fülldruck",
+      "code": "PT-F",
+      "props": {
+        "kind": "pressure",
+        "unit": "bar",
+        "signal": "pressureBar"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-pt-tag",
+      "type": "plcTag",
+      "name": "PT-F Fülldruck",
+      "code": "DB10.DBD56",
+      "props": {
+        "address": "DB10.DBD56",
+        "dataType": "REAL",
+        "plc": "PLC-NA1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung AF-12",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-doc-sp",
+      "type": "document",
+      "name": "Schaltplan AF-12",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan AF-12",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3",
+      "type": "machine",
+      "name": "Verpackungslinie VL-3",
+      "code": "VL-3",
+      "props": {
+        "profile": "m-vl3",
+        "legacyId": "m-vl3",
+        "ratedCurrentA": 14,
+        "nominalRate": 80,
+        "unit": "Gebinde/min",
+        "maintenanceIntervalH": 3000
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-plc",
+      "type": "plc",
+      "name": "SPS PLC-NA2",
+      "code": "PLC-NA2",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1500",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-eq",
+      "type": "sapEquipment",
+      "name": "Equipment VL-3",
+      "code": "EQ-VL3",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-asm-drive",
+      "type": "assembly",
+      "name": "Hauptantrieb",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-motor",
+      "type": "component",
+      "name": "Motor M1",
+      "code": "M1",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 14,
+        "twinNode": "vl-motor"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M1",
+      "code": "EQ-VL3-M1",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-motor-tag",
+      "type": "plcTag",
+      "name": "M1 Motorstrom",
+      "code": "DB20.DBD40",
+      "props": {
+        "address": "DB20.DBD40",
+        "dataType": "REAL",
+        "plc": "PLC-NA2",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-vs",
+      "type": "sensor",
+      "name": "Schwingung M1",
+      "code": "VS-M1",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M1 Schwingung",
+      "code": "DB20.DBD44",
+      "props": {
+        "address": "DB20.DBD44",
+        "dataType": "REAL",
+        "plc": "PLC-NA2",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-ts",
+      "type": "sensor",
+      "name": "Temperatur M1",
+      "code": "TT-M1",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M1 Temperatur",
+      "code": "DB20.DBD48",
+      "props": {
+        "address": "DB20.DBD48",
+        "dataType": "REAL",
+        "plc": "PLC-NA2",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-nord-4714",
+      "type": "sparePart",
+      "name": "Getriebemotor 2,2 kW",
+      "code": "4714",
+      "props": {
+        "sapMaterial": "4714",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 14,
+        "unitCost": 1240,
+        "failureModes": [
+          "Getriebeschaden",
+          "Übertemperatur",
+          "Stromspitze"
+        ],
+        "plant": "pl-nord"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-asm-tunnel",
+      "type": "assembly",
+      "name": "Shrink-Tunnel",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-heater",
+      "type": "component",
+      "name": "Heizregister",
+      "code": "HZ-1",
+      "props": {
+        "kind": "heater"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-nord-4730",
+      "type": "sparePart",
+      "name": "Heizregister Shrink-Tunnel",
+      "code": "4730",
+      "props": {
+        "sapMaterial": "4730",
+        "stock": 0,
+        "minStock": 1,
+        "leadTimeDays": 28,
+        "unitCost": 2150,
+        "failureModes": [
+          "Übertemperatur",
+          "Heizungsausfall"
+        ],
+        "plant": "pl-nord"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-fan",
+      "type": "component",
+      "name": "Umluftventilator",
+      "code": "LV-1",
+      "props": {
+        "kind": "fan"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-nord-4731",
+      "type": "sparePart",
+      "name": "Umluftventilator Tunnel",
+      "code": "4731",
+      "props": {
+        "sapMaterial": "4731",
+        "stock": 2,
+        "minStock": 1,
+        "leadTimeDays": 9,
+        "unitCost": 640,
+        "failureModes": [
+          "Vibration",
+          "Übertemperatur"
+        ],
+        "plant": "pl-nord"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-pt100",
+      "type": "sensor",
+      "name": "Tunneltemperatur PT100",
+      "code": "PT100",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-pt100-tag",
+      "type": "plcTag",
+      "name": "PT100 Tunneltemperatur",
+      "code": "DB20.DBD52",
+      "props": {
+        "address": "DB20.DBD52",
+        "dataType": "REAL",
+        "plc": "PLC-NA2",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung VL-3",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-doc-sp",
+      "type": "document",
+      "name": "Schaltplan VL-3",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan VL-3",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7",
+      "type": "machine",
+      "name": "Fördertechnik FT-7",
+      "code": "FT-7",
+      "props": {
+        "profile": "m-ft7",
+        "legacyId": "m-ft7",
+        "ratedCurrentA": 11,
+        "nominalRate": 120,
+        "unit": "Gebinde/min",
+        "maintenanceIntervalH": 3000
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-plc",
+      "type": "plc",
+      "name": "SPS PLC-NB1",
+      "code": "PLC-NB1",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1200",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-eq",
+      "type": "sapEquipment",
+      "name": "Equipment FT-7",
+      "code": "EQ-FT7",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-asm-drive",
+      "type": "assembly",
+      "name": "Antriebsstation",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-motor",
+      "type": "component",
+      "name": "Motor A3",
+      "code": "A3",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 11,
+        "twinNode": "ft-m-b"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor A3",
+      "code": "EQ-FT7-A3",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-motor-tag",
+      "type": "plcTag",
+      "name": "A3 Motorstrom",
+      "code": "DB30.DBD40",
+      "props": {
+        "address": "DB30.DBD40",
+        "dataType": "REAL",
+        "plc": "PLC-NB1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-vs",
+      "type": "sensor",
+      "name": "Schwingung A3",
+      "code": "VS-A3",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-vs-tag",
+      "type": "plcTag",
+      "name": "VS-A3 Schwingung",
+      "code": "DB30.DBD44",
+      "props": {
+        "address": "DB30.DBD44",
+        "dataType": "REAL",
+        "plc": "PLC-NB1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-ts",
+      "type": "sensor",
+      "name": "Temperatur A3",
+      "code": "TT-A3",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-ts-tag",
+      "type": "plcTag",
+      "name": "TT-A3 Temperatur",
+      "code": "DB30.DBD48",
+      "props": {
+        "address": "DB30.DBD48",
+        "dataType": "REAL",
+        "plc": "PLC-NB1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-asm-belt",
+      "type": "assembly",
+      "name": "Fördergurt",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-gurt",
+      "type": "component",
+      "name": "Modulband",
+      "props": {
+        "kind": "belt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-nord-4720",
+      "type": "sparePart",
+      "name": "Fördergurt Modulband 600 mm",
+      "code": "4720",
+      "props": {
+        "sapMaterial": "4720",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 18,
+        "unitCost": 980,
+        "failureModes": [
+          "Gurtverschleiß",
+          "Stau"
+        ],
+        "plant": "pl-nord"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-ls",
+      "type": "sensor",
+      "name": "Lichtschranke Stau",
+      "code": "LS-1",
+      "props": {
+        "kind": "presence",
+        "signal": null
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-ls-tag",
+      "type": "plcTag",
+      "name": "LS-1 Stau",
+      "code": "DB30.DBX13.0",
+      "props": {
+        "address": "DB30.DBX13.0",
+        "dataType": "BOOL",
+        "plc": "PLC-NB1",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung FT-7",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-doc-sp",
+      "type": "document",
+      "name": "Schaltplan FT-7",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan FT-7",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/b-101",
+      "type": "component",
+      "name": "Einlauf B-101",
+      "code": "B-101",
+      "props": {
+        "kind": "conveyor",
+        "twinNode": "b-101"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/sr-01",
+      "type": "component",
+      "name": "Sternrad SR-01",
+      "code": "SR-01",
+      "props": {
+        "kind": "starwheel",
+        "twinNode": "sr-01"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/rn-01",
+      "type": "component",
+      "name": "Spüler RN-01",
+      "code": "RN-01",
+      "props": {
+        "kind": "station",
+        "twinNode": "rn-01"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/sr-02",
+      "type": "component",
+      "name": "Sternrad SR-02",
+      "code": "SR-02",
+      "props": {
+        "kind": "starwheel",
+        "twinNode": "sr-02"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/fc-01",
+      "type": "component",
+      "name": "Füller FC-01",
+      "code": "FC-01",
+      "props": {
+        "kind": "station",
+        "twinNode": "fc-01"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/sr-03",
+      "type": "component",
+      "name": "Sternrad SR-03",
+      "code": "SR-03",
+      "props": {
+        "kind": "starwheel",
+        "twinNode": "sr-03"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/cp-01",
+      "type": "component",
+      "name": "Verschließer CP-01",
+      "code": "CP-01",
+      "props": {
+        "kind": "station",
+        "twinNode": "cp-01"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/lb-01",
+      "type": "component",
+      "name": "Etikettierer LB-01",
+      "code": "LB-01",
+      "props": {
+        "kind": "station",
+        "twinNode": "lb-01"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/rj-01",
+      "type": "component",
+      "name": "Ausschleuser RJ-01",
+      "code": "RJ-01",
+      "props": {
+        "kind": "station",
+        "twinNode": "rj-01"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/b-102",
+      "type": "component",
+      "name": "Auslauf B-102",
+      "code": "B-102",
+      "props": {
+        "kind": "conveyor",
+        "twinNode": "b-102"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/pk-01",
+      "type": "component",
+      "name": "Packer PK-01",
+      "code": "PK-01",
+      "props": {
+        "kind": "station",
+        "twinNode": "pk-01"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/p-2",
+      "type": "component",
+      "name": "Pumpe P2",
+      "code": "P-2",
+      "props": {
+        "kind": "pump",
+        "twinNode": "p-2"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/p-2-tag",
+      "type": "plcTag",
+      "name": "P2",
+      "code": "DB10.DBD12",
+      "props": {
+        "address": "DB10.DBD12",
+        "plc": "m-af12-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/fv-01",
+      "type": "actuator",
+      "name": "Füllventil FV-01",
+      "code": "FV-01",
+      "props": {
+        "kind": "valve",
+        "twinNode": "fv-01"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/fv-01-tag",
+      "type": "plcTag",
+      "name": "FV-01",
+      "code": "DB10.DBX0.0",
+      "props": {
+        "address": "DB10.DBX0.0",
+        "plc": "m-af12-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/ls-17",
+      "type": "sensor",
+      "name": "Lichtschranke LS-17",
+      "code": "LS-17",
+      "props": {
+        "kind": "sensor",
+        "twinNode": "ls-17"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/ls-17-tag",
+      "type": "plcTag",
+      "name": "B1",
+      "code": "I 2.1",
+      "props": {
+        "address": "I 2.1",
+        "plc": "m-af12-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/s-speed",
+      "type": "sensor",
+      "name": "Drehzahl S-202",
+      "code": "S-SPEED",
+      "props": {
+        "kind": "sensor",
+        "twinNode": "s-speed"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/s-speed-tag",
+      "type": "plcTag",
+      "name": "S-202",
+      "code": "DB10.DBD8",
+      "props": {
+        "address": "DB10.DBD8",
+        "plc": "m-af12-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/tt-214",
+      "type": "sensor",
+      "name": "Temperatur TT-214",
+      "code": "TT-214",
+      "props": {
+        "kind": "sensor",
+        "twinNode": "tt-214"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/tt-214-tag",
+      "type": "plcTag",
+      "name": "TT-214",
+      "code": "DB10.DBD16",
+      "props": {
+        "address": "DB10.DBD16",
+        "plc": "m-af12-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-af12/e-stop",
+      "type": "component",
+      "name": "Not-Aus",
+      "code": "E-STOP",
+      "props": {
+        "kind": "safety",
+        "twinNode": "e-stop"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-in",
+      "type": "component",
+      "name": "Zuführung",
+      "code": "VL-IN",
+      "props": {
+        "kind": "conveyor",
+        "twinNode": "vl-in"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-wrap",
+      "type": "component",
+      "name": "Folienwickler",
+      "code": "VL-WRAP",
+      "props": {
+        "kind": "station",
+        "twinNode": "vl-wrap"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-tunnel",
+      "type": "component",
+      "name": "Shrink-Tunnel",
+      "code": "VL-TUNNEL",
+      "props": {
+        "kind": "tunnel",
+        "twinNode": "vl-tunnel"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-tunnel-tag",
+      "type": "plcTag",
+      "name": "PT100",
+      "code": "DB20.DBD0",
+      "props": {
+        "address": "DB20.DBD0",
+        "plc": "m-vl3-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-out",
+      "type": "component",
+      "name": "Auslauf",
+      "code": "VL-OUT",
+      "props": {
+        "kind": "conveyor",
+        "twinNode": "vl-out"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-gear",
+      "type": "component",
+      "name": "Getriebe G1",
+      "code": "VL-GEAR",
+      "props": {
+        "kind": "gear",
+        "twinNode": "vl-gear"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-enc",
+      "type": "sensor",
+      "name": "Encoder",
+      "code": "VL-ENC",
+      "props": {
+        "kind": "sensor",
+        "twinNode": "vl-enc"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-enc-tag",
+      "type": "plcTag",
+      "name": "ENC",
+      "code": "DB20.DBD8",
+      "props": {
+        "address": "DB20.DBD8",
+        "plc": "m-vl3-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-l1",
+      "type": "sensor",
+      "name": "Lichtgitter L1",
+      "code": "VL-L1",
+      "props": {
+        "kind": "sensor",
+        "twinNode": "vl-l1"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-vl3/vl-l1-tag",
+      "type": "plcTag",
+      "name": "L1",
+      "code": "I 1.0",
+      "props": {
+        "address": "I 1.0",
+        "plc": "m-vl3-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-seg-a",
+      "type": "component",
+      "name": "Segment A",
+      "code": "FT-SEG-A",
+      "props": {
+        "kind": "conveyor",
+        "twinNode": "ft-seg-a"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-seg-b",
+      "type": "component",
+      "name": "Segment B",
+      "code": "FT-SEG-B",
+      "props": {
+        "kind": "conveyor",
+        "twinNode": "ft-seg-b"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-seg-c",
+      "type": "component",
+      "name": "Segment C",
+      "code": "FT-SEG-C",
+      "props": {
+        "kind": "conveyor",
+        "twinNode": "ft-seg-c"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-m-a",
+      "type": "component",
+      "name": "Motor A1",
+      "code": "FT-M-A",
+      "props": {
+        "kind": "motor",
+        "twinNode": "ft-m-a"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-m-a-tag",
+      "type": "plcTag",
+      "name": "M1",
+      "code": "DB30.DBD0",
+      "props": {
+        "address": "DB30.DBD0",
+        "plc": "m-ft7-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-m-c",
+      "type": "component",
+      "name": "Motor C1",
+      "code": "FT-M-C",
+      "props": {
+        "kind": "motor",
+        "twinNode": "ft-m-c"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-m-c-tag",
+      "type": "plcTag",
+      "name": "M5",
+      "code": "DB30.DBD8",
+      "props": {
+        "address": "DB30.DBD8",
+        "plc": "m-ft7-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-ls1",
+      "type": "sensor",
+      "name": "LS-1",
+      "code": "FT-LS1",
+      "props": {
+        "kind": "sensor",
+        "twinNode": "ft-ls1"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-ls1-tag",
+      "type": "plcTag",
+      "name": "B1",
+      "code": "I 0.1",
+      "props": {
+        "address": "I 0.1",
+        "plc": "m-ft7-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-ls2",
+      "type": "sensor",
+      "name": "LS-2",
+      "code": "FT-LS2",
+      "props": {
+        "kind": "sensor",
+        "twinNode": "ft-ls2"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-ft7/ft-ls2-tag",
+      "type": "plcTag",
+      "name": "B2",
+      "code": "I 0.2",
+      "props": {
+        "address": "I 0.2",
+        "plc": "m-ft7-plc",
+        "access": "read",
+        "fromLayout": true
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-sued-abf",
+      "type": "area",
+      "name": "Abfüllung",
+      "code": "ABF",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-sued-abf-l2",
+      "type": "line",
+      "name": "Linie 2",
+      "code": "L2",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-sued-abf-l2-fl",
+      "type": "sapFunctionalLocation",
+      "name": "TP SUED-L2",
+      "code": "DE01-SUED-L2",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-sued-abf-l4",
+      "type": "line",
+      "name": "Linie 4",
+      "code": "L4",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-sued-abf-l4-fl",
+      "type": "sapFunctionalLocation",
+      "name": "TP SUED-L4",
+      "code": "DE01-SUED-L4",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03",
+      "type": "machine",
+      "name": "Förderband FB03",
+      "code": "FB03",
+      "props": {
+        "profile": "m-ft7",
+        "offsetMin": 311,
+        "driftPhaseDays": 40,
+        "ratedCurrentA": 11,
+        "nominalRate": 120,
+        "unit": "Gebinde/min",
+        "maintenanceIntervalH": 3000
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-plc",
+      "type": "plc",
+      "name": "SPS PLC01",
+      "code": "PLC01",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1200",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-eq",
+      "type": "sapEquipment",
+      "name": "Equipment FB03",
+      "code": "EQ-FB03",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-asm-drive",
+      "type": "assembly",
+      "name": "Antriebsstation",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-motor",
+      "type": "component",
+      "name": "Motor M12",
+      "code": "M12",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 11
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M12",
+      "code": "EQ-FB03-M12",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-motor-tag",
+      "type": "plcTag",
+      "name": "M12 Motorstrom",
+      "code": "DB12.DBD4",
+      "props": {
+        "address": "DB12.DBD4",
+        "dataType": "REAL",
+        "plc": "PLC01",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-sued-4711",
+      "type": "sparePart",
+      "name": "Rillenkugellager 6205-2RS",
+      "code": "4711",
+      "props": {
+        "sapMaterial": "4711",
+        "stock": 0,
+        "minStock": 2,
+        "leadTimeDays": 12,
+        "unitCost": 38,
+        "failureModes": [
+          "Lagerschaden",
+          "Vibration"
+        ],
+        "plant": "pl-sued"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-vs",
+      "type": "sensor",
+      "name": "Schwingung M12",
+      "code": "VS-M12",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M12 Schwingung",
+      "code": "DB12.DBD8",
+      "props": {
+        "address": "DB12.DBD8",
+        "dataType": "REAL",
+        "plc": "PLC01",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-ts",
+      "type": "sensor",
+      "name": "Temperatur M12",
+      "code": "TT-M12",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M12 Temperatur",
+      "code": "DB12.DBD12",
+      "props": {
+        "address": "DB12.DBD12",
+        "dataType": "REAL",
+        "plc": "PLC01",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-sued-4714",
+      "type": "sparePart",
+      "name": "Getriebemotor 2,2 kW",
+      "code": "4714",
+      "props": {
+        "sapMaterial": "4714",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 14,
+        "unitCost": 1240,
+        "failureModes": [
+          "Getriebeschaden",
+          "Übertemperatur",
+          "Stromspitze"
+        ],
+        "plant": "pl-sued"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-asm-belt",
+      "type": "assembly",
+      "name": "Fördergurt",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-gurt",
+      "type": "component",
+      "name": "Modulband",
+      "props": {
+        "kind": "belt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-sued-4720",
+      "type": "sparePart",
+      "name": "Fördergurt Modulband 600 mm",
+      "code": "4720",
+      "props": {
+        "sapMaterial": "4720",
+        "stock": 2,
+        "minStock": 1,
+        "leadTimeDays": 18,
+        "unitCost": 980,
+        "failureModes": [
+          "Gurtverschleiß",
+          "Stau"
+        ],
+        "plant": "pl-sued"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-ls",
+      "type": "sensor",
+      "name": "Lichtschranke Stau",
+      "code": "LS-1",
+      "props": {
+        "kind": "presence",
+        "signal": null
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-ls-tag",
+      "type": "plcTag",
+      "name": "LS-1 Stau",
+      "code": "DB12.DBX4.0",
+      "props": {
+        "address": "DB12.DBX4.0",
+        "dataType": "BOOL",
+        "plc": "PLC01",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung FB03",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-doc-sp",
+      "type": "document",
+      "name": "Schaltplan FB03",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-fb03-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan FB03",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24",
+      "type": "machine",
+      "name": "Abfüllanlage AF-24",
+      "code": "AF-24",
+      "props": {
+        "profile": "m-af12",
+        "offsetMin": 1013,
+        "driftPhaseDays": 63,
+        "ratedCurrentA": 21,
+        "nominalRate": 600,
+        "unit": "Fl/min",
+        "maintenanceIntervalH": 2500
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-plc",
+      "type": "plc",
+      "name": "SPS PLC04",
+      "code": "PLC04",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1500",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-eq",
+      "type": "sapEquipment",
+      "name": "Equipment AF-24",
+      "code": "EQ-AF24",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-asm-drive",
+      "type": "assembly",
+      "name": "Hauptantrieb",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-motor",
+      "type": "component",
+      "name": "Motor M-241",
+      "code": "M-241",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 21
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M-241",
+      "code": "EQ-AF24-M241",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-motor-tag",
+      "type": "plcTag",
+      "name": "M-241 Motorstrom",
+      "code": "DB14.DBD0",
+      "props": {
+        "address": "DB14.DBD0",
+        "dataType": "REAL",
+        "plc": "PLC04",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-vs",
+      "type": "sensor",
+      "name": "Schwingung M-241",
+      "code": "VS-M-241",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M-241 Schwingung",
+      "code": "DB14.DBD4",
+      "props": {
+        "address": "DB14.DBD4",
+        "dataType": "REAL",
+        "plc": "PLC04",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-ts",
+      "type": "sensor",
+      "name": "Temperatur M-241",
+      "code": "TT-M-241",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M-241 Temperatur",
+      "code": "DB14.DBD8",
+      "props": {
+        "address": "DB14.DBD8",
+        "dataType": "REAL",
+        "plc": "PLC04",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-sued-4713",
+      "type": "sparePart",
+      "name": "Drehstrommotor 7,5 kW IE3",
+      "code": "4713",
+      "props": {
+        "sapMaterial": "4713",
+        "stock": 0,
+        "minStock": 1,
+        "leadTimeDays": 25,
+        "unitCost": 1890,
+        "failureModes": [
+          "Wicklungsschaden",
+          "Übertemperatur"
+        ],
+        "plant": "pl-sued"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-asm-filler",
+      "type": "assembly",
+      "name": "Füllerkarussell",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-valves",
+      "type": "component",
+      "name": "Füllventile (12×)",
+      "props": {
+        "kind": "valve"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-sued-4712",
+      "type": "sparePart",
+      "name": "Dichtungssatz Füllventil",
+      "code": "4712",
+      "props": {
+        "sapMaterial": "4712",
+        "stock": 3,
+        "minStock": 2,
+        "leadTimeDays": 10,
+        "unitCost": 145,
+        "failureModes": [
+          "Undichtigkeit",
+          "Füllmenge"
+        ],
+        "plant": "pl-sued"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-fv",
+      "type": "actuator",
+      "name": "Füllventil-Ansteuerung",
+      "code": "FV-01",
+      "props": {
+        "kind": "valve",
+        "access": "read-only (Status)"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-fv-tag",
+      "type": "plcTag",
+      "name": "FV-01 Status",
+      "code": "DB14.DBX3.0",
+      "props": {
+        "address": "DB14.DBX3.0",
+        "dataType": "BOOL",
+        "plc": "PLC04",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-pt",
+      "type": "sensor",
+      "name": "Fülldruck",
+      "code": "PT-F",
+      "props": {
+        "kind": "pressure",
+        "unit": "bar",
+        "signal": "pressureBar"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-pt-tag",
+      "type": "plcTag",
+      "name": "PT-F Fülldruck",
+      "code": "DB14.DBD16",
+      "props": {
+        "address": "DB14.DBD16",
+        "dataType": "REAL",
+        "plc": "PLC04",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung AF-24",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-doc-sp",
+      "type": "document",
+      "name": "Schaltplan AF-24",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-af24-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan AF-24",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25",
+      "type": "machine",
+      "name": "Verpackung VL-25",
+      "code": "VL-25",
+      "props": {
+        "profile": "m-vl3",
+        "offsetMin": 523,
+        "driftPhaseDays": 0,
+        "ratedCurrentA": 14,
+        "nominalRate": 80,
+        "unit": "Gebinde/min",
+        "maintenanceIntervalH": 3000
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-plc",
+      "type": "plc",
+      "name": "SPS PLC05",
+      "code": "PLC05",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1500",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-eq",
+      "type": "sapEquipment",
+      "name": "Equipment VL-25",
+      "code": "EQ-VL25",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-asm-drive",
+      "type": "assembly",
+      "name": "Hauptantrieb",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-motor",
+      "type": "component",
+      "name": "Motor M25",
+      "code": "M25",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 14
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M25",
+      "code": "EQ-VL25-M25",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-motor-tag",
+      "type": "plcTag",
+      "name": "M25 Motorstrom",
+      "code": "DB15.DBD0",
+      "props": {
+        "address": "DB15.DBD0",
+        "dataType": "REAL",
+        "plc": "PLC05",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-vs",
+      "type": "sensor",
+      "name": "Schwingung M25",
+      "code": "VS-M25",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M25 Schwingung",
+      "code": "DB15.DBD4",
+      "props": {
+        "address": "DB15.DBD4",
+        "dataType": "REAL",
+        "plc": "PLC05",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-ts",
+      "type": "sensor",
+      "name": "Temperatur M25",
+      "code": "TT-M25",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M25 Temperatur",
+      "code": "DB15.DBD8",
+      "props": {
+        "address": "DB15.DBD8",
+        "dataType": "REAL",
+        "plc": "PLC05",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-asm-tunnel",
+      "type": "assembly",
+      "name": "Shrink-Tunnel",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-heater",
+      "type": "component",
+      "name": "Heizregister",
+      "code": "HZ-1",
+      "props": {
+        "kind": "heater"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-sued-4730",
+      "type": "sparePart",
+      "name": "Heizregister Shrink-Tunnel",
+      "code": "4730",
+      "props": {
+        "sapMaterial": "4730",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 28,
+        "unitCost": 2150,
+        "failureModes": [
+          "Übertemperatur",
+          "Heizungsausfall"
+        ],
+        "plant": "pl-sued"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-fan",
+      "type": "component",
+      "name": "Umluftventilator",
+      "code": "LV-1",
+      "props": {
+        "kind": "fan"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-sued-4731",
+      "type": "sparePart",
+      "name": "Umluftventilator Tunnel",
+      "code": "4731",
+      "props": {
+        "sapMaterial": "4731",
+        "stock": 0,
+        "minStock": 1,
+        "leadTimeDays": 9,
+        "unitCost": 640,
+        "failureModes": [
+          "Vibration",
+          "Übertemperatur"
+        ],
+        "plant": "pl-sued"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-pt100",
+      "type": "sensor",
+      "name": "Tunneltemperatur PT100",
+      "code": "PT100",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-pt100-tag",
+      "type": "plcTag",
+      "name": "PT100 Tunneltemperatur",
+      "code": "DB15.DBD12",
+      "props": {
+        "address": "DB15.DBD12",
+        "dataType": "REAL",
+        "plc": "PLC05",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung VL-25",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-doc-sp",
+      "type": "document",
+      "name": "Schaltplan VL-25",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-sued-vl25-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan VL-25",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-posen-abf",
+      "type": "area",
+      "name": "Rozlewnia (Abfüllung)",
+      "code": "ABF",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-posen-abf-l1",
+      "type": "line",
+      "name": "Linia 1",
+      "code": "L1",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-posen-abf-l1-fl",
+      "type": "sapFunctionalLocation",
+      "name": "TP POZ-L1",
+      "code": "DE01-POZ-L1",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31",
+      "type": "machine",
+      "name": "Abfüllanlage AF-31",
+      "code": "AF-31",
+      "props": {
+        "profile": "m-af12",
+        "offsetMin": 2017,
+        "driftPhaseDays": -20,
+        "ratedCurrentA": 21,
+        "nominalRate": 600,
+        "unit": "Fl/min",
+        "maintenanceIntervalH": 2500
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-plc",
+      "type": "plc",
+      "name": "SPS PLC11",
+      "code": "PLC11",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1500",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-eq",
+      "type": "sapEquipment",
+      "name": "Equipment AF-31",
+      "code": "EQ-AF31",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-asm-drive",
+      "type": "assembly",
+      "name": "Hauptantrieb",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-motor",
+      "type": "component",
+      "name": "Motor M-311",
+      "code": "M-311",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 21
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M-311",
+      "code": "EQ-AF31-M311",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-motor-tag",
+      "type": "plcTag",
+      "name": "M-311 Motorstrom",
+      "code": "DB31.DBD0",
+      "props": {
+        "address": "DB31.DBD0",
+        "dataType": "REAL",
+        "plc": "PLC11",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-poz-4711",
+      "type": "sparePart",
+      "name": "Rillenkugellager 6205-2RS",
+      "code": "4711",
+      "props": {
+        "sapMaterial": "4711",
+        "stock": 6,
+        "minStock": 2,
+        "leadTimeDays": 6,
+        "unitCost": 38,
+        "failureModes": [
+          "Lagerschaden",
+          "Vibration"
+        ],
+        "plant": "pl-posen"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-vs",
+      "type": "sensor",
+      "name": "Schwingung M-311",
+      "code": "VS-M-311",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M-311 Schwingung",
+      "code": "DB31.DBD4",
+      "props": {
+        "address": "DB31.DBD4",
+        "dataType": "REAL",
+        "plc": "PLC11",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-ts",
+      "type": "sensor",
+      "name": "Temperatur M-311",
+      "code": "TT-M-311",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M-311 Temperatur",
+      "code": "DB31.DBD8",
+      "props": {
+        "address": "DB31.DBD8",
+        "dataType": "REAL",
+        "plc": "PLC11",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-poz-4713",
+      "type": "sparePart",
+      "name": "Drehstrommotor 7,5 kW IE3",
+      "code": "4713",
+      "props": {
+        "sapMaterial": "4713",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 21,
+        "unitCost": 1890,
+        "failureModes": [
+          "Wicklungsschaden",
+          "Übertemperatur"
+        ],
+        "plant": "pl-posen"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-asm-filler",
+      "type": "assembly",
+      "name": "Füllerkarussell",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-valves",
+      "type": "component",
+      "name": "Füllventile (12×)",
+      "props": {
+        "kind": "valve"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-poz-4712",
+      "type": "sparePart",
+      "name": "Dichtungssatz Füllventil",
+      "code": "4712",
+      "props": {
+        "sapMaterial": "4712",
+        "stock": 2,
+        "minStock": 2,
+        "leadTimeDays": 10,
+        "unitCost": 145,
+        "failureModes": [
+          "Undichtigkeit",
+          "Füllmenge"
+        ],
+        "plant": "pl-posen"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-fv",
+      "type": "actuator",
+      "name": "Füllventil-Ansteuerung",
+      "code": "FV-01",
+      "props": {
+        "kind": "valve",
+        "access": "read-only (Status)"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-fv-tag",
+      "type": "plcTag",
+      "name": "FV-01 Status",
+      "code": "DB31.DBX3.0",
+      "props": {
+        "address": "DB31.DBX3.0",
+        "dataType": "BOOL",
+        "plc": "PLC11",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-pt",
+      "type": "sensor",
+      "name": "Fülldruck",
+      "code": "PT-F",
+      "props": {
+        "kind": "pressure",
+        "unit": "bar",
+        "signal": "pressureBar"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-pt-tag",
+      "type": "plcTag",
+      "name": "PT-F Fülldruck",
+      "code": "DB31.DBD16",
+      "props": {
+        "address": "DB31.DBD16",
+        "dataType": "REAL",
+        "plc": "PLC11",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung AF-31",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-doc-sp",
+      "type": "document",
+      "name": "Schaltplan AF-31",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-af31-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan AF-31",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32",
+      "type": "machine",
+      "name": "Verpackung VL-32",
+      "code": "VL-32",
+      "props": {
+        "profile": "m-vl3",
+        "offsetMin": 1409,
+        "driftPhaseDays": 0,
+        "ratedCurrentA": 14,
+        "nominalRate": 80,
+        "unit": "Gebinde/min",
+        "maintenanceIntervalH": 3000
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-plc",
+      "type": "plc",
+      "name": "SPS PLC12",
+      "code": "PLC12",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1500",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-eq",
+      "type": "sapEquipment",
+      "name": "Equipment VL-32",
+      "code": "EQ-VL32",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-asm-drive",
+      "type": "assembly",
+      "name": "Hauptantrieb",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-motor",
+      "type": "component",
+      "name": "Motor M32",
+      "code": "M32",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 14
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M32",
+      "code": "EQ-VL32-M32",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-motor-tag",
+      "type": "plcTag",
+      "name": "M32 Motorstrom",
+      "code": "DB32.DBD0",
+      "props": {
+        "address": "DB32.DBD0",
+        "dataType": "REAL",
+        "plc": "PLC12",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-vs",
+      "type": "sensor",
+      "name": "Schwingung M32",
+      "code": "VS-M32",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M32 Schwingung",
+      "code": "DB32.DBD4",
+      "props": {
+        "address": "DB32.DBD4",
+        "dataType": "REAL",
+        "plc": "PLC12",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-ts",
+      "type": "sensor",
+      "name": "Temperatur M32",
+      "code": "TT-M32",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M32 Temperatur",
+      "code": "DB32.DBD8",
+      "props": {
+        "address": "DB32.DBD8",
+        "dataType": "REAL",
+        "plc": "PLC12",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-poz-4714",
+      "type": "sparePart",
+      "name": "Getriebemotor 2,2 kW",
+      "code": "4714",
+      "props": {
+        "sapMaterial": "4714",
+        "stock": 2,
+        "minStock": 1,
+        "leadTimeDays": 14,
+        "unitCost": 1240,
+        "failureModes": [
+          "Getriebeschaden",
+          "Übertemperatur",
+          "Stromspitze"
+        ],
+        "plant": "pl-posen"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-asm-tunnel",
+      "type": "assembly",
+      "name": "Shrink-Tunnel",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-heater",
+      "type": "component",
+      "name": "Heizregister",
+      "code": "HZ-1",
+      "props": {
+        "kind": "heater"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-poz-4730",
+      "type": "sparePart",
+      "name": "Heizregister Shrink-Tunnel",
+      "code": "4730",
+      "props": {
+        "sapMaterial": "4730",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 28,
+        "unitCost": 2150,
+        "failureModes": [
+          "Übertemperatur",
+          "Heizungsausfall"
+        ],
+        "plant": "pl-posen"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-fan",
+      "type": "component",
+      "name": "Umluftventilator",
+      "code": "LV-1",
+      "props": {
+        "kind": "fan"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-poz-4731",
+      "type": "sparePart",
+      "name": "Umluftventilator Tunnel",
+      "code": "4731",
+      "props": {
+        "sapMaterial": "4731",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 9,
+        "unitCost": 640,
+        "failureModes": [
+          "Vibration",
+          "Übertemperatur"
+        ],
+        "plant": "pl-posen"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-pt100",
+      "type": "sensor",
+      "name": "Tunneltemperatur PT100",
+      "code": "PT100",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-pt100-tag",
+      "type": "plcTag",
+      "name": "PT100 Tunneltemperatur",
+      "code": "DB32.DBD12",
+      "props": {
+        "address": "DB32.DBD12",
+        "dataType": "REAL",
+        "plc": "PLC12",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung VL-32",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-doc-sp",
+      "type": "document",
+      "name": "Schaltplan VL-32",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-poz-vl32-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan VL-32",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-atl-fil",
+      "type": "area",
+      "name": "Filling",
+      "code": "FIL",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-atl-fil-l1",
+      "type": "line",
+      "name": "Line 1",
+      "code": "L1",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "pl-atl-fil-l1-fl",
+      "type": "sapFunctionalLocation",
+      "name": "TP ATL-L1",
+      "code": "DE01-ATL-L1",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41",
+      "type": "machine",
+      "name": "Filler AF-41",
+      "code": "AF-41",
+      "props": {
+        "profile": "m-af12",
+        "offsetMin": 3301,
+        "driftPhaseDays": 30,
+        "ratedCurrentA": 21,
+        "nominalRate": 600,
+        "unit": "btl/min",
+        "maintenanceIntervalH": 2500
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-plc",
+      "type": "plc",
+      "name": "SPS PLC21",
+      "code": "PLC21",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1500",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-eq",
+      "type": "sapEquipment",
+      "name": "Equipment AF-41",
+      "code": "EQ-AF41",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-asm-drive",
+      "type": "assembly",
+      "name": "Hauptantrieb",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-motor",
+      "type": "component",
+      "name": "Motor M-411",
+      "code": "M-411",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 21
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M-411",
+      "code": "EQ-AF41-M411",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-motor-tag",
+      "type": "plcTag",
+      "name": "M-411 Motorstrom",
+      "code": "DB41.DBD0",
+      "props": {
+        "address": "DB41.DBD0",
+        "dataType": "REAL",
+        "plc": "PLC21",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-atl-4711",
+      "type": "sparePart",
+      "name": "Rillenkugellager 6205-2RS",
+      "code": "4711",
+      "props": {
+        "sapMaterial": "4711",
+        "stock": 8,
+        "minStock": 2,
+        "leadTimeDays": 4,
+        "unitCost": 38,
+        "failureModes": [
+          "Lagerschaden",
+          "Vibration"
+        ],
+        "plant": "pl-atl"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-vs",
+      "type": "sensor",
+      "name": "Schwingung M-411",
+      "code": "VS-M-411",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M-411 Schwingung",
+      "code": "DB41.DBD4",
+      "props": {
+        "address": "DB41.DBD4",
+        "dataType": "REAL",
+        "plc": "PLC21",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-ts",
+      "type": "sensor",
+      "name": "Temperatur M-411",
+      "code": "TT-M-411",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M-411 Temperatur",
+      "code": "DB41.DBD8",
+      "props": {
+        "address": "DB41.DBD8",
+        "dataType": "REAL",
+        "plc": "PLC21",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-atl-4713",
+      "type": "sparePart",
+      "name": "Drehstrommotor 7,5 kW IE3",
+      "code": "4713",
+      "props": {
+        "sapMaterial": "4713",
+        "stock": 2,
+        "minStock": 1,
+        "leadTimeDays": 14,
+        "unitCost": 1890,
+        "failureModes": [
+          "Wicklungsschaden",
+          "Übertemperatur"
+        ],
+        "plant": "pl-atl"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-asm-filler",
+      "type": "assembly",
+      "name": "Füllerkarussell",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-valves",
+      "type": "component",
+      "name": "Füllventile (12×)",
+      "props": {
+        "kind": "valve"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-atl-4712",
+      "type": "sparePart",
+      "name": "Dichtungssatz Füllventil",
+      "code": "4712",
+      "props": {
+        "sapMaterial": "4712",
+        "stock": 4,
+        "minStock": 2,
+        "leadTimeDays": 8,
+        "unitCost": 145,
+        "failureModes": [
+          "Undichtigkeit",
+          "Füllmenge"
+        ],
+        "plant": "pl-atl"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-fv",
+      "type": "actuator",
+      "name": "Füllventil-Ansteuerung",
+      "code": "FV-01",
+      "props": {
+        "kind": "valve",
+        "access": "read-only (Status)"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-fv-tag",
+      "type": "plcTag",
+      "name": "FV-01 Status",
+      "code": "DB41.DBX3.0",
+      "props": {
+        "address": "DB41.DBX3.0",
+        "dataType": "BOOL",
+        "plc": "PLC21",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-pt",
+      "type": "sensor",
+      "name": "Fülldruck",
+      "code": "PT-F",
+      "props": {
+        "kind": "pressure",
+        "unit": "bar",
+        "signal": "pressureBar"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-pt-tag",
+      "type": "plcTag",
+      "name": "PT-F Fülldruck",
+      "code": "DB41.DBD16",
+      "props": {
+        "address": "DB41.DBD16",
+        "dataType": "REAL",
+        "plc": "PLC21",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung AF-41",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-doc-sp",
+      "type": "document",
+      "name": "Schaltplan AF-41",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-af41-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan AF-41",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42",
+      "type": "machine",
+      "name": "Conveyor FT-42",
+      "code": "FT-42",
+      "props": {
+        "profile": "m-ft7",
+        "offsetMin": 2711,
+        "driftPhaseDays": 60,
+        "ratedCurrentA": 11,
+        "nominalRate": 120,
+        "unit": "cases/min",
+        "maintenanceIntervalH": 3000
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-plc",
+      "type": "plc",
+      "name": "SPS PLC22",
+      "code": "PLC22",
+      "props": {
+        "vendor": "Siemens",
+        "family": "S7-1200",
+        "access": "read-only"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-eq",
+      "type": "sapEquipment",
+      "name": "Equipment FT-42",
+      "code": "EQ-FT42",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-asm-drive",
+      "type": "assembly",
+      "name": "Antriebsstation",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-motor",
+      "type": "component",
+      "name": "Motor M42",
+      "code": "M42",
+      "props": {
+        "kind": "motor",
+        "ratedCurrentA": 11
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-motor-eq",
+      "type": "sapEquipment",
+      "name": "Equipment Motor M42",
+      "code": "EQ-FT42-M42",
+      "props": {
+        "sapSystem": "DEMO"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-motor-tag",
+      "type": "plcTag",
+      "name": "M42 Motorstrom",
+      "code": "DB42.DBD0",
+      "props": {
+        "address": "DB42.DBD0",
+        "dataType": "REAL",
+        "plc": "PLC22",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-bearing",
+      "type": "component",
+      "name": "Motorlager AS",
+      "props": {
+        "kind": "bearing"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-vs",
+      "type": "sensor",
+      "name": "Schwingung M42",
+      "code": "VS-M42",
+      "props": {
+        "kind": "vibration",
+        "unit": "mm/s",
+        "signal": "vibrationMmS"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-vs-tag",
+      "type": "plcTag",
+      "name": "VS-M42 Schwingung",
+      "code": "DB42.DBD4",
+      "props": {
+        "address": "DB42.DBD4",
+        "dataType": "REAL",
+        "plc": "PLC22",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-ts",
+      "type": "sensor",
+      "name": "Temperatur M42",
+      "code": "TT-M42",
+      "props": {
+        "kind": "temperature",
+        "unit": "°C",
+        "signal": "temperatureC"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-ts-tag",
+      "type": "plcTag",
+      "name": "TT-M42 Temperatur",
+      "code": "DB42.DBD8",
+      "props": {
+        "address": "DB42.DBD8",
+        "dataType": "REAL",
+        "plc": "PLC22",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-atl-4714",
+      "type": "sparePart",
+      "name": "Getriebemotor 2,2 kW",
+      "code": "4714",
+      "props": {
+        "sapMaterial": "4714",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 10,
+        "unitCost": 1240,
+        "failureModes": [
+          "Getriebeschaden",
+          "Übertemperatur",
+          "Stromspitze"
+        ],
+        "plant": "pl-atl"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-asm-belt",
+      "type": "assembly",
+      "name": "Fördergurt",
+      "props": {},
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-gurt",
+      "type": "component",
+      "name": "Modulband",
+      "props": {
+        "kind": "belt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "sp-atl-4720",
+      "type": "sparePart",
+      "name": "Fördergurt Modulband 600 mm",
+      "code": "4720",
+      "props": {
+        "sapMaterial": "4720",
+        "stock": 1,
+        "minStock": 1,
+        "leadTimeDays": 12,
+        "unitCost": 980,
+        "failureModes": [
+          "Gurtverschleiß",
+          "Stau"
+        ],
+        "plant": "pl-atl"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-ls",
+      "type": "sensor",
+      "name": "Lichtschranke Stau",
+      "code": "LS-1",
+      "props": {
+        "kind": "presence",
+        "signal": null
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-ls-tag",
+      "type": "plcTag",
+      "name": "LS-1 Stau",
+      "code": "DB42.DBX3.0",
+      "props": {
+        "address": "DB42.DBX3.0",
+        "dataType": "BOOL",
+        "plc": "PLC22",
+        "access": "read"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-doc-ba",
+      "type": "document",
+      "name": "Betriebsanleitung FT-42",
+      "props": {
+        "kind": "manual",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-doc-sp",
+      "type": "document",
+      "name": "Schaltplan FT-42",
+      "props": {
+        "kind": "schematic",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "m-atl-ft42-doc-wp",
+      "type": "document",
+      "name": "Wartungsplan FT-42",
+      "props": {
+        "kind": "maintenance-plan",
+        "note": "DEMO-Metadaten · kein Dokumentinhalt hinterlegt"
+      },
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e:reg-emea:partOf:co",
+      "from": "reg-emea",
+      "to": "co",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:reg-na:partOf:co",
+      "from": "reg-na",
+      "to": "co",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:cty-de:partOf:reg-emea",
+      "from": "cty-de",
+      "to": "reg-emea",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:cty-pl:partOf:reg-emea",
+      "from": "cty-pl",
+      "to": "reg-emea",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:cty-us:partOf:reg-na",
+      "from": "cty-us",
+      "to": "reg-na",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:site-ham:partOf:cty-de",
+      "from": "site-ham",
+      "to": "cty-de",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-nord:partOf:site-ham",
+      "from": "pl-nord",
+      "to": "site-ham",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:site-muc:partOf:cty-de",
+      "from": "site-muc",
+      "to": "cty-de",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-sued:partOf:site-muc",
+      "from": "pl-sued",
+      "to": "site-muc",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:site-poz:partOf:cty-pl",
+      "from": "site-poz",
+      "to": "cty-pl",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-posen:partOf:site-poz",
+      "from": "pl-posen",
+      "to": "site-poz",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:site-atl:partOf:cty-us",
+      "from": "site-atl",
+      "to": "cty-us",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-atl:partOf:site-atl",
+      "from": "pl-atl",
+      "to": "site-atl",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-nord-abf:partOf:pl-nord",
+      "from": "pl-nord-abf",
+      "to": "pl-nord",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-nord-log:partOf:pl-nord",
+      "from": "pl-nord-log",
+      "to": "pl-nord",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-nord-abf-la:partOf:pl-nord-abf",
+      "from": "pl-nord-abf-la",
+      "to": "pl-nord-abf",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-nord-abf-la:sapLocation:pl-nord-abf-la-fl",
+      "from": "pl-nord-abf-la",
+      "to": "pl-nord-abf-la-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-nord-log-lb:partOf:pl-nord-log",
+      "from": "pl-nord-log-lb",
+      "to": "pl-nord-log",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-nord-log-lb:sapLocation:pl-nord-log-lb-fl",
+      "from": "pl-nord-log-lb",
+      "to": "pl-nord-log-lb-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12:partOf:pl-nord-abf-la",
+      "from": "m-af12",
+      "to": "pl-nord-abf-la",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12:controlledBy:m-af12-plc",
+      "from": "m-af12",
+      "to": "m-af12-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12:sapEquipment:m-af12-eq",
+      "from": "m-af12",
+      "to": "m-af12-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12:sapLocation:pl-nord-abf-la-fl",
+      "from": "m-af12",
+      "to": "pl-nord-abf-la-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-asm-drive:partOf:m-af12",
+      "from": "m-af12-asm-drive",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-motor:partOf:m-af12-asm-drive",
+      "from": "m-af12-motor",
+      "to": "m-af12-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-motor:controlledBy:m-af12-plc",
+      "from": "m-af12-motor",
+      "to": "m-af12-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-motor:sapEquipment:m-af12-motor-eq",
+      "from": "m-af12-motor",
+      "to": "m-af12-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-motor-tag:tagOf:m-af12-plc",
+      "from": "m-af12-motor-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-motor:measuredBy:m-af12-motor-tag",
+      "from": "m-af12-motor",
+      "to": "m-af12-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-bearing:partOf:m-af12-asm-drive",
+      "from": "m-af12-bearing",
+      "to": "m-af12-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-nord-4711:material:mat-4711",
+      "from": "sp-nord-4711",
+      "to": "mat-4711",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-bearing:usesSparePart:sp-nord-4711",
+      "from": "m-af12-bearing",
+      "to": "sp-nord-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-vs:partOf:m-af12-motor",
+      "from": "m-af12-vs",
+      "to": "m-af12-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-vs-tag:tagOf:m-af12-plc",
+      "from": "m-af12-vs-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-vs:measuredBy:m-af12-vs-tag",
+      "from": "m-af12-vs",
+      "to": "m-af12-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-ts:partOf:m-af12-motor",
+      "from": "m-af12-ts",
+      "to": "m-af12-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-ts-tag:tagOf:m-af12-plc",
+      "from": "m-af12-ts-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-ts:measuredBy:m-af12-ts-tag",
+      "from": "m-af12-ts",
+      "to": "m-af12-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-nord-4713:material:mat-4713",
+      "from": "sp-nord-4713",
+      "to": "mat-4713",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-motor:usesSparePart:sp-nord-4713",
+      "from": "m-af12-motor",
+      "to": "sp-nord-4713",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-asm-filler:partOf:m-af12",
+      "from": "m-af12-asm-filler",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-valves:partOf:m-af12-asm-filler",
+      "from": "m-af12-valves",
+      "to": "m-af12-asm-filler",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-nord-4712:material:mat-4712",
+      "from": "sp-nord-4712",
+      "to": "mat-4712",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-valves:usesSparePart:sp-nord-4712",
+      "from": "m-af12-valves",
+      "to": "sp-nord-4712",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-fv:partOf:m-af12-valves",
+      "from": "m-af12-fv",
+      "to": "m-af12-valves",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-fv-tag:tagOf:m-af12-plc",
+      "from": "m-af12-fv-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-fv:measuredBy:m-af12-fv-tag",
+      "from": "m-af12-fv",
+      "to": "m-af12-fv-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-pt:partOf:m-af12-asm-filler",
+      "from": "m-af12-pt",
+      "to": "m-af12-asm-filler",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-pt-tag:tagOf:m-af12-plc",
+      "from": "m-af12-pt-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-pt:measuredBy:m-af12-pt-tag",
+      "from": "m-af12-pt",
+      "to": "m-af12-pt-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-doc-ba:documents:m-af12",
+      "from": "m-af12-doc-ba",
+      "to": "m-af12",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-doc-sp:documents:m-af12",
+      "from": "m-af12-doc-sp",
+      "to": "m-af12",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12-doc-wp:documents:m-af12",
+      "from": "m-af12-doc-wp",
+      "to": "m-af12",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3:partOf:pl-nord-abf-la",
+      "from": "m-vl3",
+      "to": "pl-nord-abf-la",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3:controlledBy:m-vl3-plc",
+      "from": "m-vl3",
+      "to": "m-vl3-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3:sapEquipment:m-vl3-eq",
+      "from": "m-vl3",
+      "to": "m-vl3-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3:sapLocation:pl-nord-abf-la-fl",
+      "from": "m-vl3",
+      "to": "pl-nord-abf-la-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-asm-drive:partOf:m-vl3",
+      "from": "m-vl3-asm-drive",
+      "to": "m-vl3",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-motor:partOf:m-vl3-asm-drive",
+      "from": "m-vl3-motor",
+      "to": "m-vl3-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-motor:controlledBy:m-vl3-plc",
+      "from": "m-vl3-motor",
+      "to": "m-vl3-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-motor:sapEquipment:m-vl3-motor-eq",
+      "from": "m-vl3-motor",
+      "to": "m-vl3-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-motor-tag:tagOf:m-vl3-plc",
+      "from": "m-vl3-motor-tag",
+      "to": "m-vl3-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-motor:measuredBy:m-vl3-motor-tag",
+      "from": "m-vl3-motor",
+      "to": "m-vl3-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-bearing:partOf:m-vl3-asm-drive",
+      "from": "m-vl3-bearing",
+      "to": "m-vl3-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-bearing:usesSparePart:sp-nord-4711",
+      "from": "m-vl3-bearing",
+      "to": "sp-nord-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-vs:partOf:m-vl3-motor",
+      "from": "m-vl3-vs",
+      "to": "m-vl3-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-vs-tag:tagOf:m-vl3-plc",
+      "from": "m-vl3-vs-tag",
+      "to": "m-vl3-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-vs:measuredBy:m-vl3-vs-tag",
+      "from": "m-vl3-vs",
+      "to": "m-vl3-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-ts:partOf:m-vl3-motor",
+      "from": "m-vl3-ts",
+      "to": "m-vl3-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-ts-tag:tagOf:m-vl3-plc",
+      "from": "m-vl3-ts-tag",
+      "to": "m-vl3-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-ts:measuredBy:m-vl3-ts-tag",
+      "from": "m-vl3-ts",
+      "to": "m-vl3-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-nord-4714:material:mat-4714",
+      "from": "sp-nord-4714",
+      "to": "mat-4714",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-motor:usesSparePart:sp-nord-4714",
+      "from": "m-vl3-motor",
+      "to": "sp-nord-4714",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-asm-tunnel:partOf:m-vl3",
+      "from": "m-vl3-asm-tunnel",
+      "to": "m-vl3",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-heater:partOf:m-vl3-asm-tunnel",
+      "from": "m-vl3-heater",
+      "to": "m-vl3-asm-tunnel",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-nord-4730:material:mat-4730",
+      "from": "sp-nord-4730",
+      "to": "mat-4730",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-heater:usesSparePart:sp-nord-4730",
+      "from": "m-vl3-heater",
+      "to": "sp-nord-4730",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-fan:partOf:m-vl3-asm-tunnel",
+      "from": "m-vl3-fan",
+      "to": "m-vl3-asm-tunnel",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-nord-4731:material:mat-4731",
+      "from": "sp-nord-4731",
+      "to": "mat-4731",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-fan:usesSparePart:sp-nord-4731",
+      "from": "m-vl3-fan",
+      "to": "sp-nord-4731",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-pt100:partOf:m-vl3-asm-tunnel",
+      "from": "m-vl3-pt100",
+      "to": "m-vl3-asm-tunnel",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-pt100-tag:tagOf:m-vl3-plc",
+      "from": "m-vl3-pt100-tag",
+      "to": "m-vl3-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-pt100:measuredBy:m-vl3-pt100-tag",
+      "from": "m-vl3-pt100",
+      "to": "m-vl3-pt100-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-doc-ba:documents:m-vl3",
+      "from": "m-vl3-doc-ba",
+      "to": "m-vl3",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-doc-sp:documents:m-vl3",
+      "from": "m-vl3-doc-sp",
+      "to": "m-vl3",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3-doc-wp:documents:m-vl3",
+      "from": "m-vl3-doc-wp",
+      "to": "m-vl3",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7:partOf:pl-nord-log-lb",
+      "from": "m-ft7",
+      "to": "pl-nord-log-lb",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7:controlledBy:m-ft7-plc",
+      "from": "m-ft7",
+      "to": "m-ft7-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7:sapEquipment:m-ft7-eq",
+      "from": "m-ft7",
+      "to": "m-ft7-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7:sapLocation:pl-nord-log-lb-fl",
+      "from": "m-ft7",
+      "to": "pl-nord-log-lb-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-asm-drive:partOf:m-ft7",
+      "from": "m-ft7-asm-drive",
+      "to": "m-ft7",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-motor:partOf:m-ft7-asm-drive",
+      "from": "m-ft7-motor",
+      "to": "m-ft7-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-motor:controlledBy:m-ft7-plc",
+      "from": "m-ft7-motor",
+      "to": "m-ft7-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-motor:sapEquipment:m-ft7-motor-eq",
+      "from": "m-ft7-motor",
+      "to": "m-ft7-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-motor-tag:tagOf:m-ft7-plc",
+      "from": "m-ft7-motor-tag",
+      "to": "m-ft7-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-motor:measuredBy:m-ft7-motor-tag",
+      "from": "m-ft7-motor",
+      "to": "m-ft7-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-bearing:partOf:m-ft7-asm-drive",
+      "from": "m-ft7-bearing",
+      "to": "m-ft7-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-bearing:usesSparePart:sp-nord-4711",
+      "from": "m-ft7-bearing",
+      "to": "sp-nord-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-vs:partOf:m-ft7-motor",
+      "from": "m-ft7-vs",
+      "to": "m-ft7-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-vs-tag:tagOf:m-ft7-plc",
+      "from": "m-ft7-vs-tag",
+      "to": "m-ft7-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-vs:measuredBy:m-ft7-vs-tag",
+      "from": "m-ft7-vs",
+      "to": "m-ft7-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-ts:partOf:m-ft7-motor",
+      "from": "m-ft7-ts",
+      "to": "m-ft7-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-ts-tag:tagOf:m-ft7-plc",
+      "from": "m-ft7-ts-tag",
+      "to": "m-ft7-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-ts:measuredBy:m-ft7-ts-tag",
+      "from": "m-ft7-ts",
+      "to": "m-ft7-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-motor:usesSparePart:sp-nord-4714",
+      "from": "m-ft7-motor",
+      "to": "sp-nord-4714",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-asm-belt:partOf:m-ft7",
+      "from": "m-ft7-asm-belt",
+      "to": "m-ft7",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-gurt:partOf:m-ft7-asm-belt",
+      "from": "m-ft7-gurt",
+      "to": "m-ft7-asm-belt",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-nord-4720:material:mat-4720",
+      "from": "sp-nord-4720",
+      "to": "mat-4720",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-gurt:usesSparePart:sp-nord-4720",
+      "from": "m-ft7-gurt",
+      "to": "sp-nord-4720",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-ls:partOf:m-ft7-asm-belt",
+      "from": "m-ft7-ls",
+      "to": "m-ft7-asm-belt",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-ls-tag:tagOf:m-ft7-plc",
+      "from": "m-ft7-ls-tag",
+      "to": "m-ft7-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-ls:measuredBy:m-ft7-ls-tag",
+      "from": "m-ft7-ls",
+      "to": "m-ft7-ls-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-doc-ba:documents:m-ft7",
+      "from": "m-ft7-doc-ba",
+      "to": "m-ft7",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-doc-sp:documents:m-ft7",
+      "from": "m-ft7-doc-sp",
+      "to": "m-ft7",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7-doc-wp:documents:m-ft7",
+      "from": "m-ft7-doc-wp",
+      "to": "m-ft7",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/b-101:partOf:m-af12",
+      "from": "m-af12/b-101",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/sr-01:partOf:m-af12",
+      "from": "m-af12/sr-01",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/rn-01:partOf:m-af12",
+      "from": "m-af12/rn-01",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/sr-02:partOf:m-af12",
+      "from": "m-af12/sr-02",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/fc-01:partOf:m-af12",
+      "from": "m-af12/fc-01",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/sr-03:partOf:m-af12",
+      "from": "m-af12/sr-03",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/cp-01:partOf:m-af12",
+      "from": "m-af12/cp-01",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/lb-01:partOf:m-af12",
+      "from": "m-af12/lb-01",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/rj-01:partOf:m-af12",
+      "from": "m-af12/rj-01",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/b-102:partOf:m-af12",
+      "from": "m-af12/b-102",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/pk-01:partOf:m-af12",
+      "from": "m-af12/pk-01",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/p-2:partOf:m-af12",
+      "from": "m-af12/p-2",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/p-2-tag:tagOf:m-af12-plc",
+      "from": "m-af12/p-2-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/p-2:measuredBy:m-af12/p-2-tag",
+      "from": "m-af12/p-2",
+      "to": "m-af12/p-2-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/fv-01:partOf:m-af12",
+      "from": "m-af12/fv-01",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/fv-01-tag:tagOf:m-af12-plc",
+      "from": "m-af12/fv-01-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/fv-01:measuredBy:m-af12/fv-01-tag",
+      "from": "m-af12/fv-01",
+      "to": "m-af12/fv-01-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/ls-17:partOf:m-af12",
+      "from": "m-af12/ls-17",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/ls-17-tag:tagOf:m-af12-plc",
+      "from": "m-af12/ls-17-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/ls-17:measuredBy:m-af12/ls-17-tag",
+      "from": "m-af12/ls-17",
+      "to": "m-af12/ls-17-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/s-speed:partOf:m-af12",
+      "from": "m-af12/s-speed",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/s-speed-tag:tagOf:m-af12-plc",
+      "from": "m-af12/s-speed-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/s-speed:measuredBy:m-af12/s-speed-tag",
+      "from": "m-af12/s-speed",
+      "to": "m-af12/s-speed-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/tt-214:partOf:m-af12",
+      "from": "m-af12/tt-214",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/tt-214-tag:tagOf:m-af12-plc",
+      "from": "m-af12/tt-214-tag",
+      "to": "m-af12-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/tt-214:measuredBy:m-af12/tt-214-tag",
+      "from": "m-af12/tt-214",
+      "to": "m-af12/tt-214-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-af12/e-stop:partOf:m-af12",
+      "from": "m-af12/e-stop",
+      "to": "m-af12",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-in:partOf:m-vl3",
+      "from": "m-vl3/vl-in",
+      "to": "m-vl3",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-wrap:partOf:m-vl3",
+      "from": "m-vl3/vl-wrap",
+      "to": "m-vl3",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-tunnel:partOf:m-vl3",
+      "from": "m-vl3/vl-tunnel",
+      "to": "m-vl3",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-tunnel-tag:tagOf:m-vl3-plc",
+      "from": "m-vl3/vl-tunnel-tag",
+      "to": "m-vl3-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-tunnel:measuredBy:m-vl3/vl-tunnel-tag",
+      "from": "m-vl3/vl-tunnel",
+      "to": "m-vl3/vl-tunnel-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-out:partOf:m-vl3",
+      "from": "m-vl3/vl-out",
+      "to": "m-vl3",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-gear:partOf:m-vl3",
+      "from": "m-vl3/vl-gear",
+      "to": "m-vl3",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-enc:partOf:m-vl3",
+      "from": "m-vl3/vl-enc",
+      "to": "m-vl3",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-enc-tag:tagOf:m-vl3-plc",
+      "from": "m-vl3/vl-enc-tag",
+      "to": "m-vl3-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-enc:measuredBy:m-vl3/vl-enc-tag",
+      "from": "m-vl3/vl-enc",
+      "to": "m-vl3/vl-enc-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-l1:partOf:m-vl3",
+      "from": "m-vl3/vl-l1",
+      "to": "m-vl3",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-l1-tag:tagOf:m-vl3-plc",
+      "from": "m-vl3/vl-l1-tag",
+      "to": "m-vl3-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-vl3/vl-l1:measuredBy:m-vl3/vl-l1-tag",
+      "from": "m-vl3/vl-l1",
+      "to": "m-vl3/vl-l1-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-seg-a:partOf:m-ft7",
+      "from": "m-ft7/ft-seg-a",
+      "to": "m-ft7",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-seg-b:partOf:m-ft7",
+      "from": "m-ft7/ft-seg-b",
+      "to": "m-ft7",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-seg-c:partOf:m-ft7",
+      "from": "m-ft7/ft-seg-c",
+      "to": "m-ft7",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-m-a:partOf:m-ft7",
+      "from": "m-ft7/ft-m-a",
+      "to": "m-ft7",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-m-a-tag:tagOf:m-ft7-plc",
+      "from": "m-ft7/ft-m-a-tag",
+      "to": "m-ft7-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-m-a:measuredBy:m-ft7/ft-m-a-tag",
+      "from": "m-ft7/ft-m-a",
+      "to": "m-ft7/ft-m-a-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-m-c:partOf:m-ft7",
+      "from": "m-ft7/ft-m-c",
+      "to": "m-ft7",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-m-c-tag:tagOf:m-ft7-plc",
+      "from": "m-ft7/ft-m-c-tag",
+      "to": "m-ft7-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-m-c:measuredBy:m-ft7/ft-m-c-tag",
+      "from": "m-ft7/ft-m-c",
+      "to": "m-ft7/ft-m-c-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-ls1:partOf:m-ft7",
+      "from": "m-ft7/ft-ls1",
+      "to": "m-ft7",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-ls1-tag:tagOf:m-ft7-plc",
+      "from": "m-ft7/ft-ls1-tag",
+      "to": "m-ft7-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-ls1:measuredBy:m-ft7/ft-ls1-tag",
+      "from": "m-ft7/ft-ls1",
+      "to": "m-ft7/ft-ls1-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-ls2:partOf:m-ft7",
+      "from": "m-ft7/ft-ls2",
+      "to": "m-ft7",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-ls2-tag:tagOf:m-ft7-plc",
+      "from": "m-ft7/ft-ls2-tag",
+      "to": "m-ft7-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-ft7/ft-ls2:measuredBy:m-ft7/ft-ls2-tag",
+      "from": "m-ft7/ft-ls2",
+      "to": "m-ft7/ft-ls2-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-sued-abf:partOf:pl-sued",
+      "from": "pl-sued-abf",
+      "to": "pl-sued",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-sued-abf-l2:partOf:pl-sued-abf",
+      "from": "pl-sued-abf-l2",
+      "to": "pl-sued-abf",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-sued-abf-l2:sapLocation:pl-sued-abf-l2-fl",
+      "from": "pl-sued-abf-l2",
+      "to": "pl-sued-abf-l2-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-sued-abf-l4:partOf:pl-sued-abf",
+      "from": "pl-sued-abf-l4",
+      "to": "pl-sued-abf",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-sued-abf-l4:sapLocation:pl-sued-abf-l4-fl",
+      "from": "pl-sued-abf-l4",
+      "to": "pl-sued-abf-l4-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03:partOf:pl-sued-abf-l2",
+      "from": "m-sued-fb03",
+      "to": "pl-sued-abf-l2",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03:controlledBy:m-sued-fb03-plc",
+      "from": "m-sued-fb03",
+      "to": "m-sued-fb03-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03:sapEquipment:m-sued-fb03-eq",
+      "from": "m-sued-fb03",
+      "to": "m-sued-fb03-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03:sapLocation:pl-sued-abf-l2-fl",
+      "from": "m-sued-fb03",
+      "to": "pl-sued-abf-l2-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-asm-drive:partOf:m-sued-fb03",
+      "from": "m-sued-fb03-asm-drive",
+      "to": "m-sued-fb03",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-motor:partOf:m-sued-fb03-asm-drive",
+      "from": "m-sued-fb03-motor",
+      "to": "m-sued-fb03-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-motor:controlledBy:m-sued-fb03-plc",
+      "from": "m-sued-fb03-motor",
+      "to": "m-sued-fb03-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-motor:sapEquipment:m-sued-fb03-motor-eq",
+      "from": "m-sued-fb03-motor",
+      "to": "m-sued-fb03-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-motor-tag:tagOf:m-sued-fb03-plc",
+      "from": "m-sued-fb03-motor-tag",
+      "to": "m-sued-fb03-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-motor:measuredBy:m-sued-fb03-motor-tag",
+      "from": "m-sued-fb03-motor",
+      "to": "m-sued-fb03-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-bearing:partOf:m-sued-fb03-asm-drive",
+      "from": "m-sued-fb03-bearing",
+      "to": "m-sued-fb03-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-sued-4711:material:mat-4711",
+      "from": "sp-sued-4711",
+      "to": "mat-4711",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-bearing:usesSparePart:sp-sued-4711",
+      "from": "m-sued-fb03-bearing",
+      "to": "sp-sued-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-vs:partOf:m-sued-fb03-motor",
+      "from": "m-sued-fb03-vs",
+      "to": "m-sued-fb03-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-vs-tag:tagOf:m-sued-fb03-plc",
+      "from": "m-sued-fb03-vs-tag",
+      "to": "m-sued-fb03-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-vs:measuredBy:m-sued-fb03-vs-tag",
+      "from": "m-sued-fb03-vs",
+      "to": "m-sued-fb03-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-ts:partOf:m-sued-fb03-motor",
+      "from": "m-sued-fb03-ts",
+      "to": "m-sued-fb03-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-ts-tag:tagOf:m-sued-fb03-plc",
+      "from": "m-sued-fb03-ts-tag",
+      "to": "m-sued-fb03-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-ts:measuredBy:m-sued-fb03-ts-tag",
+      "from": "m-sued-fb03-ts",
+      "to": "m-sued-fb03-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-sued-4714:material:mat-4714",
+      "from": "sp-sued-4714",
+      "to": "mat-4714",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-motor:usesSparePart:sp-sued-4714",
+      "from": "m-sued-fb03-motor",
+      "to": "sp-sued-4714",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-asm-belt:partOf:m-sued-fb03",
+      "from": "m-sued-fb03-asm-belt",
+      "to": "m-sued-fb03",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-gurt:partOf:m-sued-fb03-asm-belt",
+      "from": "m-sued-fb03-gurt",
+      "to": "m-sued-fb03-asm-belt",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-sued-4720:material:mat-4720",
+      "from": "sp-sued-4720",
+      "to": "mat-4720",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-gurt:usesSparePart:sp-sued-4720",
+      "from": "m-sued-fb03-gurt",
+      "to": "sp-sued-4720",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-ls:partOf:m-sued-fb03-asm-belt",
+      "from": "m-sued-fb03-ls",
+      "to": "m-sued-fb03-asm-belt",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-ls-tag:tagOf:m-sued-fb03-plc",
+      "from": "m-sued-fb03-ls-tag",
+      "to": "m-sued-fb03-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-ls:measuredBy:m-sued-fb03-ls-tag",
+      "from": "m-sued-fb03-ls",
+      "to": "m-sued-fb03-ls-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-doc-ba:documents:m-sued-fb03",
+      "from": "m-sued-fb03-doc-ba",
+      "to": "m-sued-fb03",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-doc-sp:documents:m-sued-fb03",
+      "from": "m-sued-fb03-doc-sp",
+      "to": "m-sued-fb03",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-fb03-doc-wp:documents:m-sued-fb03",
+      "from": "m-sued-fb03-doc-wp",
+      "to": "m-sued-fb03",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24:partOf:pl-sued-abf-l4",
+      "from": "m-sued-af24",
+      "to": "pl-sued-abf-l4",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24:controlledBy:m-sued-af24-plc",
+      "from": "m-sued-af24",
+      "to": "m-sued-af24-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24:sapEquipment:m-sued-af24-eq",
+      "from": "m-sued-af24",
+      "to": "m-sued-af24-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24:sapLocation:pl-sued-abf-l4-fl",
+      "from": "m-sued-af24",
+      "to": "pl-sued-abf-l4-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-asm-drive:partOf:m-sued-af24",
+      "from": "m-sued-af24-asm-drive",
+      "to": "m-sued-af24",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-motor:partOf:m-sued-af24-asm-drive",
+      "from": "m-sued-af24-motor",
+      "to": "m-sued-af24-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-motor:controlledBy:m-sued-af24-plc",
+      "from": "m-sued-af24-motor",
+      "to": "m-sued-af24-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-motor:sapEquipment:m-sued-af24-motor-eq",
+      "from": "m-sued-af24-motor",
+      "to": "m-sued-af24-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-motor-tag:tagOf:m-sued-af24-plc",
+      "from": "m-sued-af24-motor-tag",
+      "to": "m-sued-af24-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-motor:measuredBy:m-sued-af24-motor-tag",
+      "from": "m-sued-af24-motor",
+      "to": "m-sued-af24-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-bearing:partOf:m-sued-af24-asm-drive",
+      "from": "m-sued-af24-bearing",
+      "to": "m-sued-af24-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-bearing:usesSparePart:sp-sued-4711",
+      "from": "m-sued-af24-bearing",
+      "to": "sp-sued-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-vs:partOf:m-sued-af24-motor",
+      "from": "m-sued-af24-vs",
+      "to": "m-sued-af24-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-vs-tag:tagOf:m-sued-af24-plc",
+      "from": "m-sued-af24-vs-tag",
+      "to": "m-sued-af24-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-vs:measuredBy:m-sued-af24-vs-tag",
+      "from": "m-sued-af24-vs",
+      "to": "m-sued-af24-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-ts:partOf:m-sued-af24-motor",
+      "from": "m-sued-af24-ts",
+      "to": "m-sued-af24-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-ts-tag:tagOf:m-sued-af24-plc",
+      "from": "m-sued-af24-ts-tag",
+      "to": "m-sued-af24-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-ts:measuredBy:m-sued-af24-ts-tag",
+      "from": "m-sued-af24-ts",
+      "to": "m-sued-af24-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-sued-4713:material:mat-4713",
+      "from": "sp-sued-4713",
+      "to": "mat-4713",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-motor:usesSparePart:sp-sued-4713",
+      "from": "m-sued-af24-motor",
+      "to": "sp-sued-4713",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-asm-filler:partOf:m-sued-af24",
+      "from": "m-sued-af24-asm-filler",
+      "to": "m-sued-af24",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-valves:partOf:m-sued-af24-asm-filler",
+      "from": "m-sued-af24-valves",
+      "to": "m-sued-af24-asm-filler",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-sued-4712:material:mat-4712",
+      "from": "sp-sued-4712",
+      "to": "mat-4712",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-valves:usesSparePart:sp-sued-4712",
+      "from": "m-sued-af24-valves",
+      "to": "sp-sued-4712",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-fv:partOf:m-sued-af24-valves",
+      "from": "m-sued-af24-fv",
+      "to": "m-sued-af24-valves",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-fv-tag:tagOf:m-sued-af24-plc",
+      "from": "m-sued-af24-fv-tag",
+      "to": "m-sued-af24-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-fv:measuredBy:m-sued-af24-fv-tag",
+      "from": "m-sued-af24-fv",
+      "to": "m-sued-af24-fv-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-pt:partOf:m-sued-af24-asm-filler",
+      "from": "m-sued-af24-pt",
+      "to": "m-sued-af24-asm-filler",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-pt-tag:tagOf:m-sued-af24-plc",
+      "from": "m-sued-af24-pt-tag",
+      "to": "m-sued-af24-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-pt:measuredBy:m-sued-af24-pt-tag",
+      "from": "m-sued-af24-pt",
+      "to": "m-sued-af24-pt-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-doc-ba:documents:m-sued-af24",
+      "from": "m-sued-af24-doc-ba",
+      "to": "m-sued-af24",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-doc-sp:documents:m-sued-af24",
+      "from": "m-sued-af24-doc-sp",
+      "to": "m-sued-af24",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-af24-doc-wp:documents:m-sued-af24",
+      "from": "m-sued-af24-doc-wp",
+      "to": "m-sued-af24",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25:partOf:pl-sued-abf-l4",
+      "from": "m-sued-vl25",
+      "to": "pl-sued-abf-l4",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25:controlledBy:m-sued-vl25-plc",
+      "from": "m-sued-vl25",
+      "to": "m-sued-vl25-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25:sapEquipment:m-sued-vl25-eq",
+      "from": "m-sued-vl25",
+      "to": "m-sued-vl25-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25:sapLocation:pl-sued-abf-l4-fl",
+      "from": "m-sued-vl25",
+      "to": "pl-sued-abf-l4-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-asm-drive:partOf:m-sued-vl25",
+      "from": "m-sued-vl25-asm-drive",
+      "to": "m-sued-vl25",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-motor:partOf:m-sued-vl25-asm-drive",
+      "from": "m-sued-vl25-motor",
+      "to": "m-sued-vl25-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-motor:controlledBy:m-sued-vl25-plc",
+      "from": "m-sued-vl25-motor",
+      "to": "m-sued-vl25-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-motor:sapEquipment:m-sued-vl25-motor-eq",
+      "from": "m-sued-vl25-motor",
+      "to": "m-sued-vl25-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-motor-tag:tagOf:m-sued-vl25-plc",
+      "from": "m-sued-vl25-motor-tag",
+      "to": "m-sued-vl25-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-motor:measuredBy:m-sued-vl25-motor-tag",
+      "from": "m-sued-vl25-motor",
+      "to": "m-sued-vl25-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-bearing:partOf:m-sued-vl25-asm-drive",
+      "from": "m-sued-vl25-bearing",
+      "to": "m-sued-vl25-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-bearing:usesSparePart:sp-sued-4711",
+      "from": "m-sued-vl25-bearing",
+      "to": "sp-sued-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-vs:partOf:m-sued-vl25-motor",
+      "from": "m-sued-vl25-vs",
+      "to": "m-sued-vl25-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-vs-tag:tagOf:m-sued-vl25-plc",
+      "from": "m-sued-vl25-vs-tag",
+      "to": "m-sued-vl25-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-vs:measuredBy:m-sued-vl25-vs-tag",
+      "from": "m-sued-vl25-vs",
+      "to": "m-sued-vl25-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-ts:partOf:m-sued-vl25-motor",
+      "from": "m-sued-vl25-ts",
+      "to": "m-sued-vl25-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-ts-tag:tagOf:m-sued-vl25-plc",
+      "from": "m-sued-vl25-ts-tag",
+      "to": "m-sued-vl25-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-ts:measuredBy:m-sued-vl25-ts-tag",
+      "from": "m-sued-vl25-ts",
+      "to": "m-sued-vl25-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-motor:usesSparePart:sp-sued-4714",
+      "from": "m-sued-vl25-motor",
+      "to": "sp-sued-4714",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-asm-tunnel:partOf:m-sued-vl25",
+      "from": "m-sued-vl25-asm-tunnel",
+      "to": "m-sued-vl25",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-heater:partOf:m-sued-vl25-asm-tunnel",
+      "from": "m-sued-vl25-heater",
+      "to": "m-sued-vl25-asm-tunnel",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-sued-4730:material:mat-4730",
+      "from": "sp-sued-4730",
+      "to": "mat-4730",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-heater:usesSparePart:sp-sued-4730",
+      "from": "m-sued-vl25-heater",
+      "to": "sp-sued-4730",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-fan:partOf:m-sued-vl25-asm-tunnel",
+      "from": "m-sued-vl25-fan",
+      "to": "m-sued-vl25-asm-tunnel",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-sued-4731:material:mat-4731",
+      "from": "sp-sued-4731",
+      "to": "mat-4731",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-fan:usesSparePart:sp-sued-4731",
+      "from": "m-sued-vl25-fan",
+      "to": "sp-sued-4731",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-pt100:partOf:m-sued-vl25-asm-tunnel",
+      "from": "m-sued-vl25-pt100",
+      "to": "m-sued-vl25-asm-tunnel",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-pt100-tag:tagOf:m-sued-vl25-plc",
+      "from": "m-sued-vl25-pt100-tag",
+      "to": "m-sued-vl25-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-pt100:measuredBy:m-sued-vl25-pt100-tag",
+      "from": "m-sued-vl25-pt100",
+      "to": "m-sued-vl25-pt100-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-doc-ba:documents:m-sued-vl25",
+      "from": "m-sued-vl25-doc-ba",
+      "to": "m-sued-vl25",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-doc-sp:documents:m-sued-vl25",
+      "from": "m-sued-vl25-doc-sp",
+      "to": "m-sued-vl25",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-sued-vl25-doc-wp:documents:m-sued-vl25",
+      "from": "m-sued-vl25-doc-wp",
+      "to": "m-sued-vl25",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-posen-abf:partOf:pl-posen",
+      "from": "pl-posen-abf",
+      "to": "pl-posen",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-posen-abf-l1:partOf:pl-posen-abf",
+      "from": "pl-posen-abf-l1",
+      "to": "pl-posen-abf",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-posen-abf-l1:sapLocation:pl-posen-abf-l1-fl",
+      "from": "pl-posen-abf-l1",
+      "to": "pl-posen-abf-l1-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31:partOf:pl-posen-abf-l1",
+      "from": "m-poz-af31",
+      "to": "pl-posen-abf-l1",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31:controlledBy:m-poz-af31-plc",
+      "from": "m-poz-af31",
+      "to": "m-poz-af31-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31:sapEquipment:m-poz-af31-eq",
+      "from": "m-poz-af31",
+      "to": "m-poz-af31-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31:sapLocation:pl-posen-abf-l1-fl",
+      "from": "m-poz-af31",
+      "to": "pl-posen-abf-l1-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-asm-drive:partOf:m-poz-af31",
+      "from": "m-poz-af31-asm-drive",
+      "to": "m-poz-af31",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-motor:partOf:m-poz-af31-asm-drive",
+      "from": "m-poz-af31-motor",
+      "to": "m-poz-af31-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-motor:controlledBy:m-poz-af31-plc",
+      "from": "m-poz-af31-motor",
+      "to": "m-poz-af31-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-motor:sapEquipment:m-poz-af31-motor-eq",
+      "from": "m-poz-af31-motor",
+      "to": "m-poz-af31-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-motor-tag:tagOf:m-poz-af31-plc",
+      "from": "m-poz-af31-motor-tag",
+      "to": "m-poz-af31-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-motor:measuredBy:m-poz-af31-motor-tag",
+      "from": "m-poz-af31-motor",
+      "to": "m-poz-af31-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-bearing:partOf:m-poz-af31-asm-drive",
+      "from": "m-poz-af31-bearing",
+      "to": "m-poz-af31-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-poz-4711:material:mat-4711",
+      "from": "sp-poz-4711",
+      "to": "mat-4711",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-bearing:usesSparePart:sp-poz-4711",
+      "from": "m-poz-af31-bearing",
+      "to": "sp-poz-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-vs:partOf:m-poz-af31-motor",
+      "from": "m-poz-af31-vs",
+      "to": "m-poz-af31-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-vs-tag:tagOf:m-poz-af31-plc",
+      "from": "m-poz-af31-vs-tag",
+      "to": "m-poz-af31-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-vs:measuredBy:m-poz-af31-vs-tag",
+      "from": "m-poz-af31-vs",
+      "to": "m-poz-af31-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-ts:partOf:m-poz-af31-motor",
+      "from": "m-poz-af31-ts",
+      "to": "m-poz-af31-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-ts-tag:tagOf:m-poz-af31-plc",
+      "from": "m-poz-af31-ts-tag",
+      "to": "m-poz-af31-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-ts:measuredBy:m-poz-af31-ts-tag",
+      "from": "m-poz-af31-ts",
+      "to": "m-poz-af31-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-poz-4713:material:mat-4713",
+      "from": "sp-poz-4713",
+      "to": "mat-4713",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-motor:usesSparePart:sp-poz-4713",
+      "from": "m-poz-af31-motor",
+      "to": "sp-poz-4713",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-asm-filler:partOf:m-poz-af31",
+      "from": "m-poz-af31-asm-filler",
+      "to": "m-poz-af31",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-valves:partOf:m-poz-af31-asm-filler",
+      "from": "m-poz-af31-valves",
+      "to": "m-poz-af31-asm-filler",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-poz-4712:material:mat-4712",
+      "from": "sp-poz-4712",
+      "to": "mat-4712",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-valves:usesSparePart:sp-poz-4712",
+      "from": "m-poz-af31-valves",
+      "to": "sp-poz-4712",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-fv:partOf:m-poz-af31-valves",
+      "from": "m-poz-af31-fv",
+      "to": "m-poz-af31-valves",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-fv-tag:tagOf:m-poz-af31-plc",
+      "from": "m-poz-af31-fv-tag",
+      "to": "m-poz-af31-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-fv:measuredBy:m-poz-af31-fv-tag",
+      "from": "m-poz-af31-fv",
+      "to": "m-poz-af31-fv-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-pt:partOf:m-poz-af31-asm-filler",
+      "from": "m-poz-af31-pt",
+      "to": "m-poz-af31-asm-filler",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-pt-tag:tagOf:m-poz-af31-plc",
+      "from": "m-poz-af31-pt-tag",
+      "to": "m-poz-af31-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-pt:measuredBy:m-poz-af31-pt-tag",
+      "from": "m-poz-af31-pt",
+      "to": "m-poz-af31-pt-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-doc-ba:documents:m-poz-af31",
+      "from": "m-poz-af31-doc-ba",
+      "to": "m-poz-af31",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-doc-sp:documents:m-poz-af31",
+      "from": "m-poz-af31-doc-sp",
+      "to": "m-poz-af31",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-af31-doc-wp:documents:m-poz-af31",
+      "from": "m-poz-af31-doc-wp",
+      "to": "m-poz-af31",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32:partOf:pl-posen-abf-l1",
+      "from": "m-poz-vl32",
+      "to": "pl-posen-abf-l1",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32:controlledBy:m-poz-vl32-plc",
+      "from": "m-poz-vl32",
+      "to": "m-poz-vl32-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32:sapEquipment:m-poz-vl32-eq",
+      "from": "m-poz-vl32",
+      "to": "m-poz-vl32-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32:sapLocation:pl-posen-abf-l1-fl",
+      "from": "m-poz-vl32",
+      "to": "pl-posen-abf-l1-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-asm-drive:partOf:m-poz-vl32",
+      "from": "m-poz-vl32-asm-drive",
+      "to": "m-poz-vl32",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-motor:partOf:m-poz-vl32-asm-drive",
+      "from": "m-poz-vl32-motor",
+      "to": "m-poz-vl32-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-motor:controlledBy:m-poz-vl32-plc",
+      "from": "m-poz-vl32-motor",
+      "to": "m-poz-vl32-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-motor:sapEquipment:m-poz-vl32-motor-eq",
+      "from": "m-poz-vl32-motor",
+      "to": "m-poz-vl32-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-motor-tag:tagOf:m-poz-vl32-plc",
+      "from": "m-poz-vl32-motor-tag",
+      "to": "m-poz-vl32-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-motor:measuredBy:m-poz-vl32-motor-tag",
+      "from": "m-poz-vl32-motor",
+      "to": "m-poz-vl32-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-bearing:partOf:m-poz-vl32-asm-drive",
+      "from": "m-poz-vl32-bearing",
+      "to": "m-poz-vl32-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-bearing:usesSparePart:sp-poz-4711",
+      "from": "m-poz-vl32-bearing",
+      "to": "sp-poz-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-vs:partOf:m-poz-vl32-motor",
+      "from": "m-poz-vl32-vs",
+      "to": "m-poz-vl32-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-vs-tag:tagOf:m-poz-vl32-plc",
+      "from": "m-poz-vl32-vs-tag",
+      "to": "m-poz-vl32-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-vs:measuredBy:m-poz-vl32-vs-tag",
+      "from": "m-poz-vl32-vs",
+      "to": "m-poz-vl32-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-ts:partOf:m-poz-vl32-motor",
+      "from": "m-poz-vl32-ts",
+      "to": "m-poz-vl32-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-ts-tag:tagOf:m-poz-vl32-plc",
+      "from": "m-poz-vl32-ts-tag",
+      "to": "m-poz-vl32-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-ts:measuredBy:m-poz-vl32-ts-tag",
+      "from": "m-poz-vl32-ts",
+      "to": "m-poz-vl32-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-poz-4714:material:mat-4714",
+      "from": "sp-poz-4714",
+      "to": "mat-4714",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-motor:usesSparePart:sp-poz-4714",
+      "from": "m-poz-vl32-motor",
+      "to": "sp-poz-4714",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-asm-tunnel:partOf:m-poz-vl32",
+      "from": "m-poz-vl32-asm-tunnel",
+      "to": "m-poz-vl32",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-heater:partOf:m-poz-vl32-asm-tunnel",
+      "from": "m-poz-vl32-heater",
+      "to": "m-poz-vl32-asm-tunnel",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-poz-4730:material:mat-4730",
+      "from": "sp-poz-4730",
+      "to": "mat-4730",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-heater:usesSparePart:sp-poz-4730",
+      "from": "m-poz-vl32-heater",
+      "to": "sp-poz-4730",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-fan:partOf:m-poz-vl32-asm-tunnel",
+      "from": "m-poz-vl32-fan",
+      "to": "m-poz-vl32-asm-tunnel",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-poz-4731:material:mat-4731",
+      "from": "sp-poz-4731",
+      "to": "mat-4731",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-fan:usesSparePart:sp-poz-4731",
+      "from": "m-poz-vl32-fan",
+      "to": "sp-poz-4731",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-pt100:partOf:m-poz-vl32-asm-tunnel",
+      "from": "m-poz-vl32-pt100",
+      "to": "m-poz-vl32-asm-tunnel",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-pt100-tag:tagOf:m-poz-vl32-plc",
+      "from": "m-poz-vl32-pt100-tag",
+      "to": "m-poz-vl32-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-pt100:measuredBy:m-poz-vl32-pt100-tag",
+      "from": "m-poz-vl32-pt100",
+      "to": "m-poz-vl32-pt100-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-doc-ba:documents:m-poz-vl32",
+      "from": "m-poz-vl32-doc-ba",
+      "to": "m-poz-vl32",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-doc-sp:documents:m-poz-vl32",
+      "from": "m-poz-vl32-doc-sp",
+      "to": "m-poz-vl32",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-poz-vl32-doc-wp:documents:m-poz-vl32",
+      "from": "m-poz-vl32-doc-wp",
+      "to": "m-poz-vl32",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-atl-fil:partOf:pl-atl",
+      "from": "pl-atl-fil",
+      "to": "pl-atl",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-atl-fil-l1:partOf:pl-atl-fil",
+      "from": "pl-atl-fil-l1",
+      "to": "pl-atl-fil",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:pl-atl-fil-l1:sapLocation:pl-atl-fil-l1-fl",
+      "from": "pl-atl-fil-l1",
+      "to": "pl-atl-fil-l1-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41:partOf:pl-atl-fil-l1",
+      "from": "m-atl-af41",
+      "to": "pl-atl-fil-l1",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41:controlledBy:m-atl-af41-plc",
+      "from": "m-atl-af41",
+      "to": "m-atl-af41-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41:sapEquipment:m-atl-af41-eq",
+      "from": "m-atl-af41",
+      "to": "m-atl-af41-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41:sapLocation:pl-atl-fil-l1-fl",
+      "from": "m-atl-af41",
+      "to": "pl-atl-fil-l1-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-asm-drive:partOf:m-atl-af41",
+      "from": "m-atl-af41-asm-drive",
+      "to": "m-atl-af41",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-motor:partOf:m-atl-af41-asm-drive",
+      "from": "m-atl-af41-motor",
+      "to": "m-atl-af41-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-motor:controlledBy:m-atl-af41-plc",
+      "from": "m-atl-af41-motor",
+      "to": "m-atl-af41-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-motor:sapEquipment:m-atl-af41-motor-eq",
+      "from": "m-atl-af41-motor",
+      "to": "m-atl-af41-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-motor-tag:tagOf:m-atl-af41-plc",
+      "from": "m-atl-af41-motor-tag",
+      "to": "m-atl-af41-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-motor:measuredBy:m-atl-af41-motor-tag",
+      "from": "m-atl-af41-motor",
+      "to": "m-atl-af41-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-bearing:partOf:m-atl-af41-asm-drive",
+      "from": "m-atl-af41-bearing",
+      "to": "m-atl-af41-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-atl-4711:material:mat-4711",
+      "from": "sp-atl-4711",
+      "to": "mat-4711",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-bearing:usesSparePart:sp-atl-4711",
+      "from": "m-atl-af41-bearing",
+      "to": "sp-atl-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-vs:partOf:m-atl-af41-motor",
+      "from": "m-atl-af41-vs",
+      "to": "m-atl-af41-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-vs-tag:tagOf:m-atl-af41-plc",
+      "from": "m-atl-af41-vs-tag",
+      "to": "m-atl-af41-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-vs:measuredBy:m-atl-af41-vs-tag",
+      "from": "m-atl-af41-vs",
+      "to": "m-atl-af41-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-ts:partOf:m-atl-af41-motor",
+      "from": "m-atl-af41-ts",
+      "to": "m-atl-af41-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-ts-tag:tagOf:m-atl-af41-plc",
+      "from": "m-atl-af41-ts-tag",
+      "to": "m-atl-af41-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-ts:measuredBy:m-atl-af41-ts-tag",
+      "from": "m-atl-af41-ts",
+      "to": "m-atl-af41-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-atl-4713:material:mat-4713",
+      "from": "sp-atl-4713",
+      "to": "mat-4713",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-motor:usesSparePart:sp-atl-4713",
+      "from": "m-atl-af41-motor",
+      "to": "sp-atl-4713",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-asm-filler:partOf:m-atl-af41",
+      "from": "m-atl-af41-asm-filler",
+      "to": "m-atl-af41",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-valves:partOf:m-atl-af41-asm-filler",
+      "from": "m-atl-af41-valves",
+      "to": "m-atl-af41-asm-filler",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-atl-4712:material:mat-4712",
+      "from": "sp-atl-4712",
+      "to": "mat-4712",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-valves:usesSparePart:sp-atl-4712",
+      "from": "m-atl-af41-valves",
+      "to": "sp-atl-4712",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-fv:partOf:m-atl-af41-valves",
+      "from": "m-atl-af41-fv",
+      "to": "m-atl-af41-valves",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-fv-tag:tagOf:m-atl-af41-plc",
+      "from": "m-atl-af41-fv-tag",
+      "to": "m-atl-af41-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-fv:measuredBy:m-atl-af41-fv-tag",
+      "from": "m-atl-af41-fv",
+      "to": "m-atl-af41-fv-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-pt:partOf:m-atl-af41-asm-filler",
+      "from": "m-atl-af41-pt",
+      "to": "m-atl-af41-asm-filler",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-pt-tag:tagOf:m-atl-af41-plc",
+      "from": "m-atl-af41-pt-tag",
+      "to": "m-atl-af41-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-pt:measuredBy:m-atl-af41-pt-tag",
+      "from": "m-atl-af41-pt",
+      "to": "m-atl-af41-pt-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-doc-ba:documents:m-atl-af41",
+      "from": "m-atl-af41-doc-ba",
+      "to": "m-atl-af41",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-doc-sp:documents:m-atl-af41",
+      "from": "m-atl-af41-doc-sp",
+      "to": "m-atl-af41",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-af41-doc-wp:documents:m-atl-af41",
+      "from": "m-atl-af41-doc-wp",
+      "to": "m-atl-af41",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42:partOf:pl-atl-fil-l1",
+      "from": "m-atl-ft42",
+      "to": "pl-atl-fil-l1",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42:controlledBy:m-atl-ft42-plc",
+      "from": "m-atl-ft42",
+      "to": "m-atl-ft42-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42:sapEquipment:m-atl-ft42-eq",
+      "from": "m-atl-ft42",
+      "to": "m-atl-ft42-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42:sapLocation:pl-atl-fil-l1-fl",
+      "from": "m-atl-ft42",
+      "to": "pl-atl-fil-l1-fl",
+      "type": "sapLocation",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-asm-drive:partOf:m-atl-ft42",
+      "from": "m-atl-ft42-asm-drive",
+      "to": "m-atl-ft42",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-motor:partOf:m-atl-ft42-asm-drive",
+      "from": "m-atl-ft42-motor",
+      "to": "m-atl-ft42-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-motor:controlledBy:m-atl-ft42-plc",
+      "from": "m-atl-ft42-motor",
+      "to": "m-atl-ft42-plc",
+      "type": "controlledBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-motor:sapEquipment:m-atl-ft42-motor-eq",
+      "from": "m-atl-ft42-motor",
+      "to": "m-atl-ft42-motor-eq",
+      "type": "sapEquipment",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-motor-tag:tagOf:m-atl-ft42-plc",
+      "from": "m-atl-ft42-motor-tag",
+      "to": "m-atl-ft42-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-motor:measuredBy:m-atl-ft42-motor-tag",
+      "from": "m-atl-ft42-motor",
+      "to": "m-atl-ft42-motor-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-bearing:partOf:m-atl-ft42-asm-drive",
+      "from": "m-atl-ft42-bearing",
+      "to": "m-atl-ft42-asm-drive",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-bearing:usesSparePart:sp-atl-4711",
+      "from": "m-atl-ft42-bearing",
+      "to": "sp-atl-4711",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-vs:partOf:m-atl-ft42-motor",
+      "from": "m-atl-ft42-vs",
+      "to": "m-atl-ft42-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-vs-tag:tagOf:m-atl-ft42-plc",
+      "from": "m-atl-ft42-vs-tag",
+      "to": "m-atl-ft42-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-vs:measuredBy:m-atl-ft42-vs-tag",
+      "from": "m-atl-ft42-vs",
+      "to": "m-atl-ft42-vs-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-ts:partOf:m-atl-ft42-motor",
+      "from": "m-atl-ft42-ts",
+      "to": "m-atl-ft42-motor",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-ts-tag:tagOf:m-atl-ft42-plc",
+      "from": "m-atl-ft42-ts-tag",
+      "to": "m-atl-ft42-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-ts:measuredBy:m-atl-ft42-ts-tag",
+      "from": "m-atl-ft42-ts",
+      "to": "m-atl-ft42-ts-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-atl-4714:material:mat-4714",
+      "from": "sp-atl-4714",
+      "to": "mat-4714",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-motor:usesSparePart:sp-atl-4714",
+      "from": "m-atl-ft42-motor",
+      "to": "sp-atl-4714",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-asm-belt:partOf:m-atl-ft42",
+      "from": "m-atl-ft42-asm-belt",
+      "to": "m-atl-ft42",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-gurt:partOf:m-atl-ft42-asm-belt",
+      "from": "m-atl-ft42-gurt",
+      "to": "m-atl-ft42-asm-belt",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:sp-atl-4720:material:mat-4720",
+      "from": "sp-atl-4720",
+      "to": "mat-4720",
+      "type": "material",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-gurt:usesSparePart:sp-atl-4720",
+      "from": "m-atl-ft42-gurt",
+      "to": "sp-atl-4720",
+      "type": "usesSparePart",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-ls:partOf:m-atl-ft42-asm-belt",
+      "from": "m-atl-ft42-ls",
+      "to": "m-atl-ft42-asm-belt",
+      "type": "partOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-ls-tag:tagOf:m-atl-ft42-plc",
+      "from": "m-atl-ft42-ls-tag",
+      "to": "m-atl-ft42-plc",
+      "type": "tagOf",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-ls:measuredBy:m-atl-ft42-ls-tag",
+      "from": "m-atl-ft42-ls",
+      "to": "m-atl-ft42-ls-tag",
+      "type": "measuredBy",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-doc-ba:documents:m-atl-ft42",
+      "from": "m-atl-ft42-doc-ba",
+      "to": "m-atl-ft42",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-doc-sp:documents:m-atl-ft42",
+      "from": "m-atl-ft42-doc-sp",
+      "to": "m-atl-ft42",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    },
+    {
+      "id": "e:m-atl-ft42-doc-wp:documents:m-atl-ft42",
+      "from": "m-atl-ft42-doc-wp",
+      "to": "m-atl-ft42",
+      "type": "documents",
+      "source": "demo",
+      "createdAt": "2026-10-05T19:41:43.992Z"
+    }
+  ],
+  "seedVersion": 2
+}
