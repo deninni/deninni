@@ -11,3 +11,4 @@ data/*.json
 data/edge/
 data/audit/
 !data/.gitkeep
+dist/

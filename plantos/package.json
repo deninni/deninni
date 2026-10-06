@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "test": "tsx --test \"src/**/*.test.ts\"",
     "test:data": "npm test",
-    "smoke": "bash scripts/smoke.sh"
+    "smoke": "bash scripts/smoke.sh",
+    "demo:artifact": "node scripts/demo-artifact/build.mjs"
   },
   "engines": {
     "node": ">=20.9"
